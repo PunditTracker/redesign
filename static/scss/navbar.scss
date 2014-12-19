@@ -1,0 +1,11 @@
+@import 'base';
+
+$navbar-height: 4rem;
+.navbar {
+	height: $navbar-height;
+	background-color: $white;
+	position: fixed;
+	width: 100%;
+	z-index: 500;
+	box-shadow: 0 0 1rem black;
+}

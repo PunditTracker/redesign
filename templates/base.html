@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+{%- block head -%}
+    <meta charset="utf-8">
+    <title>{%- block title%}Pundit Tracker{%- endblock -%}</title>
+
+    {%- block fonts -%}
+    <!-- Web Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab|Merriweather+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    {%- endblock fonts -%}
+
+    {%- block css -%}
+    <!-- PureCSS -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&amp;pure/0.5.0/grids-min.css&amp;pure/0.5.0/forms-min.css">
+    {%- endblock css%}
+
+    {%- block js -%}
+    <!-- jQuery -->
+    <script type="text/javascript"
+            src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- JavaScript imports -->
+    {%- endblock js -%}
+
+    {%- block favicon -%}
+    <!-- Favicon.ico -->
+    <link rel="shortcut icon"
+          href=" {{url_for('static', filename='img/favicon.ico') }}"
+          type="image/x-icon">
+    <link rel="icon"
+          href="{{ url_for('static', filename='img/favicon.ico') }}"
+          type="image/x-icon">
+    {%- endblock favicon -%}
+{%- endblock head -%}
+</head>
+<body>
+{%- block body -%}{%- endblock body -%}
+{%- block bodyJs -%}{%- endblock bodyJs -%}
+</body>
+</html>

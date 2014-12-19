@@ -1,0 +1,65 @@
+@import 'animations';
+
+.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+@mixin text-shadow($height, $width, $color) {
+    text-shadow: $height $width $color;
+    -webkit-text-shadow: $height $width $color;
+    -moz-text-shadow: $height $width $color;
+
+}
+
+@mixin transition-with-delay($speed, $delay) {
+    -webkit-transition: $speed $delay ease all;
+       -moz-transition: $speed $delay ease all;
+         -o-transition: $speed $delay ease all;
+            transition: $speed $delay ease all;
+}
+@mixin transition($speed) {
+    @include transition-with-delay($speed, 0);
+}
+
+.animated {
+    @include animated(0.5s);
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin two-way-scrim($x) {
+    @include _scrim(rgba($x, $x, $x,1), 0%,
+                    rgba($x, $x, $x,0.25), 20%,
+                    rgba($x, $x, $x,0.01), 50%,
+                    rgba($x, $x, $x,0.25), 70%,
+                    rgba($x, $x, $x,1), 100%);
+}
+
+@mixin scrim($x) {
+    @include _scrim(rgba($x, $x, $x,0), 0%,
+                    rgba($x, $x, $x,0.25), 55%,
+                    rgba($x, $x, $x,0.25), 55%,
+                    rgba($x, $x, $x,1), 100%,
+                    rgba($x, $x, $x,1), 100%);
+}
+
+@mixin _scrim ($v1_c, $v1_p, $v2_c, $v2_p, $v3_c, $v3_p, $v4_c, $v4_p, $v5_c, $v5_p) {
+    background: -moz-linear-gradient(top, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($v1_p, $v1_c), color-stop($v2_p, $v2_c), color-stop($v3_p, $v3_c), color-stop($v4_p $v4_c), color-stop($v5_p $v5_c));
+    background: -webkit-linear-gradient(top, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
+    background: -o-linear-gradient(top, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
+    background: -ms-linear-gradient(top, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
+    background: linear-gradient(to bottom, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
+}
+
+

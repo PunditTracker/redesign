@@ -1,0 +1,259 @@
+@import 'base';
+@import 'navbar';
+
+$card-grid-padding: 1.5rem;
+$hero-height: 25rem;
+$prediction-height: 15rem;
+$prediction-padding: 1rem;
+$pundit-vertical-padding: 1rem;
+$pundit-height: 4rem;
+$hero-image-width: 100rem;
+$tall-2-height: (2 * $prediction-height + $card-grid-padding);
+html, body {
+    background-color: $ultralightgray;
+    position: relative;
+}
+
+.content {
+    z-index: 80;
+    position: absolute;
+    width: 100%;
+
+    & >.card-grid {
+        width: 95%;
+    }
+}
+
+.hero {
+    height: $hero-height;
+    max-width: $content-width;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: ($navbar-height);
+    z-index: 100;
+
+    .right {
+        z-index: 200;
+    }
+}
+
+
+body > .background {
+    position: absolute;
+    width: 100%;
+    height: ($navbar-height + $hero-height + ($prediction-height * 1.75));
+    overflow-x: hidden;
+
+    .hero-image {
+        margin-top: $navbar-height;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 100%;
+        position: absolute;
+        left: 50%;
+        height: ($hero-height + ($prediction-height *1.75));
+        overflow: hidden;
+        width: $hero-image-width;
+        margin-left: (-1 * $hero-image-width / 2);
+        z-index: 50;
+        @include border-box;
+        .scrim {
+            @include scrim($BACKGROUND);
+        }
+    }
+}
+.scrim {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 60;
+}
+.card-grid {
+    max-width: $content-width;
+    margin: 0 auto;
+    margin-bottom: $card-grid-padding;
+    & > div {
+        padding: 0 ($card-grid-padding / 2);
+        @include border-box;
+    }
+
+    .card-grid  {
+        z-index: 200;
+        width: 100%;
+        &:last-child {
+            margin: 0;
+        }
+        & > div {
+            padding: 0;
+            &:not(:last-child) {
+                padding-right: ($card-grid-padding / 2);
+            }
+            &:not(:first-child) {
+                padding-left: ($card-grid-padding / 2);
+            }
+        }
+    }
+}
+
+.with-image {
+    position: relative;
+
+    .background {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        position: absolute;
+        // width: 100%;
+        top: -15rem;
+        left: 50%;
+        overflow: visible;
+        height: ($tall-2-height + 30rem);
+        width: $hero-image-width;
+        margin-left: (-1 * $hero-image-width / 2);
+        .scrim {
+            @include two-way-scrim($BACKGROUND);
+        }
+    }
+}
+
+.prediction {
+    &.v1 {
+        z-index: 200;
+        background-color: $white;
+        padding: $prediction-padding;
+        height: $prediction-height;
+        position: relative;
+        @include border-box;
+        .text {
+            margin: 0;
+        }
+        &.tall-2 {
+            color: white;
+            height: $tall-2-height;
+            .background {
+                background-image: url(../../img/vertical.jpg);
+                display: block;
+            }
+
+            .pundit {
+                background-color: rgba(0,0,0,0) !important;
+            }
+
+            .text {
+                position: absolute;
+                bottom: ($pundit-height + $pundit-vertical-padding);
+                z-index: 300;
+                @extend .h2;
+            }
+        }
+        &.featured {
+            background-color: rgba(0,0,0,0);
+            color: $white;
+            height: ($hero-height - 2rem);
+
+            .text {
+                @extend .h2;
+                text-shadow: 2px 2px 3px black;
+                position: absolute;
+                bottom: 5rem;
+            }
+
+            .pundit {
+                background-color: rgba(0,0,0,0) !important;
+                bottom: 1rem;
+                .photo {
+                    height: 3rem;
+                    width: 3rem;
+                    border-radius: 3rem;
+                }
+                .text-wrapper {
+                    height: 5rem;
+                    left: 4rem;
+                    text-shadow: 2px 2px 3px black;
+                }
+                .name {
+                    @extend .h3;
+                    line-height: 1.25rem;
+                    margin: 0;
+                    text-shadow: 2px 2px 3px black;
+                }
+                .source {
+                    @extend .h6;
+                    margin: 1rem 0 0 ;
+                }
+            }
+        }
+        &.no-box {
+            background-color: rgba(0,0,0,0.2) !important;
+            .background {
+                display: none;
+            }
+            padding-bottom: 1rem;
+            height: $tall-2-height;
+            border: 1rem solid white;
+            // @include scrim(50);
+            .text {
+                width: 50%;
+            }
+
+        }
+        .background {
+            width: 100%;
+            background-position: center center;
+            background-size: cover;
+            display: none;
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+        }
+        .pundit {
+            height: $pundit-height;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 300;
+            @include border-box;
+
+            &.blue { background-color: $blue; }
+            &.red { background-color: $red; }
+            &.yellow { background-color: $yellow; }
+            &.green { background-color: $green; }
+            &.orange { background-color: $orange; }
+
+
+            .photo {
+                background-image: url(../../img/profile.jpeg);
+                background-position: center center;
+                background-size: cover;
+                height: ($pundit-height - 2 * $pundit-vertical-padding);
+                width: ($pundit-height - 2 * $pundit-vertical-padding);
+                border-radius: ($pundit-height - 2 * $pundit-vertical-padding);
+                margin: $pundit-vertical-padding;
+                margin-left: $prediction-padding;
+                display: inline-block;
+            }
+            .text-wrapper {
+                @include border-box;
+                position: absolute;
+                padding: $pundit-vertical-padding;
+                top: 0;
+                left: ($pundit-height - 2 * $pundit-vertical-padding + $prediction-padding);
+                height: $pundit-height;
+                color: white;
+                .name {
+                    margin:0;
+                }
+                .source {
+                    margin: 0.25rem 0 0;
+                }
+            }
+        }
+        .scrim {
+            @include scrim(50);
+        }
+    }
+}
