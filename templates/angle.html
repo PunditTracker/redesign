@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros with context %}
+
+{%- block css -%}
+{{ super() }}
+{% assets "scss_angle" %}
+<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+{% endassets %}
+{%- endblock -%}
+{%- block bodyJs -%}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+{%- endblock -%}
+
+
+{% macro prediction_set(a,b,c, color, category) %}
+<div class="strip {{color}}">
+    <div class="content ">
+        <div class="prediction-set {{ color }}">
+            <div class="set-title {{ color}} ">
+                <h3 class="title">{{category}}</h3>
+                <span class="angle hang-right"></span>
+            </div>
+            <ul class="inner {{color}}">
+                <div class="set-title-spacer"></div>
+                {% for _ in range(4) %}
+                {{ macros.angle_prediction() }}
+                {% endfor %}
+            </ul>
+            <span class="angle right"></span>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{%- block body -%}
+{{ macros.angle_navbar() }}
+
+<div class="hero">
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1 contain">
+            <span class="angle left"></span>
+                <i class="bg-image" style="background-image:url({{ url_for('static', filename='img/hero.jpg') }});"></i>
+                {{ macros.angle_prediction('featured') }}
+            <span class="angle right"></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% for pred in macros.predictions %}
+{% if pred[3] == 'green' or pred[3] == 'red' %}
+<div class="triple">
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        {{ macros.angle_prediction('small first-top') }}
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1">
+                        {{ macros.angle_prediction('small first') }}
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div class="pure-g">
+                    <div class="pure-u-1-1">
+                        {{ macros.angle_prediction('tall-2') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% elif pred[3] == 'blue' %}
+<div class="hero inline">
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1 contain">
+            <span class="angle left"></span>
+                <i class="bg-image" style="background-image:url({{ url_for('static', filename='img/callout.jpg') }});"></i>
+                {{ macros.angle_prediction('featured') }}
+            <span class="angle right"></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="triple">
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small first-top') }}
+            </div>
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small second-top') }}
+            </div>
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small third-top') }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triple">
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small first') }}
+            </div>
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small second') }}
+            </div>
+            <div class="pure-u-1-3">
+                {{ macros.angle_prediction('small third') }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{{ prediction_set(*pred) }}
+{% endfor %}
+{%- endblock -%}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros with context %}
+
+{%- block css -%}
+{{ super() }}
+{% assets "scss_grid" %}
+<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+{% endassets %}
+{%- endblock -%}
+{%- block bodyJs -%}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+{%- endblock -%}
+
+
+{%- block body -%}
+{{ macros.navbar() }}
+<div class="background">
+    <div class="hero-image" style="background-image:url({{ url_for('static', filename='img/hero.jpg') }});">
+        <div class="scrim"></div>
+    </div>
+</div>
+<div class="hero">
+    <div class="pure-g">
+        <div class="pure-u-1-2"></div>
+        <div class="pure-u-1-2 right">
+            {{ macros.prediction('featured') }}
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-2-3">
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+        </div>
+        <div class="pure-u-1-3">{{ macros.prediction('tall-2') }}</div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-2-3">{{ macros.prediction('wide-2') }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">{{ macros.prediction('tall-2') }}</div>
+        <div class="pure-u-2-3">
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1">{{ macros.prediction('wide-2') }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+    </div>
+    <div class="with-image">
+        <div class="background" style="background-image:url({{ url_for('static', filename='img/callout.jpg') }});">
+            <div class="scrim"></div>
+        </div>
+        <div class="pure-g card-grid">
+            <div class="pure-u-2-3">{{ macros.prediction('tall-2 wide-2 no-box featured') }}</div>
+            <div class="pure-u-1-3">
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">{{ macros.prediction() }}</div>
+                </div>
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">{{ macros.prediction() }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-2-3">
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+        </div>
+        <div class="pure-u-1-3">{{ macros.prediction('tall-2') }}</div>
+    </div>
+
+</div>
+{%- endblock -%}

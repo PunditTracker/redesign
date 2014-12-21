@@ -1,0 +1,104 @@
+
+{% set predictions = [
+    ('Rand Paul will get fewer primary votes in 2016 than his father got in 2012', 'Bill Kristol ', 'ABC: This Week', 'yellow', 'Politics'),
+    ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green', 'Finance'),
+    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'blue', 'Sports'),
+    ('NFL: Falcons to Win in Week 16 (ATL @ NO)', 'Pete Prisco', 'CBS', 'red', 'Tech'),
+    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'orange', 'Media'),
+]%}
+
+{% macro prediction(class) %}
+{% with text, name, source, color, _ = random(predictions) %}
+<div class="prediction v1 {{class}}">
+    <div class="background">
+        <div class="scrim"></div>
+    </div>
+    <h3 class="text">{{ text }}</h3>
+    <div class="pundit {{ color }}">
+        <div class="photo"></div>
+        <div class="text-wrapper">
+            <h5 class="name">{{ name }}</h5>
+            <h6 class="source">{{ source }}</h6>
+        </div>
+        <div class="voting">
+            <a href="#" class="up">
+                <span class="label">Likely</span>
+                <i class="  fa fa-chevron-up"></i>
+            </a>
+            <a href="#" class="down">
+                <span class="label">Unlikely</span>
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% endmacro %}
+
+{% macro angle_prediction(class) %}
+{% with text, name, source, color, _ = random(predictions) %}
+<div class="prediction v1 {{class}} {{color}}">
+    <span class="angle hang-left"></span>
+    <div class="background">
+        <div class="scrim"></div>
+    </div>
+    <h3 class="text">{{ text }}</h3>
+    <div class="pundit">
+        <div class="photo"></div>
+        <div class="text-wrapper">
+            <h5 class="name">{{ name }}</h5>
+            <h6 class="source">{{ source }}</h6>
+        </div>
+    </div>
+    <span class="angle hang-right"></span>
+</div>
+{% endwith %}
+{% endmacro %}
+
+
+{% macro navbar() %}
+<div class="navbar">
+    <nav>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div class="logo">
+                    <span class="p">Pundit</span><br><span class="t">Tracker</span>
+                </div>
+                <ul class="categories">
+                    {% for _, _, _, color, category in predictions %}
+                        <li>
+                            <a href="#" data-color="{{color}}">{{ category }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <a class="sign-up button" href="#">Sign Up</a>
+                <a class="login" href="#">Log in</a>
+            </div>
+        </div>
+    </nav>
+</div>
+{% endmacro %}
+
+
+{% macro angle_navbar() %}
+<div class="navbar">
+    <nav>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div class="logo">
+                    <span class="p">Pundit</span><br><span class="t">Tracker</span>
+                </div>
+                <ul class="categories">
+                    {% for _, _, _, color, category in predictions %}
+                        <li>
+                            <a href="#" data-color="{{color}}">{{ category }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <a class="sign-up button" href="#">Sign Up</a>
+                <a class="login" href="#">Log in</a>
+            </div>
+        </div>
+    </nav>
+</div>
+{% endmacro %}

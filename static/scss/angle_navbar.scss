@@ -1,13 +1,15 @@
 @import 'base';
-
+@import 'utils';
+$hero-height: 25rem;
+$angle: 0.2;
 $navbar-height: 4rem;
 .navbar {
 	height: $navbar-height;
-	background-color: $white;
+	background-color: $red;
+	color: $white;
 	position: fixed;
 	width: 100%;
-	z-index: 500;
-	box-shadow: 0 0 1rem black;
+	z-index: 5000;
 	nav {
 		max-width: $content-width;
 		margin: 0 auto;
@@ -18,17 +20,17 @@ $navbar-height: 4rem;
 }
 
 .logo {
+	width: ($hero-height * $angle );
 	@extend .h4;
-	margin-top: 1rem;
+	height: $navbar-height;
+	position: relative;
+	padding-top: 1rem;
 	display: inline-block;
 	span {
 		text-align: justify;
 		width: 4rem;
 		line-height: 0.75rem;
 		display: block;
-	}
-	.p {
-
 	}
 	.t {
 		font-size: 0.95rem;

@@ -5,10 +5,16 @@
       "scss/*.scss"
     ],
     "rules": {
-      "scss_app": {
-        "output": "app.css",
+      "scss_grid": {
+        "output": "grid.css",
         "inputs": [
-          "scss/app.scss"
+          "scss/grid.scss"
+        ]
+      },
+      "scss_angle": {
+        "output": "angle.css",
+        "inputs": [
+          "scss/angle.scss"
         ]
       }
     }

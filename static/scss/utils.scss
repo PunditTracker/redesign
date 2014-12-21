@@ -62,4 +62,59 @@
     background: linear-gradient(to bottom, $v1_c $v1_p, $v2_c $v2_p, $v3_c $v3_p, $v4_c $v4_p, $v5_c $v5_p);
 }
 
+@mixin button($bg, $fg, $border: 0) {
+    background-color: $bg;
+    color: $fg;
+    width: auto;
+    display: inline-block;
+    border: $border;
+    padding: 0.5rem 1rem;
+    @include border-box;
 
+    &.hover {
+
+    }
+}
+
+@mixin angle($h, $w, $c, $z: auto) {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: $z;
+    &.left {
+        left:0;
+        border-top: $h solid $c;
+        border-right: $w solid transparent;
+    }
+    &.hang-left {
+        left: (-1 * $w);
+        border-bottom: $h solid $c;
+        border-left: $w solid transparent;
+    }
+    &.right {
+        right: 0;
+        border-bottom: $h solid $c;
+        border-left: $w solid transparent;
+    }
+    &.hang-right {
+        right: (-1 * $w);
+        border-top: $h solid $c;
+        border-right: $w solid transparent;
+    }
+}
+
+@mixin rotate($deg) {
+
+/* Safari */
+-webkit-transform: rotate($deg) translateX(2.5rem);
+
+/* Firefox */
+-moz-transform: rotate($deg) translateX(2.5rem);
+
+/* IE */
+-ms-transform: rotate($deg) translateX(2.5rem);
+
+/* Opera */
+-o-transform: rotate($deg) translateX(2.5rem);
+}

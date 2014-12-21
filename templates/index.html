@@ -1,138 +1,57 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros with context %}
 
 {%- block css -%}
 {{ super() }}
-{% assets "scss_app" %}
+{% assets "scss_grid" %}
 <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
 {% endassets %}
 {%- endblock -%}
 {%- block bodyJs -%}
 {{ super() }}
 <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<style type="text/css">
+div {
+	width: 20rem;
+	margin-left: -10rem;
+	position: absolute;
+	left: 50%;
+	list-style: none;
+	margin-top: 10rem;
+	text-align: center;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	padding: 1rem;
+}
+
+a  {
+	border: 1px solid black;
+	padding: 0.5rem 1rem;
+	transition: 0.2s ease all;
+}
+
+a:hover {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+</style>
 {%- endblock -%}
 
 
-{% set predictions = [
-    ('Rand Paul will get fewer primary votes in 2016 than his father got in 2012', 'Bill Kristol ', 'ABC: This Week', 'yellow'),
-    ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green'),
-    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'blue'),
-    ('NFL: Falcons to Win in Week 16 (ATL @ NO)', 'Pete Prisco', 'CBS', 'red'),
-    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'orange'),
-]%}
-
-{% macro prediction(class) %}
-{% with text, name, source, color = random(predictions) %}
-<div class="prediction v1 {{class}}">
-    <div class="background">
-        <div class="scrim"></div>
-    </div>
-    <h3 class="text">{{ text }}</h3>
-    <div class="pundit {{ color }}">
-        <div class="photo"></div>
-        <div class="text-wrapper">
-            <h5 class="name">{{ name }}</h5>
-            <h6 class="source">{{ source }}</h6>
-        </div>
-    </div>
-</div>
-{% endwith %}
-{% endmacro %}
-
-{% macro navbar() %}
-<div class="navbar">
-    <nav></nav>
-</div>
-{% endmacro %}
-
 {%- block body -%}
-{{ navbar() }}
-<div class="background">
-    <div class="hero-image" style="background-image:url({{ url_for('static', filename='img/hero.jpg') }});">
-        <div class="scrim"></div>
-    </div>
-</div>
-<div class="hero">
-    <div class="pure-g">
-        <div class="pure-u-1-2"></div>
-        <div class="pure-u-1-2 right">
-            {{ prediction('featured') }}
-        </div>
-    </div>
-</div>
-<div class="content">
-    <div class="pure-g card-grid">
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-2-3">
-            <div class="pure-g card-grid">
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-            </div>
-            <div class="pure-g card-grid">
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-            </div>
-        </div>
-        <div class="pure-u-1-3">{{ prediction('tall-2') }}</div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-2-3">{{ prediction('wide-2') }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-1-3">{{ prediction('tall-2') }}</div>
-        <div class="pure-u-2-3">
-            <div class="pure-g card-grid">
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-            </div>
-            <div class="pure-g card-grid">
-                <div class="pure-u-1">{{ prediction('wide-2') }}</div>
-            </div>
-        </div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-    </div>
-    <div class="with-image">
-        <div class="background" style="background-image:url({{ url_for('static', filename='img/callout.jpg') }});">
-            <div class="scrim"></div>
-        </div>
-        <div class="pure-g card-grid">
-            <div class="pure-u-2-3">{{ prediction('tall-2 wide-2 no-box featured') }}</div>
-            <div class="pure-u-1-3">
-                <div class="pure-g card-grid">
-                    <div class="pure-u-1">{{ prediction() }}</div>
-                </div>
-                <div class="pure-g card-grid">
-                    <div class="pure-u-1">{{ prediction() }}</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-        <div class="pure-u-1-3">{{ prediction() }}</div>
-    </div>
-    <div class="pure-g card-grid">
-        <div class="pure-u-2-3">
-            <div class="pure-g card-grid">
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-            </div>
-            <div class="pure-g card-grid">
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-                <div class="pure-u-1-2">{{ prediction() }}</div>
-            </div>
-        </div>
-        <div class="pure-u-1-3">{{ prediction('tall-2') }}</div>
-    </div>
-
+<div>
+	<h3>Designs</h3>
+	<ul>
+		<li><a href="/grid">Grid</a></li>
+		<li><a href="/angle">Angle</a></li>
+	</ul>
 </div>
 {%- endblock -%}

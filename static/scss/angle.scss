@@ -1,0 +1,323 @@
+@import 'base';
+@import 'angle_navbar';
+
+$hero-height: 25rem;
+$angle: 0.2;
+$prediction-width: 20rem;
+$prediction-height: 15rem;
+$set-title-width: 2rem;
+$prediction-space: 4rem;
+$prediction-vert-margin: 1rem;
+$prediction-set-height: ($prediction-height + 2 * $prediction-vert-margin);
+
+html, body {
+    background-color: $white;
+    position: relative;
+}
+
+.button {
+	@include button(rgba(0,0,0,0), $white, 1px solid $white);
+}
+
+.content {
+    z-index: 80;
+    width: 100%;
+    overflow-x: hidden;
+    max-width: $content-width;
+    margin: 0 auto;
+    width: 100%;
+    @include border-box;
+    position: relative;
+}
+
+.hero {
+	background-color: $red;
+	padding-top: $navbar-height;
+	padding-bottom: 1rem;
+    height: $hero-height;
+    .contain {
+	    position: relative;
+	    height: $hero-height;
+    }
+    .bg-image {
+    	height: $hero-height;
+    }
+    .angle {
+    	@include angle($hero-height, $hero-height * $angle, $red, 100)
+    }
+
+    &.inline {
+    	padding-top: 1rem;
+    	background-color: $yellow;
+    	.angle {
+	    	@include angle($hero-height, $hero-height * $angle, $yellow, 100)
+	    }
+    }
+}
+
+@mixin prediction-color($color) {
+	&.featured {
+		& > .angle {
+			@include angle($hero-height, $hero-height*$angle, $color, 100);
+		}
+	}
+	background-color: $color;
+	& > .angle {
+		@include angle($prediction-height, $prediction-height*$angle, $color, 100);
+	}
+
+	&.small > .angle {
+		@include angle(10rem, 10rem*$angle, $color, 100);
+	}
+
+	&.tall-2 > .angle {
+		@include angle(22rem, 22rem*$angle, $color, 100);
+	}
+}
+
+@mixin prediction-set-color($color) {
+	background-color: $color;
+	& > .angle {
+		@include angle($prediction-set-height, $prediction-set-height*$angle, $color, 100);
+	}
+}
+
+@mixin prediction-set-inner-color($color) {
+	& > .angle {
+		@include angle($prediction-set-height, $prediction-set-height*$angle, $color, 100);
+	}
+}
+
+i.bg-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+}
+
+
+.prediction {
+	position: relative;
+	display: inline-block;
+	width: $prediction-width;
+	height: $prediction-height;
+	padding-left: $prediction-height * $angle;
+	margin: $prediction-vert-margin 0;
+	@include border-box;
+	.pundit * {
+		display: inline;
+	}
+
+	// &.blue { @include prediction-color($blue); }
+	// &.red { @include prediction-color($red); }
+	// &.yellow { @include prediction-color($yellow); }
+	// &.green { @include prediction-color($green); }
+	// &.orange { @include prediction-color($orange); }
+
+	@include prediction-color($white);
+
+	&.featured {
+		position: absolute;
+		width: 50%;
+		@include prediction-color(rgba(255,255,255,0.3));
+		color: $white;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: 0;
+		height: $hero-height;
+		padding-right: ($hero-height*$angle);
+
+		.text {
+            @extend .h2;
+            text-shadow: 2px 2px 3px black;
+            bottom: 5rem;
+        }
+
+        .pundit {
+            background-color: rgba(0,0,0,0) !important;
+            .photo {
+                height: 3rem;
+                width: 3rem;
+                border-radius: 3rem;
+            }
+            .text-wrapper {
+                height: 5rem;
+                left: 4rem;
+                text-shadow: 2px 2px 3px black;
+            }
+            .name {
+                @extend .h3;
+                line-height: 1.25rem;
+                margin: 0;
+                text-shadow: 2px 2px 3px black;
+            }
+            .source {
+                @extend .h6;
+                margin: 1rem 0 0 ;
+            }
+        }
+	}
+
+	&.tall-2 {
+		height: 22rem;
+		width: 32rem;
+		left: 2rem;
+
+		.angle {
+			width: 0.5rem !important;
+		}
+	}
+
+	&.small {
+		height: 10rem;
+		width: 15rem;
+		padding-left: 1rem;
+
+		&.first-top {
+			left: 4.2rem;
+		}
+		&.second-top {
+			left: 2.2rem;
+		}
+		&.third-top {
+			left: 0.2rem;
+		}
+		&.first {
+			left: 2rem;
+		}
+		&.second {
+			left: 0;
+		}
+		&.third {
+			left: -2rem;
+		}
+
+		.text {
+			font-size: 1rem;
+			line-height: 1.2rem;
+		}
+
+		.text-wrapper {
+			display: inline-block;
+			margin-left: 1rem;
+		}
+
+		.name {
+			margin: 0;
+			display: block;
+			font-size: 1rem;
+		}
+		.source {
+			margin: 0;
+			display: block;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+
+.set-title {
+	width: $set-title-width;
+	height: $prediction-set-height;
+	position: absolute;
+	z-index: 1000;
+
+	&.blue { @include prediction-set-color($blue); }
+	&.red { @include prediction-set-color($red); }
+	&.yellow { @include prediction-set-color($yellow); }
+	&.green { @include prediction-set-color($green); }
+	&.orange { @include prediction-set-color($orange); }
+
+	.title {
+		position: absolute;
+		z-index: 2000;
+		height: 2rem;
+		top: 50%;
+		color: $white;
+		right: 0;
+		margin-top: -1rem;
+		-webkit-transform-origin: right;
+		@include rotate(-77deg);
+		font-size: 1.5rem;
+	}
+}
+.set-title-spacer {
+	width: $set-title-width;
+	height: $prediction-height;
+	display: relative;
+	display: inline-block;
+	float: left;
+}
+
+.prediction-set {
+	height: $prediction-set-height;
+	width: 100%;
+	padding: 1rem 0;
+	overflow-x: scroll;
+	list-style: none;
+	&.blue { @include prediction-set-color($blue); }
+	&.red { @include prediction-set-color($red); }
+	&.yellow { @include prediction-set-color($yellow); }
+	&.green { @include prediction-set-color($green); }
+	&.orange { @include prediction-set-color($orange); }
+	& > .angle {
+		width: 1rem !important;
+		top: 1rem !important;
+	}
+
+	& > .inner {
+		margin: 0;
+		padding: 0 1rem 0 0;
+		position: relative;
+		padding-right: ($prediction-set-height*$angle + $prediction-vert-margin);
+		height: $prediction-set-height;
+		background-color: $ultralightgray;
+		width: (4 * ($prediction-width + $prediction-space) + $set-title-width + 1rem);
+
+		&.blue { @include prediction-set-inner-color($blue); }
+		&.red { @include prediction-set-inner-color($red); }
+		&.yellow { @include prediction-set-inner-color($yellow); }
+		&.green { @include prediction-set-inner-color($green); }
+		&.orange { @include prediction-set-inner-color($orange); }
+	}
+
+
+	.prediction {
+		float: left;
+		margin-left: $prediction-space;
+	}
+}
+
+.strip {
+	&.blue { background-color: $blue; }
+	&.red { background-color: $red; }
+	&.yellow { background-color: $yellow; }
+	&.green { background-color: $green; }
+	&.orange { background-color: $orange; }
+}
+
+.triple {
+	background-color: $ultralightgray;
+	.content {
+		overflow: visible !important;
+	}
+}
+
+$pundit-height: 2rem;
+.photo {
+	background-image: url(../../img/profile.jpeg);
+	background-position: center center;
+	background-size: cover;
+	height: $pundit-height;
+	width: $pundit-height;
+	border-radius: ($pundit-height);
+	display: inline-block !important;
+}

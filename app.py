@@ -6,9 +6,20 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
-    return render_template('index.html',
+    return render_template('index.html')
+
+
+@app.route('/grid')
+def grid():
+    return render_template('grid.html',
+                           random=(lambda l: l[random.randint(0, len(l) - 1)]))
+
+
+@app.route('/angle')
+def angle():
+    return render_template('angle.html',
                            random=(lambda l: l[random.randint(0, len(l) - 1)]))
 
 
