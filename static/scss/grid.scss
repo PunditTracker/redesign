@@ -1,16 +1,18 @@
 @import 'base';
 @import 'navbar';
 
+$extension: 5rem;
 $card-grid-padding: 1.5rem;
-$hero-height: 25rem;
+$hero-height: 30rem;
 $prediction-height: 15rem;
 $prediction-padding: 1rem;
 $pundit-vertical-padding: 1rem;
 $pundit-height: 4rem;
 $hero-image-width: 100rem;
 $tall-2-height: (2 * $prediction-height + $card-grid-padding);
+$tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
 html, body {
-    background-color: $ultralightgray;
+    background-color: $verylightgray;
     position: relative;
 }
 
@@ -29,43 +31,71 @@ html, body {
     }
 }
 
-.hero {
-    height: $hero-height;
-    max-width: $content-width;
-    margin: 0 auto;
-    width: 95%;
-    padding: $navbar-height 0.75rem;
-    z-index: 100;
-    @include border-box;
+.blue { background-color: $blue; }
+.red { background-color: $red; }
+.yellow { background-color: $yellow; }
+.yellow-green { background-color: $yellow-green; }
+.green { background-color: $green; }
+.orange { background-color: $orange; }
 
-    .right {
-        z-index: 200;
+
+.hero {
+    @include transition(0.5s);
+    height: 80vh;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 100;
+    padding-top: $navbar-height + 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &.fixed {
+
+        height: $hero-height;
+        width: ($content-width + 2 * $extension);
+
+        &.done {
+            max-width: 95%;
+        }
+
+        .featured {
+            height: $hero-height;
+        }
+    }
+
+    & > .background {
+        box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
+        top: ($navbar-height + 2rem);
+        bottom: 2rem;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100%;
+        width: 100%;
+        overflow-x: hidden;
+
+    // .hero-image {
+    //     margin-top: $navbar-height;
+    //     background-repeat: no-repeat;
+    //     background-position: top right;
+    //     background-size: 100%;
+    //     position: absolute;
+    //     left: 50%;
+    //     height: ($hero-height);
+    //     overflow: hidden;
+    //     width: $hero-image-width;
+    //     margin-left: (-1 * $hero-image-width / 2);
+    //     z-index: 50;
+    //     @include border-box;
+
+    // }
+    .scrim {
+        @include scrim($BACKGROUND);
     }
 }
 
-
-body > .background {
-    position: absolute;
-    width: 100%;
-    height: ($navbar-height + $hero-height + ($prediction-height * 1.75));
-    overflow-x: hidden;
-
-    .hero-image {
-        margin-top: $navbar-height;
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 100%;
-        position: absolute;
-        left: 50%;
-        height: ($hero-height + ($prediction-height *1.75));
-        overflow: hidden;
-        width: $hero-image-width;
-        margin-left: (-1 * $hero-image-width / 2);
-        z-index: 50;
-        @include border-box;
-        .scrim {
-            @include scrim($BACKGROUND);
-        }
+    .right {
+        z-index: 200;
     }
 }
 .scrim {
@@ -127,20 +157,161 @@ body > .background {
     }
 }
 
+.faceoff-outer {
+    margin: 2rem 0;
+}
+
+.faceoff-wrapper {
+    color: white;
+    position: relative;
+    margin: 0 (-1 * $extension);
+    padding: 0 $extension;
+    box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
+    .question {
+        position: relative;
+        height: 4rem;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 5rem 0 0;
+        z-index: 500;
+        @extend .h2;
+        text-shadow: 2px 2px 3px black;
+    }
+    .background {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        background-image: url(../../img/football.jpg);
+
+        .scrim {
+            background-color: rgba(0,0,0, 0.15);
+        }
+    }
+}
+
+.featured-users, .featured-pundits {
+    height: $tall-3-2-height;
+    background-color: $white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    & > .title-wrapper {
+        @include border-box;
+        // background-color: $blue;
+        background-image: url(../../img/hero.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: ($tall-3-2-height - 4 * $pundit-height);
+        padding: 1rem;
+        position: relative;
+        & > .title {
+            position: absolute;
+            bottom: 1rem;
+            margin: 0;
+            color: white;
+            // text-shadow: 2px 2px 3px black;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .prediction {
     &.v1 {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
         z-index: 200;
         background-color: $white;
         padding: $prediction-padding;
+        padding-right: $pundit-height;
         height: $prediction-height;
         position: relative;
         @include border-box;
         .text {
             margin: 0;
         }
+        .bar {
+            position: absolute;
+            bottom: ($pundit-height - 0.5rem);
+            height: 0.5rem;
+            width: 100%;
+            left: 0;
+        }
+        &.faceoff {
+            background-color: rgba(0,0,0,0);
+            position: relative;
+            padding: 3rem;
+            text-shadow: 2px 2px 3px black;
+            .pundit {
+                border: 0;
+                top: 0;
+                position: relative;
+                background-color: rgba(0,0,0,0);
+                .text-wrapper {
+                    left: 0;
+                    color: $white;
+                }
+                .photo {
+                    height: 6rem;
+                    width: 6rem;
+                    border-radius: 6rem;
+                }
+                .name {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+                .source {
+                    font-size: 1.5rem;
+                }
+            }
+            .text {
+                margin-top: 2.5rem;
+            }
+            &.left {
+                .pundit {
+                    .photo {
+                        position: absolute;
+                        left: -7rem;
+                        top: -1rem;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            &.right {
+                .text {
+                    text-align: right;
+                }
+                .pundit {
+                    .photo {
+                        position: absolute;
+                        right: -7rem;
+                        top: -1rem;
+                    }
+                    .text-wrapper {
+                        left: auto;
+                        width: 100%;
+                        float: right;
+                        text-align: right;
+                    }
+                }
+            }
+        }
         &.tall-2 {
             color: white;
             height: $tall-2-height;
+            .prompt {
+                color: $white;
+            }
             .background {
                 background-image: url(../../img/vertical.jpg);
                 display: block;
@@ -148,6 +319,9 @@ body > .background {
 
             .pundit {
                 background-color: rgba(0,0,0,0) !important;
+                .text-wrapper, .voting {
+                    color: $white;
+                }
             }
 
             .text {
@@ -161,42 +335,38 @@ body > .background {
             }
         }
         &.featured {
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0,0,0,0.2);
             color: $white;
-            height: ($hero-height - $navbar-height - 1rem);
+            position: absolute;
+            bottom: 2rem;
+            width: 50%;
 
             .text {
-                @extend .h2;
+                @extend .h1;
                 text-shadow: 2px 2px 3px black;
                 position: absolute;
                 bottom: 5rem;
+                left: 1rem;
+                right: ($pundit-height + 1rem);
             }
 
             .pundit {
                 background-color: rgba(0,0,0,0) !important;
-                bottom: 1rem;
-                .photo {
-                    height: 3rem;
-                    width: 3rem;
-                    border-radius: 3rem;
-                }
+                bottom: 0;
                 .text-wrapper {
                     height: 5rem;
+                    color: $white;
                     left: 4rem;
                     text-shadow: 2px 2px 3px black;
                 }
-                .name {
-                    @extend .h3;
-                    line-height: 1.25rem;
-                    margin: 0;
+                .name, .source {
                     text-shadow: 2px 2px 3px black;
                 }
-                .source {
-                    @extend .h6;
-                    margin: 1rem 0 0 ;
-                }
-
                 .voting {
+                    .prompt {
+                        color: white;
+                        text-shadow: 2px 2px 3px black;
+                    }
                     .label {
                         display: inline-block;
                         font-size: 1.2rem;
@@ -240,89 +410,226 @@ body > .background {
             height: 100%;
         }
         .pundit {
-            height: $pundit-height;
-            width: 100%;
             position: absolute;
             bottom: 0;
             left: 0;
-            z-index: 300;
-            @include border-box;
-
-            &.blue { background-color: $blue; }
-            &.red { background-color: $red; }
-            &.yellow { background-color: $yellow; }
-            &.green { background-color: $green; }
-            &.orange { background-color: $orange; }
-
-
-            .photo {
-                background-image: url(../../img/profile.jpeg);
-                background-position: center center;
-                background-size: cover;
-                height: ($pundit-height - 2 * $pundit-vertical-padding);
-                width: ($pundit-height - 2 * $pundit-vertical-padding);
-                border-radius: ($pundit-height - 2 * $pundit-vertical-padding);
-                margin: $pundit-vertical-padding;
-                margin-left: $prediction-padding;
-                display: inline-block;
-            }
-            .text-wrapper {
-                @include border-box;
-                position: absolute;
-                padding: $pundit-vertical-padding;
-                top: 0;
-                left: ($pundit-height - 2 * $pundit-vertical-padding + $prediction-padding);
-                height: $pundit-height;
-                color: white;
-                .name {
-                    margin:0;
-                }
-                .source {
-                    margin: 0.25rem 0 0;
-                }
-            }
-            .voting {
-                color: $white;
-                height: ($pundit-height/2);
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 3rem;
-
-                .label {
-                    display: none;
-                }
-
-                .up, .down {
-                    border-left: 1px solid $white;
-                    position: absolute;
-                    right: 0;
-                    padding: 0 $prediction-padding;
-                    height: ($pundit-height / 2);
-                    line-height: ($pundit-height / 3);
-                    font-size: 1.5rem;
-                    @include border-box;
-                    @include transition(0.2s);
-
-                    &:hover {
-                        background-color: rgba(0,0,0,0.2);
-                    }
-                }
-
-                .up {
-                    top: 0;
-                    vertical-align: bottom;
-                    padding-top: ($pundit-height / 18);
-                }
-                .down {
-                    vertical-align: top;
-                    top: ($pundit-height / 2);
-                    padding-top: ($pundit-height / 18);
-                }
-            }
         }
         .scrim {
             @include scrim(50);
         }
     }
 }
+
+.pundit {
+    position: relative;
+    height: $pundit-height;
+    background-color: $ultralightgray;
+    width: 100%;
+    color: $black;
+    z-index: 300;
+    @include border-box;
+
+    .photo > .grade {
+        position: absolute;
+        display: block;
+        top: $pundit-height;
+
+
+        .average {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 1rem;
+            left: 0;
+            bottom: 0;
+            @include transition(0.2s);
+        }
+        .letter {
+            top: -0.5rem;
+        }
+
+        &:hover {
+            .letter {
+                top: -0.5rem;
+            }
+            .average {
+                bottom: 0;
+            }
+        }
+    }
+
+    .grade {
+        position: relative;
+        height: $pundit-height;
+        width: $pundit-height;
+        color: $white;
+        text-align: center;
+        overflow: hidden;
+        @include transition(0.2s);
+
+        .letter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            @include transition(0.2s);
+            font-size: 1.5rem;
+            line-height: $pundit-height;
+            vertical-align: middle;
+        }
+
+
+    }
+
+
+    .photo {
+        background-image: url(../../img/profile.jpeg);
+        background-position: center center;
+        background-size: cover;
+        height: $pundit-height;
+        width: $pundit-height;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+    &:hover {
+        .grade {
+            top: 0;
+        }
+    }
+    .text-wrapper {
+        @include border-box;
+        position: absolute;
+        padding: $pundit-vertical-padding;
+        top: 0;
+        left: ($pundit-height - 2 * $pundit-vertical-padding +  2 * $prediction-padding);
+        height: $pundit-height;
+        color: $black;
+        .name {
+            margin:0;
+        }
+        .source {
+            margin: 0.25rem 0 0;
+        }
+    }
+    .voting {
+        z-index: 1000;
+        height: $pundit-height;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: $pundit-height;
+        @include transition(0.2s);
+
+
+        .prompt {
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 0;
+            font-size: 0.8rem;
+            line-height: $pundit-height;
+            height: $pundit-height;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+            color: $black;
+        }
+        .options {
+            height: ($prediction-height - $pundit-height);
+            width: $pundit-height;
+            position: absolute;
+            bottom: $pundit-height;
+            right: 0;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 3000;
+            @include transition(0.2s);
+            li {
+                height: (($prediction-height - $pundit-height)/4);
+                width: $pundit-height;
+                .letter {
+                    line-height: (($prediction-height - $pundit-height)/4);
+                }
+            }
+        }
+        &:hover {
+            height: (5 * $pundit-height);
+        }
+
+        .label {
+            display: none;
+        }
+
+        .up, .down {
+            border-left: 1px solid $white;
+            position: absolute;
+            right: 0;
+            padding: 0 $prediction-padding;
+            height: ($pundit-height / 2);
+            line-height: ($pundit-height / 3);
+            font-size: 1.5rem;
+            @include border-box;
+            @include transition(0.2s);
+
+            &:hover {
+                background-color: rgba(0,0,0,0.2);
+            }
+        }
+
+        .up {
+            top: 0;
+            vertical-align: bottom;
+            padding-top: ($pundit-height / 18);
+        }
+        .down {
+            vertical-align: top;
+            top: ($pundit-height / 2);
+            padding-top: ($pundit-height / 18);
+        }
+    }
+}
+
+.category-link {
+    background-color: $blue;
+    color: $white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    z-index: 200;
+    padding: $prediction-padding;
+    height: $prediction-height;
+    @include border-box;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../../img/hero.jpg);
+    h2 {
+        position: absolute;
+        right: 1rem;
+        left: 1rem;
+        text-shadow: 2px 2px 3px black;
+        z-index: 1000;
+        line-height: 3rem;
+        margin: 0;
+
+        & + a h2 {
+            bottom: 1rem;
+            text-decoration: underline !important;
+        }
+        & + a i {
+            text-decoration: underline !important;
+
+        }
+    }
+
+    .scrim {
+        @include scrim(50);
+    }
+}
+
+.full {
+    height: 80vh;
+}
+

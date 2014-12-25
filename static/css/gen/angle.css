@@ -573,25 +573,25 @@ html, body {
 .hero .angle.left {
   left: 0;
   border-top: 25rem solid #e54236;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.hang-left {
-  left: -5rem;
+  left: -2.5rem;
   border-bottom: 25rem solid #e54236;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.right {
   right: 0;
   border-bottom: 25rem solid #e54236;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.hang-right {
-  right: -5rem;
+  right: -2.5rem;
   border-top: 25rem solid #e54236;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 49 */
 .hero.inline {
@@ -610,25 +610,25 @@ html, body {
 .hero.inline .angle.left {
   left: 0;
   border-top: 25rem solid #f4bb15;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.hang-left {
-  left: -5rem;
+  left: -2.5rem;
   border-bottom: 25rem solid #f4bb15;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.right {
   right: 0;
   border-bottom: 25rem solid #f4bb15;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.hang-right {
-  right: -5rem;
+  right: -2.5rem;
   border-top: 25rem solid #f4bb15;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 
 /* line 91 */
@@ -651,7 +651,7 @@ i.bg-image {
   display: inline-block;
   width: 20rem;
   height: 15rem;
-  padding-left: 3rem;
+  padding-left: 1.5rem;
   margin: 1rem 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -674,25 +674,25 @@ i.bg-image {
 .prediction.featured > .angle.left {
   left: 0;
   border-top: 25rem solid white;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-left {
-  left: -5rem;
+  left: -2.5rem;
   border-bottom: 25rem solid white;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.right {
   right: 0;
   border-bottom: 25rem solid white;
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-right {
-  right: -5rem;
+  right: -2.5rem;
   border-top: 25rem solid white;
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 65 */
 .prediction > .angle {
@@ -706,25 +706,25 @@ i.bg-image {
 .prediction > .angle.left {
   left: 0;
   border-top: 15rem solid white;
-  border-right: 3rem solid transparent;
+  border-right: 1.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.hang-left {
-  left: -3rem;
+  left: -1.5rem;
   border-bottom: 15rem solid white;
-  border-left: 3rem solid transparent;
+  border-left: 1.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.right {
   right: 0;
   border-bottom: 15rem solid white;
-  border-left: 3rem solid transparent;
+  border-left: 1.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.hang-right {
-  right: -3rem;
+  right: -1.5rem;
   border-top: 15rem solid white;
-  border-right: 3rem solid transparent;
+  border-right: 1.5rem solid transparent;
 }
 /* line 69 */
 .prediction.small > .angle {
@@ -738,25 +738,25 @@ i.bg-image {
 .prediction.small > .angle.left {
   left: 0;
   border-top: 10rem solid white;
-  border-right: 2rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.hang-left {
-  left: -2rem;
+  left: -1rem;
   border-bottom: 10rem solid white;
-  border-left: 2rem solid transparent;
+  border-left: 1rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.right {
   right: 0;
   border-bottom: 10rem solid white;
-  border-left: 2rem solid transparent;
+  border-left: 1rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.hang-right {
-  right: -2rem;
+  right: -1rem;
   border-top: 10rem solid white;
-  border-right: 2rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 /* line 73 */
 .prediction.tall-2 > .angle {
@@ -770,25 +770,25 @@ i.bg-image {
 .prediction.tall-2 > .angle.left {
   left: 0;
   border-top: 22rem solid white;
-  border-right: 4.4rem solid transparent;
+  border-right: 2.2rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.hang-left {
-  left: -4.4rem;
+  left: -2.2rem;
   border-bottom: 22rem solid white;
-  border-left: 4.4rem solid transparent;
+  border-left: 2.2rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.right {
   right: 0;
   border-bottom: 22rem solid white;
-  border-left: 4.4rem solid transparent;
+  border-left: 2.2rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.hang-right {
-  right: -4.4rem;
+  right: -2.2rem;
   border-top: 22rem solid white;
-  border-right: 4.4rem solid transparent;
+  border-right: 2.2rem solid transparent;
 }
 /* line 126 */
 .prediction.featured {
@@ -801,7 +801,7 @@ i.bg-image {
   bottom: 0;
   margin: 0;
   height: 25rem;
-  padding-right: 5rem;
+  padding-right: 2.5rem;
 }
 /* line 60 */
 .prediction.featured.featured > .angle {
@@ -815,25 +815,25 @@ i.bg-image {
 .prediction.featured.featured > .angle.left {
   left: 0;
   border-top: 25rem solid rgba(255, 255, 255, 0.3);
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.hang-left {
-  left: -5rem;
+  left: -2.5rem;
   border-bottom: 25rem solid rgba(255, 255, 255, 0.3);
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.right {
   right: 0;
   border-bottom: 25rem solid rgba(255, 255, 255, 0.3);
-  border-left: 5rem solid transparent;
+  border-left: 2.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.hang-right {
-  right: -5rem;
+  right: -2.5rem;
   border-top: 25rem solid rgba(255, 255, 255, 0.3);
-  border-right: 5rem solid transparent;
+  border-right: 2.5rem solid transparent;
 }
 /* line 65 */
 .prediction.featured > .angle {
@@ -847,25 +847,25 @@ i.bg-image {
 .prediction.featured > .angle.left {
   left: 0;
   border-top: 15rem solid rgba(255, 255, 255, 0.3);
-  border-right: 3rem solid transparent;
+  border-right: 1.5rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-left {
-  left: -3rem;
+  left: -1.5rem;
   border-bottom: 15rem solid rgba(255, 255, 255, 0.3);
-  border-left: 3rem solid transparent;
+  border-left: 1.5rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.right {
   right: 0;
   border-bottom: 15rem solid rgba(255, 255, 255, 0.3);
-  border-left: 3rem solid transparent;
+  border-left: 1.5rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-right {
-  right: -3rem;
+  right: -1.5rem;
   border-top: 15rem solid rgba(255, 255, 255, 0.3);
-  border-right: 3rem solid transparent;
+  border-right: 1.5rem solid transparent;
 }
 /* line 69 */
 .prediction.featured.small > .angle {
@@ -879,25 +879,25 @@ i.bg-image {
 .prediction.featured.small > .angle.left {
   left: 0;
   border-top: 10rem solid rgba(255, 255, 255, 0.3);
-  border-right: 2rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.hang-left {
-  left: -2rem;
+  left: -1rem;
   border-bottom: 10rem solid rgba(255, 255, 255, 0.3);
-  border-left: 2rem solid transparent;
+  border-left: 1rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.right {
   right: 0;
   border-bottom: 10rem solid rgba(255, 255, 255, 0.3);
-  border-left: 2rem solid transparent;
+  border-left: 1rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.hang-right {
-  right: -2rem;
+  right: -1rem;
   border-top: 10rem solid rgba(255, 255, 255, 0.3);
-  border-right: 2rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 /* line 73 */
 .prediction.featured.tall-2 > .angle {
@@ -911,25 +911,25 @@ i.bg-image {
 .prediction.featured.tall-2 > .angle.left {
   left: 0;
   border-top: 22rem solid rgba(255, 255, 255, 0.3);
-  border-right: 4.4rem solid transparent;
+  border-right: 2.2rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.hang-left {
-  left: -4.4rem;
+  left: -2.2rem;
   border-bottom: 22rem solid rgba(255, 255, 255, 0.3);
-  border-left: 4.4rem solid transparent;
+  border-left: 2.2rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.right {
   right: 0;
   border-bottom: 22rem solid rgba(255, 255, 255, 0.3);
-  border-left: 4.4rem solid transparent;
+  border-left: 2.2rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.hang-right {
-  right: -4.4rem;
+  right: -2.2rem;
   border-top: 22rem solid rgba(255, 255, 255, 0.3);
-  border-right: 4.4rem solid transparent;
+  border-right: 2.2rem solid transparent;
 }
 /* line 138 */
 .prediction.featured .text {
@@ -1048,25 +1048,25 @@ i.bg-image {
 .set-title.blue > .angle.left {
   left: 0;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.right {
   right: 0;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 234 */
 .set-title.red {
@@ -1084,25 +1084,25 @@ i.bg-image {
 .set-title.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 235 */
 .set-title.yellow {
@@ -1120,25 +1120,25 @@ i.bg-image {
 .set-title.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 236 */
 .set-title.green {
@@ -1156,25 +1156,25 @@ i.bg-image {
 .set-title.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 237 */
 .set-title.orange {
@@ -1192,25 +1192,25 @@ i.bg-image {
 .set-title.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 239 */
 .set-title .title {
@@ -1266,25 +1266,25 @@ i.bg-image {
 .prediction-set.blue > .angle.left {
   left: 0;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.right {
   right: 0;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 267 */
 .prediction-set.red {
@@ -1302,25 +1302,25 @@ i.bg-image {
 .prediction-set.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 268 */
 .prediction-set.yellow {
@@ -1338,25 +1338,25 @@ i.bg-image {
 .prediction-set.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 269 */
 .prediction-set.green {
@@ -1374,25 +1374,25 @@ i.bg-image {
 .prediction-set.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 270 */
 .prediction-set.orange {
@@ -1410,25 +1410,25 @@ i.bg-image {
 .prediction-set.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 271 */
 .prediction-set > .angle {
@@ -1440,7 +1440,7 @@ i.bg-image {
   margin: 0;
   padding: 0 1rem 0 0;
   position: relative;
-  padding-right: 4.4rem;
+  padding-right: 2.7rem;
   height: 17rem;
   background-color: #ddd;
   width: 99rem;
@@ -1457,25 +1457,25 @@ i.bg-image {
 .prediction-set > .inner.blue > .angle.left {
   left: 0;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.right {
   right: 0;
   border-bottom: 17rem solid #2a81c4;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #2a81c4;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 86 */
 .prediction-set > .inner.red > .angle {
@@ -1489,25 +1489,25 @@ i.bg-image {
 .prediction-set > .inner.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #e54236;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 86 */
 .prediction-set > .inner.yellow > .angle {
@@ -1521,25 +1521,25 @@ i.bg-image {
 .prediction-set > .inner.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #f4bb15;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 86 */
 .prediction-set > .inner.green > .angle {
@@ -1553,25 +1553,25 @@ i.bg-image {
 .prediction-set > .inner.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #039b67;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 86 */
 .prediction-set > .inner.orange > .angle {
@@ -1585,25 +1585,25 @@ i.bg-image {
 .prediction-set > .inner.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.hang-left {
-  left: -3.4rem;
+  left: -1.7rem;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
-  border-left: 3.4rem solid transparent;
+  border-left: 1.7rem solid transparent;
 }
 /* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.hang-right {
-  right: -3.4rem;
+  right: -1.7rem;
   border-top: 17rem solid #d79003;
-  border-right: 3.4rem solid transparent;
+  border-right: 1.7rem solid transparent;
 }
 /* line 293 */
 .prediction-set .prediction {

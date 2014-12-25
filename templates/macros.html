@@ -1,34 +1,162 @@
 
 {% set predictions = [
-    ('Rand Paul will get fewer primary votes in 2016 than his father got in 2012', 'Bill Kristol ', 'ABC: This Week', 'yellow', 'Politics'),
-    ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green', 'Finance'),
-    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'blue', 'Sports'),
-    ('NFL: Falcons to Win in Week 16 (ATL @ NO)', 'Pete Prisco', 'CBS', 'red', 'Tech'),
-    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'orange', 'Media'),
+    ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green', 'Finance', 'A+'),
+    ('Rand Paul will get fewer primary votes in 2016 than his father got in 2012', 'Bill Kristol ', 'ABC: This Week', 'yellow', 'Politics', 'B'),
+    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'yellow-green', 'Sports', 'C-'),
+    ('NFL: Falcons to Win in Week 16 (ATL @ NO)', 'Pete Prisco', 'CBS', 'red', 'Tech', 'F'),
+    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'orange', 'Media', 'D+'),
+]%}
+{% set faceoffs = [
+    ('Who is going to take the superbowl?', 'The Patriots will win the superbowl 21-10.', 'Pete Prisco', 'CBS', 'The Broncos will beat the Patriots 14-7.', 'Bill Bigsby', 'FoxSPORTS', 'NFL')
 ]%}
 
+{% set cats = [
+    'http://placekitten.com/800/250',
+    'http://placekitten.com/800/400',
+    'http://placekitten.com/300/350',
+    'http://placekitten.com/300/500',
+    'http://placekitten.com/400/450',
+    'http://placekitten.com/400/600',
+    'http://placekitten.com/500/600',
+    'http://placekitten.com/500/700',
+    'http://placekitten.com/600/700',
+    'http://placekitten.com/600/800'
+]%}
+
+{% macro category_link() %}
+<div class="category-link">
+    <div class="scrim"></div>
+    <h2>The best finance predictions.</h2>
+    <a href="#/finance"><h2>Finance Hub <i class="fa fa-long-arrow-right "></i></h2></a>
+</div>
+{% endmacro %}
+
 {% macro prediction(class) %}
-{% with text, name, source, color, _ = random(predictions) %}
+{% with text, name, source, color, _, grade = random(predictions) %}
 <div class="prediction v1 {{class}}">
     <div class="background">
         <div class="scrim"></div>
     </div>
     <h3 class="text">{{ text }}</h3>
-    <div class="pundit {{ color }}">
-        <div class="photo"></div>
-        <div class="text-wrapper">
-            <h5 class="name">{{ name }}</h5>
-            <h6 class="source">{{ source }}</h6>
+    <!-- <div class="bar {{color}}"></div> -->
+    {{ pundit(name, source, color, grade) }}
+</div>
+{% endwith %}
+{% endmacro %}
+
+{% macro pundit(name, source, color, grade, tag='div', voting=True) %}
+<{{tag}} class="pundit {{color}}">
+    <div class="photo">
+        <div class="grade {{ color }}">
+            <span class="letter">{{ grade}}</span>
+            <span class="average">Average</span>
         </div>
-        <div class="voting">
-            <a href="#" class="up">
-                <span class="label">Likely</span>
-                <i class="  fa fa-chevron-up"></i>
-            </a>
-            <a href="#" class="down">
-                <span class="label">Unlikely</span>
-                <i class="fa fa-chevron-down"></i>
-            </a>
+    </div>
+    <div class="text-wrapper">
+        <a href="#/pundit/{{name}}">
+            <h5 class="name">{{ name }}</h5>
+        </a>
+        <a href="#/source/{{source}}">
+            <h6 class="source">{{ source }}</h6>
+        </a>
+    </div>
+    {% if voting %}
+    <div class="voting">
+        <div class="prompt">
+            <p><i class="fa fa-bar-chart"></i></p>
+        </div>
+        <ul class="options">
+            <li class="grade green">
+                <a href="#">
+                    <span class="letter">A</span>
+                </a>
+            </li>
+            <li class="grade yellow">
+                <a href="#">
+                    <span class="letter">B</span>
+                </a>
+            </li>
+            <li class="grade orange">
+                <a href="#">
+                    <span class="letter">C</span>
+                </a>
+            </li>
+            <li class="grade red">
+                <a href="#">
+                    <span class="letter">F</span>
+                </a>
+            </li>
+        </ul>
+        <!-- <a href="#" class="up">
+            <span class="label">Likely</span>
+            <i class="  fa fa-chevron-up"></i>
+        </a>
+        <a href="#" class="down">
+            <span class="label">Unlikely</span>
+            <i class="fa fa-chevron-down"></i>
+        </a> -->
+    </div>
+    {% endif %}
+</{{tag}}>
+{% endmacro %}
+
+{% macro featured_pundits() %}
+<div class="featured-pundits tall-3-2">
+    <div class="title-wrapper">
+        <h2 class="title">Featured Pundits</h2>
+    </div>
+    <ul>
+        {% for _, name, source, color, _, grade in predictions[:4] %}
+        {{ pundit(name, source, color, grade, 'li', False) }}
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro featured_users() %}
+<div class="featured-pundits tall-3-2">
+    <div class="title-wrapper">
+        <h2 class="title">Featured Users</h2>
+    </div>
+    <ul>
+        {% for _, name, source, color, _, grade in predictions[:4] %}
+        {{ pundit(name, source, color, grade, 'li', False) }}
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro faceoff() %}
+{% with question, text1, name1, source1, text2, name2, source2, category = random(faceoffs) %}
+<div class="faceoff-wrapper">
+    <div class="background">
+        <div class="scrim"></div>
+    </div>
+    <h3 class="question">{{ question }}</h3>
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+            <div class="prediction v1 faceoff left">
+                <div class="pundit">
+                    <div class="photo"></div>
+                    <div class="text-wrapper">
+                        <h5 class="name">{{ name1 }}</h5>
+                        <h6 class="source">{{ source1 }}</h6>
+                    </div>
+                </div>
+                <h3 class="text">{{ text1 }}</h3>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="prediction v1 faceoff right">
+                <div class="pundit">
+                    <div class="photo"></div>
+                    <div class="text-wrapper">
+                        <h5 class="name">{{ name2 }}</h5>
+                        <h6 class="source">{{ source2 }}</h6>
+                    </div>
+                </div>
+                <h3 class="text">{{ text2 }}</h3>
+            </div>
         </div>
     </div>
 </div>
@@ -36,8 +164,8 @@
 {% endmacro %}
 
 {% macro angle_prediction(class) %}
-{% with text, name, source, color, _ = random(predictions) %}
-<div class="prediction v1 {{class}} {{color}}">
+{% with text, name, source, color, _, grade = random(predictions) %}
+<div class="prediction v1 {{class}}">
     <span class="angle hang-left"></span>
     <div class="background">
         <div class="scrim"></div>
@@ -65,7 +193,7 @@
                     <span class="p">Pundit</span><br><span class="t">Tracker</span>
                 </div>
                 <ul class="categories">
-                    {% for _, _, _, color, category in predictions %}
+                    {% for _, _, _, color, category, _ in predictions %}
                         <li>
                             <a href="#" data-color="{{color}}">{{ category }}</a>
                         </li>
@@ -89,7 +217,7 @@
                     <span class="p">Pundit</span><br><span class="t">Tracker</span>
                 </div>
                 <ul class="categories">
-                    {% for _, _, _, color, category in predictions %}
+                    {% for _, _, _, color, category, _ in predictions %}
                         <li>
                             <a href="#" data-color="{{color}}">{{ category }}</a>
                         </li>
