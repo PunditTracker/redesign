@@ -40,7 +40,6 @@ html, body {
 
 
 .hero {
-    @include transition(0.5s);
     height: 80vh;
     margin: 0 auto;
     width: 100%;
@@ -74,21 +73,6 @@ html, body {
         width: 100%;
         overflow-x: hidden;
 
-    // .hero-image {
-    //     margin-top: $navbar-height;
-    //     background-repeat: no-repeat;
-    //     background-position: top right;
-    //     background-size: 100%;
-    //     position: absolute;
-    //     left: 50%;
-    //     height: ($hero-height);
-    //     overflow: hidden;
-    //     width: $hero-image-width;
-    //     margin-left: (-1 * $hero-image-width / 2);
-    //     z-index: 50;
-    //     @include border-box;
-
-    // }
     .scrim {
         @include scrim($BACKGROUND);
     }
@@ -163,11 +147,27 @@ html, body {
 
 .faceoff-wrapper {
     color: white;
+    .background {
+        background-image: url(../../img/football.jpg);
+    }
+}
+
+.set-wrapper {
+    .background {
+        background-image: url(../../img/hero.jpg);
+    }
+    .card-grid {
+        padding: 2rem 0 5rem;
+    }
+}
+
+.faceoff-wrapper, .set-wrapper {
     position: relative;
     margin: 0 (-1 * $extension);
     padding: 0 $extension;
     box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
     .question {
+        color: $white;
         position: relative;
         height: 4rem;
         text-align: center;
@@ -186,7 +186,6 @@ html, body {
         top:0;
         left:0;
         height: 100%;
-        background-image: url(../../img/football.jpg);
 
         .scrim {
             background-color: rgba(0,0,0, 0.15);
@@ -252,7 +251,7 @@ html, body {
             position: relative;
             padding: 3rem;
             text-shadow: 2px 2px 3px black;
-            .pundit {
+            & > .pundit {
                 border: 0;
                 top: 0;
                 position: relative;
@@ -274,7 +273,7 @@ html, body {
                     font-size: 1.5rem;
                 }
             }
-            .text {
+            & > .text {
                 margin-top: 2.5rem;
             }
             &.left {

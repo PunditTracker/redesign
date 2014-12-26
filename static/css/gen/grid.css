@@ -48,7 +48,7 @@
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
 /* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -62,7 +62,7 @@ body, html {
 /* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, label {
   margin-bottom: 0.3125rem;
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 2rem;
@@ -119,30 +119,30 @@ input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholde
 
 /* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .prediction.v1.featured .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Roboto Slab", Georgia, serif;
   font-size: 3rem;
   line-height: 4rem;
 }
 
 /* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .prediction.v1.tall-2 .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 3rem;
 }
 
 /* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4, .logo {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -152,7 +152,7 @@ h4, .h4, .logo {
 
 /* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1rem;
@@ -161,7 +161,7 @@ h5, .h5 {
 
 /* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -247,7 +247,7 @@ h6, .h6 {
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
 /* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -261,7 +261,7 @@ body, html {
 /* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, label {
   margin-bottom: 0.3125rem;
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 2rem;
@@ -318,30 +318,30 @@ input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholde
 
 /* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .prediction.v1.featured .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Roboto Slab", Georgia, serif;
   font-size: 3rem;
   line-height: 4rem;
 }
 
 /* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .prediction.v1.tall-2 .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 3rem;
 }
 
 /* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4, .logo {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -351,7 +351,7 @@ h4, .h4, .logo {
 
 /* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1rem;
@@ -360,7 +360,7 @@ h5, .h5 {
 
 /* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -524,10 +524,6 @@ html, body {
 
 /* line 42 */
 .hero {
-  -webkit-transition: 0.5s 0 ease all;
-  -moz-transition: 0.5s 0 ease all;
-  -o-transition: 0.5s 0 ease all;
-  transition: 0.5s 0 ease all;
   height: 80vh;
   margin: 0 auto;
   width: 100%;
@@ -536,20 +532,20 @@ html, body {
   padding-bottom: 2rem;
   position: relative;
 }
-/* line 52 */
+/* line 51 */
 .hero.fixed {
   height: 30rem;
   width: 75rem;
 }
-/* line 57 */
+/* line 56 */
 .hero.fixed.done {
   max-width: 95%;
 }
-/* line 61 */
+/* line 60 */
 .hero.fixed .featured {
   height: 30rem;
 }
-/* line 66 */
+/* line 65 */
 .hero > .background {
   box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
   top: 6rem;
@@ -561,7 +557,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 92 */
+/* line 76 */
 .hero > .background .scrim {
   background: -moz-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(221, 221, 221, 0)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd), color-stop(100% #dddddd));
@@ -570,12 +566,12 @@ html, body {
   background: -ms-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
 }
-/* line 97 */
+/* line 81 */
 .hero .right {
   z-index: 200;
 }
 
-/* line 101 */
+/* line 85 */
 .scrim {
   height: 100%;
   width: 100%;
@@ -585,49 +581,49 @@ html, body {
   z-index: 60;
 }
 
-/* line 109 */
+/* line 93 */
 .card-grid {
   max-width: 65rem;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-/* line 113 */
+/* line 97 */
 .card-grid > div {
   padding: 0 0.75rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 118 */
+/* line 102 */
 .card-grid .card-grid {
   z-index: 200;
   width: 100%;
 }
-/* line 121 */
+/* line 105 */
 .card-grid .card-grid:last-child {
   margin: 0;
 }
-/* line 124 */
+/* line 108 */
 .card-grid .card-grid > div {
   padding: 0;
 }
-/* line 126 */
+/* line 110 */
 .card-grid .card-grid > div:not(:last-child) {
   padding-right: 0.75rem;
 }
-/* line 129 */
+/* line 113 */
 .card-grid .card-grid > div:not(:first-child) {
   padding-left: 0.75rem;
 }
 
-/* line 136 */
+/* line 120 */
 .with-image {
   position: relative;
   max-width: 65rem;
   width: 95%;
   margin: 0 auto;
 }
-/* line 142 */
+/* line 126 */
 .with-image .background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -640,7 +636,7 @@ html, body {
   width: 100rem;
   margin-left: -50rem;
 }
-/* line 154 */
+/* line 138 */
 .with-image .background .scrim {
   background: -moz-linear-gradient(top, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(20%, rgba(221, 221, 221, 0.25)), color-stop(50%, rgba(221, 221, 221, 0.01)), color-stop(70% rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd));
@@ -650,21 +646,39 @@ html, body {
   background: linear-gradient(to bottom, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
 }
 
-/* line 160 */
+/* line 144 */
 .faceoff-outer {
   margin: 2rem 0;
 }
 
-/* line 164 */
+/* line 148 */
 .faceoff-wrapper {
   color: white;
+}
+/* line 150 */
+.faceoff-wrapper .background {
+  background-image: url(../../img/football.jpg);
+}
+
+/* line 156 */
+.set-wrapper .background {
+  background-image: url(../../img/hero.jpg);
+}
+/* line 159 */
+.set-wrapper .card-grid {
+  padding: 2rem 0 5rem;
+}
+
+/* line 164 */
+.faceoff-wrapper, .set-wrapper {
   position: relative;
   margin: 0 -5rem;
   padding: 0 5rem;
   box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
 }
-/* line 170 */
-.faceoff-wrapper .question {
+/* line 169 */
+.faceoff-wrapper .question, .set-wrapper .question {
+  color: white;
   position: relative;
   height: 4rem;
   text-align: center;
@@ -675,7 +689,7 @@ html, body {
   text-shadow: 2px 2px 3px black;
 }
 /* line 181 */
-.faceoff-wrapper .background {
+.faceoff-wrapper .background, .set-wrapper .background {
   width: 100%;
   background-position: center center;
   background-size: cover;
@@ -683,20 +697,19 @@ html, body {
   top: 0;
   left: 0;
   height: 100%;
-  background-image: url(../../img/football.jpg);
 }
-/* line 191 */
-.faceoff-wrapper .background .scrim {
+/* line 190 */
+.faceoff-wrapper .background .scrim, .set-wrapper .background .scrim {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 197 */
+/* line 196 */
 .featured-users, .featured-pundits {
   height: 23.25rem;
   background-color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
 }
-/* line 201 */
+/* line 200 */
 .featured-users > .title-wrapper, .featured-pundits > .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -709,21 +722,21 @@ html, body {
   padding: 1rem;
   position: relative;
 }
-/* line 211 */
+/* line 210 */
 .featured-users > .title-wrapper > .title, .featured-pundits > .title-wrapper > .title {
   position: absolute;
   bottom: 1rem;
   margin: 0;
   color: white;
 }
-/* line 220 */
+/* line 219 */
 .featured-users ul, .featured-pundits ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 228 */
+/* line 227 */
 .prediction.v1 {
   background-position: center center;
   background-size: cover;
@@ -739,11 +752,11 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 240 */
+/* line 239 */
 .prediction.v1 .text {
   margin: 0;
 }
-/* line 243 */
+/* line 242 */
 .prediction.v1 .bar {
   position: absolute;
   bottom: 3.5rem;
@@ -751,101 +764,101 @@ html, body {
   width: 100%;
   left: 0;
 }
-/* line 250 */
+/* line 249 */
 .prediction.v1.faceoff {
   background-color: transparent;
   position: relative;
   padding: 3rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 255 */
-.prediction.v1.faceoff .pundit {
+/* line 254 */
+.prediction.v1.faceoff > .pundit {
   border: 0;
   top: 0;
   position: relative;
   background-color: transparent;
 }
-/* line 260 */
-.prediction.v1.faceoff .pundit .text-wrapper {
+/* line 259 */
+.prediction.v1.faceoff > .pundit .text-wrapper {
   left: 0;
   color: white;
 }
-/* line 264 */
-.prediction.v1.faceoff .pundit .photo {
+/* line 263 */
+.prediction.v1.faceoff > .pundit .photo {
   height: 6rem;
   width: 6rem;
   border-radius: 6rem;
 }
-/* line 269 */
-.prediction.v1.faceoff .pundit .name {
+/* line 268 */
+.prediction.v1.faceoff > .pundit .name {
   font-size: 2rem;
   line-height: 2.5rem;
 }
-/* line 273 */
-.prediction.v1.faceoff .pundit .source {
+/* line 272 */
+.prediction.v1.faceoff > .pundit .source {
   font-size: 1.5rem;
 }
-/* line 277 */
-.prediction.v1.faceoff .text {
+/* line 276 */
+.prediction.v1.faceoff > .text {
   margin-top: 2.5rem;
 }
-/* line 282 */
+/* line 281 */
 .prediction.v1.faceoff.left .pundit .photo {
   position: absolute;
   left: -7rem;
   top: -1rem;
   margin-left: 1rem;
 }
-/* line 291 */
+/* line 290 */
 .prediction.v1.faceoff.right .text {
   text-align: right;
 }
-/* line 295 */
+/* line 294 */
 .prediction.v1.faceoff.right .pundit .photo {
   position: absolute;
   right: -7rem;
   top: -1rem;
 }
-/* line 300 */
+/* line 299 */
 .prediction.v1.faceoff.right .pundit .text-wrapper {
   left: auto;
   width: 100%;
   float: right;
   text-align: right;
 }
-/* line 309 */
+/* line 308 */
 .prediction.v1.tall-2 {
   color: white;
   height: 31.5rem;
 }
-/* line 312 */
+/* line 311 */
 .prediction.v1.tall-2 .prompt {
   color: white;
 }
-/* line 315 */
+/* line 314 */
 .prediction.v1.tall-2 .background {
   background-image: url(../../img/vertical.jpg);
   display: block;
 }
-/* line 320 */
+/* line 319 */
 .prediction.v1.tall-2 .pundit {
   background-color: transparent !important;
 }
-/* line 322 */
+/* line 321 */
 .prediction.v1.tall-2 .pundit .text-wrapper, .prediction.v1.tall-2 .pundit .voting {
   color: white;
 }
-/* line 327 */
+/* line 326 */
 .prediction.v1.tall-2 .text {
   position: absolute;
   bottom: 5rem;
   z-index: 300;
 }
-/* line 333 */
+/* line 332 */
 .prediction.v1.tall-2 .voting .up, .prediction.v1.tall-2 .voting .down {
   border-left: 0 !important;
 }
-/* line 337 */
+/* line 336 */
 .prediction.v1.featured {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -853,7 +866,7 @@ html, body {
   bottom: 2rem;
   width: 50%;
 }
-/* line 344 */
+/* line 343 */
 .prediction.v1.featured .text {
   text-shadow: 2px 2px 3px black;
   position: absolute;
@@ -861,60 +874,60 @@ html, body {
   left: 1rem;
   right: 5rem;
 }
-/* line 353 */
+/* line 352 */
 .prediction.v1.featured .pundit {
   background-color: transparent !important;
   bottom: 0;
 }
-/* line 356 */
+/* line 355 */
 .prediction.v1.featured .pundit .text-wrapper {
   height: 5rem;
   color: white;
   left: 4rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 362 */
+/* line 361 */
 .prediction.v1.featured .pundit .name, .prediction.v1.featured .pundit .source {
   text-shadow: 2px 2px 3px black;
 }
-/* line 366 */
+/* line 365 */
 .prediction.v1.featured .pundit .voting .prompt {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 370 */
+/* line 369 */
 .prediction.v1.featured .pundit .voting .label {
   display: inline-block;
   font-size: 1.2rem;
   padding-right: 0.5rem;
   line-height: 1.5rem;
 }
-/* line 376 */
+/* line 375 */
 .prediction.v1.featured .pundit .voting .up, .prediction.v1.featured .pundit .voting .down {
   width: 9rem;
   text-align: right;
   border-left: 0;
 }
-/* line 381 */
+/* line 380 */
 .prediction.v1.featured .pundit .voting .up:hover, .prediction.v1.featured .pundit .voting .down:hover {
   background-color: transparent;
 }
-/* line 388 */
+/* line 387 */
 .prediction.v1.no-box {
   background-color: rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 1rem;
   height: 31.5rem;
   border: 1rem solid white;
 }
-/* line 390 */
+/* line 389 */
 .prediction.v1.no-box .background {
   display: none;
 }
-/* line 397 */
+/* line 396 */
 .prediction.v1.no-box .text {
   width: 50%;
 }
-/* line 402 */
+/* line 401 */
 .prediction.v1 .background {
   width: 100%;
   background-position: center center;
@@ -925,13 +938,13 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 412 */
+/* line 411 */
 .prediction.v1 .pundit {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 417 */
+/* line 416 */
 .prediction.v1 .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -941,7 +954,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 423 */
+/* line 422 */
 .pundit {
   position: relative;
   height: 4rem;
@@ -953,13 +966,13 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 432 */
+/* line 431 */
 .pundit .photo > .grade {
   position: absolute;
   display: block;
   top: 4rem;
 }
-/* line 438 */
+/* line 437 */
 .pundit .photo > .grade .average {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -974,19 +987,19 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 449 */
+/* line 448 */
 .pundit .photo > .grade .letter {
   top: -0.5rem;
 }
-/* line 454 */
+/* line 453 */
 .pundit .photo > .grade:hover .letter {
   top: -0.5rem;
 }
-/* line 457 */
+/* line 456 */
 .pundit .photo > .grade:hover .average {
   bottom: 0;
 }
-/* line 463 */
+/* line 462 */
 .pundit .grade {
   position: relative;
   height: 4rem;
@@ -999,7 +1012,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 472 */
+/* line 471 */
 .pundit .grade .letter {
   position: absolute;
   top: 0;
@@ -1013,7 +1026,7 @@ html, body {
   line-height: 4rem;
   vertical-align: middle;
 }
-/* line 487 */
+/* line 486 */
 .pundit .photo {
   background-image: url(../../img/profile.jpeg);
   background-position: center center;
@@ -1024,11 +1037,11 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-/* line 498 */
+/* line 497 */
 .pundit:hover .grade {
   top: 0;
 }
-/* line 502 */
+/* line 501 */
 .pundit .text-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1040,15 +1053,15 @@ html, body {
   height: 4rem;
   color: #111;
 }
-/* line 510 */
+/* line 509 */
 .pundit .text-wrapper .name {
   margin: 0;
 }
-/* line 513 */
+/* line 512 */
 .pundit .text-wrapper .source {
   margin: 0.25rem 0 0;
 }
-/* line 517 */
+/* line 516 */
 .pundit .voting {
   z-index: 1000;
   height: 4rem;
@@ -1062,7 +1075,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 528 */
+/* line 527 */
 .pundit .voting .prompt {
   text-transform: uppercase;
   position: absolute;
@@ -1075,7 +1088,7 @@ html, body {
   width: 100%;
   color: #111;
 }
-/* line 540 */
+/* line 539 */
 .pundit .voting .options {
   height: 11rem;
   width: 4rem;
@@ -1091,24 +1104,24 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 551 */
+/* line 550 */
 .pundit .voting .options li {
   height: 2.75rem;
   width: 4rem;
 }
-/* line 554 */
+/* line 553 */
 .pundit .voting .options li .letter {
   line-height: 2.75rem;
 }
-/* line 559 */
+/* line 558 */
 .pundit .voting:hover {
   height: 20rem;
 }
-/* line 563 */
+/* line 562 */
 .pundit .voting .label {
   display: none;
 }
-/* line 567 */
+/* line 566 */
 .pundit .voting .up, .pundit .voting .down {
   border-left: 1px solid white;
   position: absolute;
@@ -1125,24 +1138,24 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 578 */
+/* line 577 */
 .pundit .voting .up:hover, .pundit .voting .down:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 583 */
+/* line 582 */
 .pundit .voting .up {
   top: 0;
   vertical-align: bottom;
   padding-top: 0.22222rem;
 }
-/* line 588 */
+/* line 587 */
 .pundit .voting .down {
   vertical-align: top;
   top: 2rem;
   padding-top: 0.22222rem;
 }
 
-/* line 596 */
+/* line 595 */
 .category-link {
   background-color: #2a81c4;
   color: white;
@@ -1158,7 +1171,7 @@ html, body {
   background-size: cover;
   background-image: url(../../img/hero.jpg);
 }
-/* line 608 */
+/* line 607 */
 .category-link h2 {
   position: absolute;
   right: 1rem;
@@ -1168,16 +1181,16 @@ html, body {
   line-height: 3rem;
   margin: 0;
 }
-/* line 617 */
+/* line 616 */
 .category-link h2 + a h2 {
   bottom: 1rem;
   text-decoration: underline !important;
 }
-/* line 621 */
+/* line 620 */
 .category-link h2 + a i {
   text-decoration: underline !important;
 }
-/* line 627 */
+/* line 626 */
 .category-link .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -1187,7 +1200,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 632 */
+/* line 631 */
 .full {
   height: 80vh;
 }

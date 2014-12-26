@@ -44,6 +44,20 @@
 {% endwith %}
 {% endmacro %}
 
+{% macro set() %}
+<div class="set-wrapper">
+    <div class="background">
+        <div class="scrim"></div>
+    </div>
+    <h3 class="question">The latest sports predictions</h3>
+    <div class="pure-g card-grid">
+        {% for _ in range(3) %}
+        <div class="pure-u-1-3">{{ prediction() }}</div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
+
 {% macro pundit(name, source, color, grade, tag='div', voting=True) %}
 <{{tag}} class="pundit {{color}}">
     <div class="photo">
@@ -198,6 +212,12 @@
                             <a href="#" data-color="{{color}}">{{ category }}</a>
                         </li>
                     {% endfor %}
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
                 </ul>
                 <a class="sign-up button" href="#">Sign Up</a>
                 <a class="login" href="#">Log in</a>

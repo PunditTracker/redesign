@@ -7,8 +7,8 @@ $extra-bold: 800;
 $bold: 700;
 $regular: 400;
 $thin: 300;
-$sans: 'Lato', Helvetica, Ariel sans-serif;
-$slab:'Roboto Slab', Georgia, serif;
+$sans: 'Open Sans', Helvetica, Ariel sans-serif;
+$serif:'Roboto Slab', Georgia, serif;
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
@@ -57,7 +57,7 @@ a, a:hover {
 }
 
 input, textarea, {
-    font-family: $slab;
+    font-family: $serif;
     font-weight: $regular;
     font-size: 1rem;
     padding: 0.3125rem;
@@ -65,26 +65,26 @@ input, textarea, {
     &:-moz-placeholder,
     &::-moz-placeholder,
     &:-ms-input-placeholder {
-        font-family: $slab;
+        font-family: $serif;
         font-weight: $regular;
         font-size: 1rem;
     }
 }
 
 h1, .h1 {
-    font-family: $sans;
+    font-family: $serif;
     font-size: 3rem;
     line-height: 4rem;
 }
 h2, .h2 {
-    font-family: $sans;
-    font-weight: $bold;
+    font-family: $serif;
+    font-weight: $regular;
     font-size: 2.25rem;
     line-height: 3rem;
 }
 h3, .h3 {
-    font-family: $sans;
-    font-weight: $bold;
+    font-family: $serif;
+    font-weight: $regular;
     font-size: 1.25rem;
     line-height: 2rem;
 }
