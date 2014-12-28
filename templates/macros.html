@@ -95,7 +95,7 @@
 {% endmacro %}
 
 {% macro featured_pundits() %}
-<div class="featured-pundits tall-3-2">
+<div class="featured-pundits">
     <div class="title-wrapper">
         <h2 class="title">Featured Pundits</h2>
     </div>
@@ -108,7 +108,7 @@
 {% endmacro %}
 
 {% macro featured_users() %}
-<div class="featured-pundits tall-3-2">
+<div class="featured-pundits">
     <div class="title-wrapper">
         <h2 class="title">Featured Users</h2>
     </div>
@@ -116,6 +116,48 @@
         {% for _, name, source, color, _, grade in predictions[:4] %}
         {{ pundit(name, source, color, grade, 'li') }}
         {% endfor %}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro facebook() %}
+<div class="facebook">
+    <div class="title-wrapper">
+        <!-- <h2>Pundit Tracker in your feed</h2> -->
+        <h3>Like Pundit Tracker<br> on Facebook</h3>
+    </div>
+    <div class="fb-wrapper">
+        <div class="inner">
+            <div class="fb-like" data-href="http://www.pundittracker.com/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro blog_posts() %}
+<div class="featured-blog-posts">
+    <div class="title-wrapper">
+        <h2 class="title">From our Blog</h2>
+    </div>
+    <ul>
+        <li class="blog-post">
+            <a href="">
+                <h4>Which Experts Predicted a Royals-Giants World Series?</h4>
+                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+            </a>
+        </li>
+        <li class="blog-post">
+            <a href="">
+                <h4>If you are going to be wrong, be spectacularly wrong</h4>
+                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+            </a>
+        </li>
+        <li class="blog-post">
+            <a href="">
+                <h4>Is Nate Silver a Wizard or simply Above Average?</h4>
+                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+            </a>
+        </li>
     </ul>
 </div>
 {% endmacro %}
@@ -223,4 +265,64 @@
         </div>
     </nav>
 </div>
+{% endmacro %}
+
+{% macro footer() %}
+<footer>
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">
+            <ul>
+                <li class="double">
+                    <a href="">
+                        <div class="logo">
+                            <span class="p">Pundit</span><br><span class="t">Tracker</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pure-u-1-3"></div>
+        <div class="pure-u-1-3"></div>
+    </div>
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-3">
+            <ul>
+                <li><a href="">Finance</a></li>
+                <li><a href="">Politics</a></li>
+                <li><a href="">Sports</a></li>
+                <li>
+                    <ul>
+                        <li><a href="">NFL</a></li>
+                        <li><a href="">NBA</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Media</a></li>
+            </ul>
+        </div>
+        <div class="pure-u-1-3">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Blogs we like</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="pure-u-1-3">
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li>
+                    <ul>
+                        <li><a href="">@ptraxfinance</a></li>
+                        <li><a href="">@ptraxpolitics</a></li>
+                        <li><a href="">@ptraxsports</a></li>
+                        <li><a href="">@ptraxentertain</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 {% endmacro %}

@@ -1,6 +1,7 @@
 @import 'base';
 @import 'navbar';
 
+$blog-post-height: 6rem;
 $extension: 10rem;
 $card-grid-padding: 1.5rem;
 $hero-height: 30rem;
@@ -199,7 +200,7 @@ html, body {
     }
 }
 
-.featured-users, .featured-pundits {
+.featured-users, .featured-pundits, .featured-blog-posts {
     height: $tall-3-2-height;
     background-color: $white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
@@ -218,7 +219,7 @@ html, body {
             bottom: 1rem;
             margin: 0;
             color: white;
-            // text-shadow: 2px 2px 3px black;
+            text-shadow: 2px 2px 3px black;
         }
     }
 
@@ -226,6 +227,69 @@ html, body {
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+}
+
+.featured-blog-posts {
+    & > .title-wrapper {
+        height: ($tall-3-2-height - 3*$blog-post-height) !important;
+    }
+
+    .blog-post {
+        height: $blog-post-height;
+        width: 100%;
+        background-color: $white;
+        padding: $prediction-padding;
+        @include border-box;
+
+        &:hover {
+            background-color: $ultralightgray;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid $ultralightgray;
+        }
+        h4 {
+            margin: 0;
+            line-height: 1.5rem;
+        }
+        h6 {
+            margin-top: 0.25rem;
+        }
+    }
+}
+
+.facebook {
+    height: $tall-3-2-height;
+    height: $prediction-height;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    position: relative;
+    @include radial(59,89,152,50%, $prediction-height - $pundit-height);
+    .title-wrapper {
+        @include border-box;
+        padding: $prediction-padding;
+        height: ($tall-3-2-height - 4 * $pundit-height);
+        color: white;
+        h3, h2{
+            margin: 0;
+        }
+    }
+    & > .fb-wrapper {
+        text-align: center;
+        position: absolute;
+        top: ($tall-3-2-height - 4 * $pundit-height);
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 500;
+        display: block;
+        @include border-box;
+        & > .inner {
+            position: absolute;
+            height: 8rem;
+            margin-top: -4rem;
+            width: 100%;
+            top: 50%;
+        }
     }
 }
 
@@ -390,6 +454,12 @@ html, body {
         }
     }
     &.wide-2 {
+        .text {
+            @extend .h3;
+        }
+    }
+    &.tall-3-2 {
+        height: $tall-3-2-height;
         .text {
             @extend .h3;
         }

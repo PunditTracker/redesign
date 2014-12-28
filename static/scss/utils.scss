@@ -118,3 +118,63 @@
 /* Opera */
 -o-transform: rotate($deg) translateX(2.5rem);
 }
+
+
+$p1: 0%;
+$p2: 15%;
+$p3: 35%;
+$p4: 45%;
+$p5: 60%;
+$p6: 100%;
+$o1: 0.01;
+$o2: 0.1;
+$o3: 0.4;
+$o4: 0.6;
+$o5: 1;
+$o6: 1;
+@mixin radial($r, $g, $b, $x, $y) {
+    background: rgba(255,255,255,1);
+    background: -moz-radial-gradient($x $y, circle cover,
+        rgba($r,$g,$b,$o1) $p1,
+        rgba($r,$g,$b,$o2) $p2,
+        rgba($r,$g,$b,$o3) $p3,
+        rgba($r,$g,$b,$o4) $p4,
+        rgba($r,$g,$b,$o5) $p5,
+        rgba($r,$g,$b,$o6) $p6);
+    background: -webkit-gradient(radial, $x $y, 0px, $x $y, 100%,
+        color-stop($p1,  rgba($r,$g,$b,$o1)),
+        color-stop($p2, rgba($r,$g,$b,$o2)),
+        color-stop($p3, rgba($r,$g,$b,$o3)),
+        color-stop($p4, rgba($r,$g,$b,$o4)),
+        color-stop($p5, rgba($r,$g,$b,$o5)),
+        color-stop($p6,rgba($r,$g,$b,$o6)));
+    background: -webkit-radial-gradient($x $y, circle cover,
+        rgba($r,$g,$b,$o1) $p1,
+        rgba($r,$g,$b,$o2) $p2,
+        rgba($r,$g,$b,$o3) $p3,
+        rgba($r,$g,$b,$o4) $p4,
+        rgba($r,$g,$b,$o5) $p5,
+        rgba($r,$g,$b,$o6) $p6);
+    background: -o-radial-gradient($x $y, circle cover,
+        rgba($r,$g,$b,$o1) $p1,
+        rgba($r,$g,$b,$o2) $p2,
+        rgba($r,$g,$b,$o3) $p3,
+        rgba($r,$g,$b,$o4) $p4,
+        rgba($r,$g,$b,$o5) $p5,
+        rgba($r,$g,$b,$o6) $p6);
+    background: -ms-radial-gradient($x $y, circle cover,
+        rgba($r,$g,$b,$o1) $p1,
+        rgba($r,$g,$b,$o2) $p2,
+        rgba($r,$g,$b,$o3) $p3,
+        rgba($r,$g,$b,$o4) $p4,
+        rgba($r,$g,$b,$o5) $p5,
+        rgba($r,$g,$b,$o6) $p6);
+    background: radial-gradient(circle at $x $y,
+        rgba($r,$g,$b,$o1) $p1,
+        rgba($r,$g,$b,$o2) $p2,
+        rgba($r,$g,$b,$o3) $p3,
+        rgba($r,$g,$b,$o4) $p4,
+        rgba($r,$g,$b,$o5) $p5,
+        rgba($r,$g,$b,$o6) $p6);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3b5897', GradientType=1 );
+}
