@@ -492,6 +492,15 @@ html, body {
             z-index: 300;
             @extend .h2;
         }
+        .options, .options li {
+                border: 0 !important;
+        }
+        .option {
+            text-shadow: 2px 2px 3px black;
+        }
+        .options li:hover .option {
+            text-shadow: none;
+        }
     }
     &.featured {
         background-color: rgba(0,0,0,0.2);
@@ -524,14 +533,19 @@ html, body {
             }
         }
         .voting {
-            .options {
-                text-shadow: none;
-            }
             .prompt {
                 color: white;
                 text-shadow: 2px 2px 3px black;
             }
-
+            .options, .options li {
+                border: 0 !important;
+            }
+            .option {
+                text-shadow: 2px 2px 3px black;
+            }
+            .options li:hover .option {
+                text-shadow: none;
+            }
         }
     }
     &.no-box {
