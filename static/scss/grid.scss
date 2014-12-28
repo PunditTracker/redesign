@@ -604,28 +604,28 @@ html, body {
 footer {
     background-color: $blue;
     color: $white;
-    padding: 4rem 0;
+    padding: 2rem 0 4rem;
     margin-top: 2rem;
     @include border-box;
-    ul {
-        margin: 0rem auto;
-        max-width: $content-width;
+
+    & > .card-grid {
         max-width: 95%;
+        width: $content-width;
+        margin: 0 auto;
+    }
+    ul {
         padding: 0.75rem;
         list-style: none;
         padding: 0;
         margin: 0;
-        li {
-            width: 10rem;
-            margin: 0 auto;
-        }
         ul {
             margin-left: 1rem;
         }
     }
     .double {
-        @include border-box;
         border-bottom: 1px solid $white;
+        margin-bottom: 0.5rem;
+        width: 50%;
     }
 }
 
