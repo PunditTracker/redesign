@@ -426,6 +426,7 @@ html, body {
     &.featured {
         background-color: rgba(0,0,0,0.2);
         color: $white;
+        text-shadow: 2px 2px 3px black;
         position: absolute;
         bottom: 2rem;
         width: 50%;
@@ -632,6 +633,9 @@ footer {
         ul {
             margin-left: 1rem;
         }
+    }
+    .logo {
+
     }
 }
 
