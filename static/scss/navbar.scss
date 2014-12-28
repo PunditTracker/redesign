@@ -50,15 +50,27 @@ $navbar-height: 4rem;
 	}
 }
 
-.sign-up {
+.sign-up, .search, {
 	float: right;
 	font-size: 0.8rem;
 	margin-top: 1rem;
 }
 
-.login {
-	float: right;
-	font-size: 0.8rem;
+.search {
+	position: relative;
 	margin-right: 1rem;
-	margin-top: 1.5rem;
+
+	i {
+		position: absolute;
+        left: 1rem;
+        top: 0.5rem;
+        line-height: 1.2rem;
+        vertical-align: middle;
+        @include transition(0.2s);
+	}
+
+	.stretch:focus i {
+	    color: rgba(0,0,0,0) !important;
+    }
+
 }

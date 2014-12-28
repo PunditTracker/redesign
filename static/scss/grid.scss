@@ -19,7 +19,7 @@ html, body {
 }
 
 .button {
-    @include button($blue, $white)
+    @include button($blue, $white, $ultralightgray, 1px solid $blue)
 }
 
 .content {

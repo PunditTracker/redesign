@@ -63,9 +63,9 @@ body, html {
 p, label {
   margin-bottom: 0.3125rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 /* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -104,27 +104,13 @@ a, a:hover {
 }
 
 /* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input, textarea {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.3125rem;
-}
-/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -132,7 +118,7 @@ h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 
   line-height: 3rem;
 }
 
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 70, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -140,7 +126,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 76, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -148,7 +134,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -157,7 +143,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -165,32 +151,63 @@ h6, .h6, .prediction .voting .options li .option {
   line-height: 1rem;
 }
 
+/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input, textarea {
+  @extends .h6;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  width: 10rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+  @extends .h6;
+}
+/* line 113, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch, textarea.stretch {
+  width: 2.5rem;
+  padding-left: 1.75rem;
+}
+/* line 117, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch:focus, textarea.stretch:focus {
+  width: 10rem;
+  padding-left: 2.25rem;
+}
+
 @media screen and (min-width: 1921px) {
-  /* line 112, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 125, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 131, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 124, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 137, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 143, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 136, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -260,9 +277,9 @@ body, html {
 p, label {
   margin-bottom: 0.3125rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 /* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -301,27 +318,13 @@ a, a:hover {
 }
 
 /* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input, textarea {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.3125rem;
-}
-/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -329,7 +332,7 @@ h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 
   line-height: 3rem;
 }
 
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 70, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -337,7 +340,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 76, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -345,7 +348,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -354,7 +357,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -362,32 +365,63 @@ h6, .h6, .prediction .voting .options li .option {
   line-height: 1rem;
 }
 
+/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input, textarea {
+  @extends .h6;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  width: 10rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+  @extends .h6;
+}
+/* line 113, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch, textarea.stretch {
+  width: 2.5rem;
+  padding-left: 1.75rem;
+}
+/* line 117, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch:focus, textarea.stretch:focus {
+  width: 10rem;
+  padding-left: 2.25rem;
+}
+
 @media screen and (min-width: 1921px) {
-  /* line 112, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 125, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 131, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 124, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 137, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 143, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 136, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -450,18 +484,32 @@ h6, .h6, .prediction .voting .options li .option {
 }
 
 /* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
-.sign-up {
+.sign-up, .search {
   float: right;
   font-size: 0.8rem;
   margin-top: 1rem;
 }
 
 /* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
-.login {
-  float: right;
-  font-size: 0.8rem;
+.search {
+  position: relative;
   margin-right: 1rem;
-  margin-top: 1.5rem;
+}
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+.search i {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  line-height: 1.2rem;
+  vertical-align: middle;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+.search .stretch:focus i {
+  color: transparent !important;
 }
 
 /* line 16 */
@@ -476,11 +524,15 @@ html, body {
   color: white;
   width: auto;
   display: inline-block;
-  border: 0;
+  border: 1px solid #2a81c4;
   padding: 0.5rem 1rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.button:hover {
+  color: #f5f5f5;
 }
 
 /* line 25 */
