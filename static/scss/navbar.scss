@@ -18,8 +18,10 @@ $navbar-height: 4rem;
 }
 
 .logo {
-	@extend .h4;
-	margin-top: 1rem;
+	@extend .h5;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0.75rem;
 	display: inline-block;
 	span {
 		text-align: justify;
@@ -28,11 +30,12 @@ $navbar-height: 4rem;
 		display: block;
 	}
 	.p {
-
+		font-size: 1.125rem;
+		line-height: 1.25rem;
 	}
 	.t {
 		font-size: 0.95rem;
-		margin-top: -1.25rem;
+		margin-top: -1rem;
 	}
 }
 

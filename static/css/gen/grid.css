@@ -118,14 +118,14 @@ input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholde
 }
 
 /* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.v1.featured .text {
+h1, .h1, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
 }
 
 /* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall-2 .text {
+h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -133,68 +133,66 @@ h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall
 }
 
 /* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h3, .h3 {
+h3, .h3, .prediction.wide-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h4, .h4, .logo {
-  font-family: "Open Sans", Helvetica, Ariel sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin-bottom: .625rem;
-  text-transform: uppercase;
-}
-
-/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h5, .h5 {
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h6, .h6 {
+/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h6, .h6, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   line-height: 1rem;
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 112, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 120, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 126, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 124, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 132, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 136, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 @-webkit-keyframes fade-in-up {
@@ -317,14 +315,14 @@ input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholde
 }
 
 /* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.v1.featured .text {
+h1, .h1, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
 }
 
 /* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall-2 .text {
+h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -332,68 +330,66 @@ h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.v1.tall
 }
 
 /* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h3, .h3 {
+h3, .h3, .prediction.wide-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h4, .h4, .logo {
-  font-family: "Open Sans", Helvetica, Ariel sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin-bottom: .625rem;
-  text-transform: uppercase;
-}
-
-/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h5, .h5 {
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h6, .h6 {
+/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h6, .h6, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   line-height: 1rem;
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 112, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 120, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 126, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 124, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 132, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 136, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 /* line 4, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
@@ -418,42 +414,49 @@ h6, .h6 {
 
 /* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo {
-  margin-top: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
   display: inline-block;
 }
-/* line 24, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo span {
   text-align: justify;
   width: 4rem;
   line-height: 0.75rem;
   display: block;
 }
-/* line 33, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 32, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+.logo .p {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+/* line 36, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo .t {
   font-size: 0.95rem;
-  margin-top: -1.25rem;
+  margin-top: -1rem;
 }
 
-/* line 39, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .categories {
   display: inline-block;
   vertical-align: top;
 }
-/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .categories li {
   display: inline-block;
   font-size: 0.8rem;
   padding: 0 1rem;
 }
 
-/* line 50, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .sign-up {
   float: right;
   font-size: 0.8rem;
   margin-top: 1rem;
 }
 
-/* line 56, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .login {
   float: right;
   font-size: 0.8rem;
@@ -461,13 +464,13 @@ h6, .h6 {
   margin-top: 1.5rem;
 }
 
-/* line 14 */
+/* line 15 */
 html, body {
   background-color: #e5e5e5;
   position: relative;
 }
 
-/* line 19 */
+/* line 20 */
 .button {
   background-color: #2a81c4;
   color: white;
@@ -480,75 +483,75 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 23 */
+/* line 24 */
 .content {
   z-index: 80;
   position: absolute;
   width: 100%;
   overflow-x: hidden;
 }
-/* line 29 */
+/* line 30 */
 .content > .card-grid {
   width: 95%;
 }
 
-/* line 34 */
+/* line 35 */
 .blue {
   background-color: #2a81c4;
 }
 
-/* line 35 */
+/* line 36 */
 .red {
   background-color: #e54236;
 }
 
-/* line 36 */
+/* line 37 */
 .yellow {
   background-color: #f4bb15;
 }
 
-/* line 37 */
+/* line 38 */
 .yellow-green {
   background-color: #FF5900;
 }
 
-/* line 38 */
+/* line 39 */
 .green {
   background-color: #039b67;
 }
 
-/* line 39 */
+/* line 40 */
 .orange {
   background-color: #d79003;
 }
 
-/* line 42 */
+/* line 43 */
 .hero {
   height: 80vh;
   margin: 0 auto;
   width: 100%;
   z-index: 100;
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
   position: relative;
 }
-/* line 51 */
+/* line 52 */
 .hero.fixed {
   height: 30rem;
-  width: 75rem;
+  width: 85rem;
 }
-/* line 56 */
+/* line 57 */
 .hero.fixed.done {
-  max-width: 95%;
+  max-width: 100%;
 }
-/* line 60 */
+/* line 61 */
 .hero.fixed .featured {
   height: 30rem;
 }
-/* line 65 */
+/* line 66 */
 .hero > .background {
   box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
-  top: 6rem;
+  top: 4rem;
   bottom: 2rem;
   position: absolute;
   background-repeat: no-repeat;
@@ -557,7 +560,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 76 */
+/* line 77 */
 .hero > .background .scrim {
   background: -moz-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(221, 221, 221, 0)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd), color-stop(100% #dddddd));
@@ -566,12 +569,12 @@ html, body {
   background: -ms-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
 }
-/* line 81 */
+/* line 82 */
 .hero .right {
   z-index: 200;
 }
 
-/* line 85 */
+/* line 86 */
 .scrim {
   height: 100%;
   width: 100%;
@@ -581,49 +584,50 @@ html, body {
   z-index: 60;
 }
 
-/* line 93 */
+/* line 94 */
 .card-grid {
   max-width: 65rem;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-/* line 97 */
+/* line 98 */
 .card-grid > div {
   padding: 0 0.75rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 102 */
+/* line 107 */
 .card-grid .card-grid {
   z-index: 200;
   width: 100%;
 }
-/* line 105 */
+/* line 110 */
 .card-grid .card-grid:last-child {
   margin: 0;
 }
-/* line 108 */
+/* line 113 */
 .card-grid .card-grid > div {
   padding: 0;
+  margin: 0;
 }
-/* line 110 */
+/* line 116 */
 .card-grid .card-grid > div:not(:last-child) {
   padding-right: 0.75rem;
 }
-/* line 113 */
+/* line 119 */
 .card-grid .card-grid > div:not(:first-child) {
   padding-left: 0.75rem;
 }
 
-/* line 120 */
+/* line 126 */
 .with-image {
   position: relative;
   max-width: 65rem;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
-/* line 126 */
+/* line 132 */
 .with-image .background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -636,7 +640,7 @@ html, body {
   width: 100rem;
   margin-left: -50rem;
 }
-/* line 138 */
+/* line 144 */
 .with-image .background .scrim {
   background: -moz-linear-gradient(top, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(20%, rgba(221, 221, 221, 0.25)), color-stop(50%, rgba(221, 221, 221, 0.01)), color-stop(70% rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd));
@@ -646,37 +650,37 @@ html, body {
   background: linear-gradient(to bottom, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
 }
 
-/* line 144 */
+/* line 150 */
 .faceoff-outer {
   margin: 2rem 0;
 }
 
-/* line 148 */
+/* line 154 */
 .faceoff-wrapper {
   color: white;
 }
-/* line 150 */
+/* line 156 */
 .faceoff-wrapper .background {
   background-image: url(../../img/football.jpg);
 }
 
-/* line 156 */
+/* line 162 */
 .set-wrapper .background {
   background-image: url(../../img/hero.jpg);
 }
-/* line 159 */
+/* line 165 */
 .set-wrapper .card-grid {
   padding: 2rem 0 5rem;
 }
 
-/* line 164 */
+/* line 170 */
 .faceoff-wrapper, .set-wrapper {
   position: relative;
-  margin: 0 -5rem;
-  padding: 0 5rem;
+  margin: 0 -10.75rem;
+  padding: 0 10.75rem;
   box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
 }
-/* line 169 */
+/* line 175 */
 .faceoff-wrapper .question, .set-wrapper .question {
   color: white;
   position: relative;
@@ -688,7 +692,7 @@ html, body {
   z-index: 500;
   text-shadow: 2px 2px 3px black;
 }
-/* line 181 */
+/* line 187 */
 .faceoff-wrapper .background, .set-wrapper .background {
   width: 100%;
   background-position: center center;
@@ -698,18 +702,18 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 190 */
+/* line 196 */
 .faceoff-wrapper .background .scrim, .set-wrapper .background .scrim {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 196 */
+/* line 202 */
 .featured-users, .featured-pundits {
   height: 23.25rem;
   background-color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
 }
-/* line 200 */
+/* line 206 */
 .featured-users > .title-wrapper, .featured-pundits > .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -722,213 +726,44 @@ html, body {
   padding: 1rem;
   position: relative;
 }
-/* line 210 */
+/* line 216 */
 .featured-users > .title-wrapper > .title, .featured-pundits > .title-wrapper > .title {
   position: absolute;
   bottom: 1rem;
   margin: 0;
   color: white;
 }
-/* line 219 */
+/* line 225 */
 .featured-users ul, .featured-pundits ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 227 */
-.prediction.v1 {
+/* line 232 */
+.prediction {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
   z-index: 200;
   background-color: white;
-  padding: 1rem;
-  padding-right: 4rem;
+  padding: 0.75rem;
   height: 15rem;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /**************
+   * Variations *
+   **************/
 }
-/* line 239 */
-.prediction.v1 .text {
+/* line 243 */
+.prediction .text {
   margin: 0;
 }
-/* line 242 */
-.prediction.v1 .bar {
-  position: absolute;
-  bottom: 3.5rem;
-  height: 0.5rem;
-  width: 100%;
-  left: 0;
-}
-/* line 249 */
-.prediction.v1.faceoff {
-  background-color: transparent;
-  position: relative;
-  padding: 3rem;
-  text-shadow: 2px 2px 3px black;
-}
-/* line 254 */
-.prediction.v1.faceoff > .pundit {
-  border: 0;
-  top: 0;
-  position: relative;
-  background-color: transparent;
-}
-/* line 259 */
-.prediction.v1.faceoff > .pundit .text-wrapper {
-  left: 0;
-  color: white;
-}
-/* line 263 */
-.prediction.v1.faceoff > .pundit .photo {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 6rem;
-}
-/* line 268 */
-.prediction.v1.faceoff > .pundit .name {
-  font-size: 2rem;
-  line-height: 2.5rem;
-}
-/* line 272 */
-.prediction.v1.faceoff > .pundit .source {
-  font-size: 1.5rem;
-}
-/* line 276 */
-.prediction.v1.faceoff > .text {
-  margin-top: 2.5rem;
-}
-/* line 281 */
-.prediction.v1.faceoff.left .pundit .photo {
-  position: absolute;
-  left: -7rem;
-  top: -1rem;
-  margin-left: 1rem;
-}
-/* line 290 */
-.prediction.v1.faceoff.right .text {
-  text-align: right;
-}
-/* line 294 */
-.prediction.v1.faceoff.right .pundit .photo {
-  position: absolute;
-  right: -7rem;
-  top: -1rem;
-}
-/* line 299 */
-.prediction.v1.faceoff.right .pundit .text-wrapper {
-  left: auto;
-  width: 100%;
-  float: right;
-  text-align: right;
-}
-/* line 308 */
-.prediction.v1.tall-2 {
-  color: white;
-  height: 31.5rem;
-}
-/* line 311 */
-.prediction.v1.tall-2 .prompt {
-  color: white;
-}
-/* line 314 */
-.prediction.v1.tall-2 .background {
-  background-image: url(../../img/vertical.jpg);
-  display: block;
-}
-/* line 319 */
-.prediction.v1.tall-2 .pundit {
-  background-color: transparent !important;
-}
-/* line 321 */
-.prediction.v1.tall-2 .pundit .text-wrapper, .prediction.v1.tall-2 .pundit .voting {
-  color: white;
-}
-/* line 326 */
-.prediction.v1.tall-2 .text {
-  position: absolute;
-  bottom: 5rem;
-  z-index: 300;
-}
-/* line 332 */
-.prediction.v1.tall-2 .voting .up, .prediction.v1.tall-2 .voting .down {
-  border-left: 0 !important;
-}
-/* line 336 */
-.prediction.v1.featured {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  position: absolute;
-  bottom: 2rem;
-  width: 50%;
-}
-/* line 343 */
-.prediction.v1.featured .text {
-  text-shadow: 2px 2px 3px black;
-  position: absolute;
-  bottom: 5rem;
-  left: 1rem;
-  right: 5rem;
-}
-/* line 352 */
-.prediction.v1.featured .pundit {
-  background-color: transparent !important;
-  bottom: 0;
-}
-/* line 355 */
-.prediction.v1.featured .pundit .text-wrapper {
-  height: 5rem;
-  color: white;
-  left: 4rem;
-  text-shadow: 2px 2px 3px black;
-}
-/* line 361 */
-.prediction.v1.featured .pundit .name, .prediction.v1.featured .pundit .source {
-  text-shadow: 2px 2px 3px black;
-}
-/* line 365 */
-.prediction.v1.featured .pundit .voting .prompt {
-  color: white;
-  text-shadow: 2px 2px 3px black;
-}
-/* line 369 */
-.prediction.v1.featured .pundit .voting .label {
-  display: inline-block;
-  font-size: 1.2rem;
-  padding-right: 0.5rem;
-  line-height: 1.5rem;
-}
-/* line 375 */
-.prediction.v1.featured .pundit .voting .up, .prediction.v1.featured .pundit .voting .down {
-  width: 9rem;
-  text-align: right;
-  border-left: 0;
-}
-/* line 380 */
-.prediction.v1.featured .pundit .voting .up:hover, .prediction.v1.featured .pundit .voting .down:hover {
-  background-color: transparent;
-}
-/* line 387 */
-.prediction.v1.no-box {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  padding-bottom: 1rem;
-  height: 31.5rem;
-  border: 1rem solid white;
-}
-/* line 389 */
-.prediction.v1.no-box .background {
-  display: none;
-}
-/* line 396 */
-.prediction.v1.no-box .text {
-  width: 50%;
-}
-/* line 401 */
-.prediction.v1 .background {
+/* line 246 */
+.prediction .background {
   width: 100%;
   background-position: center center;
   background-size: cover;
@@ -938,14 +773,14 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 411 */
-.prediction.v1 .pundit {
+/* line 256 */
+.prediction .pundit {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 416 */
-.prediction.v1 .scrim {
+/* line 261 */
+.prediction .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
   background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
@@ -953,55 +788,266 @@ html, body {
   background: -ms-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
+/* line 264 */
+.prediction .voting {
+  z-index: 500;
+  height: 2rem;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 4rem;
+  width: 100%;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 274 */
+.prediction .voting .prompt {
+  text-transform: uppercase;
+  position: absolute;
+  display: none;
+  top: -1rem;
+  font-size: 0.8rem;
+  line-height: 4rem;
+  height: 4rem;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  color: #111;
+}
+/* line 287 */
+.prediction .voting .options {
+  margin-top: 1px;
+  border-top: 1px solid #f5f5f5;
+  height: 2rem;
+  line-height: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 3000;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0;
+}
+/* line 303 */
+.prediction .voting .options li {
+  width: 25%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  height: 2rem;
+}
+/* line 309 */
+.prediction .voting .options li:hover {
+  color: #111;
+  background-color: #f5f5f5;
+}
+/* line 313 */
+.prediction .voting .options li:not(:last-child) {
+  border-right: 1px solid #f5f5f5;
+}
+/* line 316 */
+.prediction .voting .options li .option {
+  line-height: 2rem;
+  vertical-align: top;
+}
+/* line 325 */
+.prediction:hover .voting .options {
+  top: 0;
+}
+/* line 333 */
+.prediction.faceoff {
+  background-color: transparent;
+  position: relative;
+  padding: 3rem;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 338 */
+.prediction.faceoff > .pundit {
+  border: 0;
+  top: 0;
+  position: relative;
+  background-color: transparent;
+}
+/* line 343 */
+.prediction.faceoff > .pundit .text-wrapper {
+  left: 0;
+  color: white;
+}
+/* line 347 */
+.prediction.faceoff > .pundit .photo {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 6rem;
+}
+/* line 352 */
+.prediction.faceoff > .pundit .name {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+/* line 356 */
+.prediction.faceoff > .pundit .source {
+  font-size: 1.5rem;
+}
+/* line 360 */
+.prediction.faceoff > .text {
+  margin-top: 2.5rem;
+}
+/* line 365 */
+.prediction.faceoff.left .pundit .photo {
+  position: absolute;
+  left: -7rem;
+  top: -1rem;
+  margin-left: 1rem;
+}
+/* line 374 */
+.prediction.faceoff.right .text {
+  text-align: right;
+}
+/* line 378 */
+.prediction.faceoff.right .pundit .photo {
+  position: absolute;
+  right: -7rem;
+  top: -1rem;
+}
+/* line 383 */
+.prediction.faceoff.right .pundit .text-wrapper {
+  left: auto;
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+/* line 397 */
+.prediction.tall-2 {
+  color: white;
+  height: 31.5rem;
+}
+/* line 400 */
+.prediction.tall-2 .prompt {
+  color: white;
+}
+/* line 403 */
+.prediction.tall-2 .background {
+  background-image: url(../../img/vertical.jpg);
+  display: block;
+}
+/* line 408 */
+.prediction.tall-2 .pundit {
+  background-color: transparent !important;
+  color: white;
+}
+/* line 412 */
+.prediction.tall-2 .text-wrapper {
+  color: white;
+}
+/* line 415 */
+.prediction.tall-2 .text {
+  position: absolute;
+  text-shadow: 2px 2px 3px black;
+  bottom: 6.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 300;
+}
+/* line 426 */
+.prediction.featured {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  position: absolute;
+  bottom: 2rem;
+  width: 50%;
+}
+/* line 433 */
+.prediction.featured .text {
+  position: absolute;
+  bottom: 7rem;
+  left: 1rem;
+  right: 1rem;
+}
+/* line 442 */
+.prediction.featured .pundit {
+  background-color: transparent !important;
+  bottom: 0;
+}
+/* line 445 */
+.prediction.featured .pundit .text-wrapper {
+  height: 5rem;
+  color: white;
+  left: 4rem;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 451 */
+.prediction.featured .pundit .name, .prediction.featured .pundit .source {
+  text-shadow: 2px 2px 3px black;
+}
+/* line 456 */
+.prediction.featured .voting .prompt {
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 460 */
+.prediction.featured .voting .label {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding-right: 0.5rem;
+  line-height: 1.5rem;
+}
+/* line 466 */
+.prediction.featured .voting .up, .prediction.featured .voting .down {
+  width: 9rem;
+  text-align: right;
+  border-left: 0;
+}
+/* line 471 */
+.prediction.featured .voting .up:hover, .prediction.featured .voting .down:hover {
+  background-color: transparent;
+}
+/* line 477 */
+.prediction.no-box {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  padding-bottom: 1rem;
+  height: 31.5rem;
+  border: 1rem solid white;
+}
+/* line 479 */
+.prediction.no-box .background {
+  display: none;
+}
+/* line 486 */
+.prediction.no-box .text {
+  width: 50%;
+}
 
-/* line 422 */
+/* line 493 */
 .pundit {
   position: relative;
   height: 4rem;
   background-color: #f5f5f5;
   width: 100%;
   color: #111;
-  z-index: 300;
+  z-index: 700;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 431 */
-.pundit .photo > .grade {
-  position: absolute;
-  display: block;
-  top: 4rem;
-}
-/* line 437 */
-.pundit .photo > .grade .average {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  line-height: 1rem;
-  left: 0;
-  bottom: 0;
-  -webkit-transition: 0.2s 0 ease all;
-  -moz-transition: 0.2s 0 ease all;
-  -o-transition: 0.2s 0 ease all;
-  transition: 0.2s 0 ease all;
-}
-/* line 448 */
-.pundit .photo > .grade .letter {
-  top: -0.5rem;
-}
-/* line 453 */
-.pundit .photo > .grade:hover .letter {
-  top: -0.5rem;
-}
-/* line 456 */
-.pundit .photo > .grade:hover .average {
-  bottom: 0;
-}
-/* line 462 */
+/* line 502 */
 .pundit .grade {
-  position: relative;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
   height: 4rem;
   width: 4rem;
   color: white;
@@ -1012,10 +1058,25 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 471 */
-.pundit .grade .letter {
+/* line 514 */
+.pundit .grade .average {
+  font-size: 0.7rem;
+  text-transform: uppercase;
   position: absolute;
-  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1rem;
+  left: 0;
+  bottom: -1rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 525 */
+.pundit .grade .letter {
+  top: 0rem;
+  position: absolute;
   left: 0;
   width: 100%;
   -webkit-transition: 0.2s 0 ease all;
@@ -1026,7 +1087,15 @@ html, body {
   line-height: 4rem;
   vertical-align: middle;
 }
-/* line 486 */
+/* line 537 */
+.pundit .grade:hover .letter {
+  top: -0.5rem;
+}
+/* line 540 */
+.pundit .grade:hover .average {
+  bottom: 0;
+}
+/* line 545 */
 .pundit .photo {
   background-image: url(../../img/profile.jpeg);
   background-position: center center;
@@ -1037,11 +1106,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-/* line 497 */
-.pundit:hover .grade {
-  top: 0;
-}
-/* line 501 */
+/* line 555 */
 .pundit .text-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1049,119 +1114,31 @@ html, body {
   position: absolute;
   padding: 1rem;
   top: 0;
-  left: 4rem;
+  left: 3.5rem;
+  right: 4rem;
   height: 4rem;
   color: #111;
 }
-/* line 509 */
+/* line 564 */
 .pundit .text-wrapper .name {
   margin: 0;
 }
-/* line 512 */
+/* line 567 */
 .pundit .text-wrapper .source {
   margin: 0.25rem 0 0;
 }
-/* line 516 */
-.pundit .voting {
-  z-index: 1000;
-  height: 4rem;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 4rem;
-  -webkit-transition: 0.2s 0 ease all;
-  -moz-transition: 0.2s 0 ease all;
-  -o-transition: 0.2s 0 ease all;
-  transition: 0.2s 0 ease all;
-}
-/* line 527 */
-.pundit .voting .prompt {
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  font-size: 0.8rem;
-  line-height: 4rem;
-  height: 4rem;
-  vertical-align: middle;
-  text-align: center;
-  width: 100%;
-  color: #111;
-}
-/* line 539 */
-.pundit .voting .options {
-  height: 11rem;
-  width: 4rem;
-  position: absolute;
-  bottom: 4rem;
-  right: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 3000;
-  -webkit-transition: 0.2s 0 ease all;
-  -moz-transition: 0.2s 0 ease all;
-  -o-transition: 0.2s 0 ease all;
-  transition: 0.2s 0 ease all;
-}
-/* line 550 */
-.pundit .voting .options li {
-  height: 2.75rem;
-  width: 4rem;
-}
-/* line 553 */
-.pundit .voting .options li .letter {
-  line-height: 2.75rem;
-}
-/* line 558 */
-.pundit .voting:hover {
-  height: 20rem;
-}
-/* line 562 */
-.pundit .voting .label {
-  display: none;
-}
-/* line 566 */
-.pundit .voting .up, .pundit .voting .down {
-  border-left: 1px solid white;
-  position: absolute;
-  right: 0;
-  padding: 0 1rem;
-  height: 2rem;
-  line-height: 1.33333rem;
-  font-size: 1.5rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: 0.2s 0 ease all;
-  -moz-transition: 0.2s 0 ease all;
-  -o-transition: 0.2s 0 ease all;
-  transition: 0.2s 0 ease all;
-}
-/* line 577 */
-.pundit .voting .up:hover, .pundit .voting .down:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-/* line 582 */
-.pundit .voting .up {
+/* line 572 */
+.pundit:hover .grade {
   top: 0;
-  vertical-align: bottom;
-  padding-top: 0.22222rem;
-}
-/* line 587 */
-.pundit .voting .down {
-  vertical-align: top;
-  top: 2rem;
-  padding-top: 0.22222rem;
 }
 
-/* line 595 */
+/* line 578 */
 .category-link {
   background-color: #2a81c4;
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
   z-index: 200;
-  padding: 1rem;
+  padding: 0.75rem;
   height: 15rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1171,7 +1148,7 @@ html, body {
   background-size: cover;
   background-image: url(../../img/hero.jpg);
 }
-/* line 607 */
+/* line 590 */
 .category-link h2 {
   position: absolute;
   right: 1rem;
@@ -1181,16 +1158,16 @@ html, body {
   line-height: 3rem;
   margin: 0;
 }
-/* line 616 */
+/* line 599 */
 .category-link h2 + a h2 {
   bottom: 1rem;
   text-decoration: underline !important;
 }
-/* line 620 */
+/* line 603 */
 .category-link h2 + a i {
   text-decoration: underline !important;
 }
-/* line 626 */
+/* line 609 */
 .category-link .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -1200,7 +1177,32 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 631 */
-.full {
-  height: 80vh;
+/* line 614 */
+footer {
+  background-color: #2a81c4;
+  color: white;
+  padding: 4rem 0;
+  margin-top: 2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 620 */
+footer ul {
+  margin: 0rem auto;
+  max-width: 65rem;
+  max-width: 95%;
+  padding: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 628 */
+footer ul li {
+  width: 10rem;
+  margin: 0 auto;
+}
+/* line 632 */
+footer ul ul {
+  margin-left: 1rem;
 }

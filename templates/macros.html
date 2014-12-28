@@ -2,9 +2,9 @@
 {% set predictions = [
     ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green', 'Finance', 'A+'),
     ('Rand Paul will get fewer primary votes in 2016 than his father got in 2012', 'Bill Kristol ', 'ABC: This Week', 'yellow', 'Politics', 'B'),
-    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'yellow-green', 'Sports', 'C-'),
+    ('NCAAF: Alabama will defeat Ohio St in playoff game', 'RNG Roger', 'RNG', 'orange', 'Sports', 'C-'),
     ('NFL: Falcons to Win in Week 16 (ATL @ NO)', 'Pete Prisco', 'CBS', 'red', 'Tech', 'F'),
-    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'orange', 'Media', 'D+'),
+    ('\'The Hobbit: The Battle of the Five Armies\' will gross $60.3-$73.9 mil this 3-day wknd (Dec 19-21)', 'Todd Thatcher', 'Direct', 'yellow-green', 'Media', 'D+'),
 ]%}
 {% set faceoffs = [
     ('Who is going to take the superbowl?', 'The Patriots will win the superbowl 21-10.', 'Pete Prisco', 'CBS', 'The Broncos will beat the Patriots 14-7.', 'Bill Bigsby', 'FoxSPORTS', 'NFL')
@@ -37,8 +37,26 @@
     <div class="background">
         <div class="scrim"></div>
     </div>
-    <h3 class="text">{{ text }}</h3>
-    <!-- <div class="bar {{color}}"></div> -->
+    <h4 class="text">{{ text }}</h4>
+    <div class="voting">
+        <div class="prompt">
+            <p><i class="fa fa-bar-chart"></i></p>
+        </div>
+        <ul class="options">
+            <li><a href="#">
+                <span class="option">No Way</span>
+            </a></li>
+            <li><a href="#">
+                <span class="option">Unlikely</span>
+            </a></li>
+            <li><a href="#">
+                <span class="option">Likely</span>
+            </a></li>
+            <li><a href="#">
+                <span class="option">Definitely</span>
+            </a></li>
+        </ul>
+    </div>
     {{ pundit(name, source, color, grade) }}
 </div>
 {% endwith %}
@@ -58,14 +76,9 @@
 </div>
 {% endmacro %}
 
-{% macro pundit(name, source, color, grade, tag='div', voting=True) %}
+{% macro pundit(name, source, color, grade, tag='div') %}
 <{{tag}} class="pundit {{color}}">
-    <div class="photo">
-        <div class="grade {{ color }}">
-            <span class="letter">{{ grade}}</span>
-            <span class="average">Average</span>
-        </div>
-    </div>
+    <div class="photo"></div>
     <div class="text-wrapper">
         <a href="#/pundit/{{name}}">
             <h5 class="name">{{ name }}</h5>
@@ -74,43 +87,10 @@
             <h6 class="source">{{ source }}</h6>
         </a>
     </div>
-    {% if voting %}
-    <div class="voting">
-        <div class="prompt">
-            <p><i class="fa fa-bar-chart"></i></p>
-        </div>
-        <ul class="options">
-            <li class="grade green">
-                <a href="#">
-                    <span class="letter">A</span>
-                </a>
-            </li>
-            <li class="grade yellow">
-                <a href="#">
-                    <span class="letter">B</span>
-                </a>
-            </li>
-            <li class="grade orange">
-                <a href="#">
-                    <span class="letter">C</span>
-                </a>
-            </li>
-            <li class="grade red">
-                <a href="#">
-                    <span class="letter">F</span>
-                </a>
-            </li>
-        </ul>
-        <!-- <a href="#" class="up">
-            <span class="label">Likely</span>
-            <i class="  fa fa-chevron-up"></i>
-        </a>
-        <a href="#" class="down">
-            <span class="label">Unlikely</span>
-            <i class="fa fa-chevron-down"></i>
-        </a> -->
+    <div class="grade {{ color }}">
+        <span class="letter">{{ grade}}</span>
+        <span class="average">Average</span>
     </div>
-    {% endif %}
 </{{tag}}>
 {% endmacro %}
 
@@ -121,7 +101,7 @@
     </div>
     <ul>
         {% for _, name, source, color, _, grade in predictions[:4] %}
-        {{ pundit(name, source, color, grade, 'li', False) }}
+        {{ pundit(name, source, color, grade, 'li') }}
         {% endfor %}
     </ul>
 </div>
@@ -134,7 +114,7 @@
     </div>
     <ul>
         {% for _, name, source, color, _, grade in predictions[:4] %}
-        {{ pundit(name, source, color, grade, 'li', False) }}
+        {{ pundit(name, source, color, grade, 'li') }}
         {% endfor %}
     </ul>
 </div>
@@ -212,12 +192,6 @@
                             <a href="#" data-color="{{color}}">{{ category }}</a>
                         </li>
                     {% endfor %}
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
                 </ul>
                 <a class="sign-up button" href="#">Sign Up</a>
                 <a class="login" href="#">Log in</a>

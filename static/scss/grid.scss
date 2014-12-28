@@ -1,13 +1,14 @@
 @import 'base';
 @import 'navbar';
 
-$extension: 5rem;
+$extension: 10rem;
 $card-grid-padding: 1.5rem;
 $hero-height: 30rem;
 $prediction-height: 15rem;
-$prediction-padding: 1rem;
+$prediction-padding: 0.75rem;
 $pundit-vertical-padding: 1rem;
 $pundit-height: 4rem;
+$voting-height: 2rem;
 $hero-image-width: 100rem;
 $tall-2-height: (2 * $prediction-height + $card-grid-padding);
 $tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
@@ -44,7 +45,7 @@ html, body {
     margin: 0 auto;
     width: 100%;
     z-index: 100;
-    padding-top: $navbar-height + 2rem;
+    padding-top: $navbar-height;
     padding-bottom: 2rem;
     position: relative;
 
@@ -54,7 +55,7 @@ html, body {
         width: ($content-width + 2 * $extension);
 
         &.done {
-            max-width: 95%;
+            max-width: 100%;
         }
 
         .featured {
@@ -64,7 +65,7 @@ html, body {
 
     & > .background {
         box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
-        top: ($navbar-height + 2rem);
+        top: $navbar-height;
         bottom: 2rem;
         position: absolute;
         background-repeat: no-repeat;
@@ -97,6 +98,10 @@ html, body {
     & > div {
         padding: 0 ($card-grid-padding / 2);
         @include border-box;
+
+        &:first-child {
+            // margin-left: (- $card-grid-padding);
+        }
     }
 
     .card-grid  {
@@ -107,6 +112,7 @@ html, body {
         }
         & > div {
             padding: 0;
+            margin: 0;
             &:not(:last-child) {
                 padding-right: ($card-grid-padding / 2);
             }
@@ -120,7 +126,7 @@ html, body {
 .with-image {
     position: relative;
     max-width: $content-width;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 
     .background {
@@ -163,8 +169,8 @@ html, body {
 
 .faceoff-wrapper, .set-wrapper {
     position: relative;
-    margin: 0 (-1 * $extension);
-    padding: 0 $extension;
+    margin: 0 (-1 * $extension - 0.75rem);
+    padding: 0 ($extension + 0.75rem);
     box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
     .question {
         color: $white;
@@ -224,198 +230,263 @@ html, body {
 }
 
 .prediction {
-    &.v1 {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    z-index: 200;
+    background-color: $white;
+    padding: $prediction-padding;
+    height: $prediction-height;
+    position: relative;
+    @include border-box;
+    .text {
+        margin: 0;
+    }
+    .background {
+        width: 100%;
         background-position: center center;
         background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
-        z-index: 200;
-        background-color: $white;
-        padding: $prediction-padding;
-        padding-right: $pundit-height;
-        height: $prediction-height;
-        position: relative;
-        @include border-box;
-        .text {
-            margin: 0;
-        }
-        .bar {
+        display: none;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+    }
+    .pundit {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .scrim {
+        @include scrim(50);
+    }
+    .voting {
+        z-index: 500;
+        height: $voting-height;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: $pundit-height;
+        width: 100%;
+        @include transition(0.2s);
+
+        .prompt {
+            text-transform: uppercase;
             position: absolute;
-            bottom: ($pundit-height - 0.5rem);
-            height: 0.5rem;
+            display: none;
+            top: -1rem;
+            font-size: 0.8rem;
+            line-height: $pundit-height;
+            height: $pundit-height;
+            vertical-align: middle;
+            text-align: center;
             width: 100%;
+            color: $black;
+        }
+        .options {
+            margin-top: 1px;
+            border-top: 1px solid $ultralightgray;
+            height: $voting-height;
+            line-height: $voting-height;
+            position: absolute;
             left: 0;
+            right: 0;
+            top: $voting-height;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 3000;
+            @include transition(0.2s);
+            @include border-box;
+            font-size: 0;
+            li {
+                width: 25%;
+                display: inline-block;
+                @include border-box;
+                text-align: center;
+                height: $voting-height;
+                &:hover {
+                    color: $black;
+                    background-color: $ultralightgray;
+                }
+                &:not(:last-child) {
+                    border-right: 1px solid $ultralightgray;
+                }
+                .option {
+                    @extend .h6;
+                    line-height: 2rem;
+                    vertical-align: top;
+                }
+            }
         }
-        &.faceoff {
-            background-color: rgba(0,0,0,0);
+    }
+    &:hover {
+        .voting .options{
+            top: 0;
+        }
+    }
+
+    /**************
+     * Variations *
+     **************/
+    &.faceoff {
+        background-color: rgba(0,0,0,0);
+        position: relative;
+        padding: 3rem;
+        text-shadow: 2px 2px 3px black;
+        & > .pundit {
+            border: 0;
+            top: 0;
             position: relative;
-            padding: 3rem;
-            text-shadow: 2px 2px 3px black;
-            & > .pundit {
-                border: 0;
-                top: 0;
-                position: relative;
-                background-color: rgba(0,0,0,0);
-                .text-wrapper {
-                    left: 0;
-                    color: $white;
-                }
-                .photo {
-                    height: 6rem;
-                    width: 6rem;
-                    border-radius: 6rem;
-                }
-                .name {
-                    font-size: 2rem;
-                    line-height: 2.5rem;
-                }
-                .source {
-                    font-size: 1.5rem;
-                }
-            }
-            & > .text {
-                margin-top: 2.5rem;
-            }
-            &.left {
-                .pundit {
-                    .photo {
-                        position: absolute;
-                        left: -7rem;
-                        top: -1rem;
-                        margin-left: 1rem;
-                    }
-                }
-            }
-            &.right {
-                .text {
-                    text-align: right;
-                }
-                .pundit {
-                    .photo {
-                        position: absolute;
-                        right: -7rem;
-                        top: -1rem;
-                    }
-                    .text-wrapper {
-                        left: auto;
-                        width: 100%;
-                        float: right;
-                        text-align: right;
-                    }
-                }
-            }
-        }
-        &.tall-2 {
-            color: white;
-            height: $tall-2-height;
-            .prompt {
+            background-color: rgba(0,0,0,0);
+            .text-wrapper {
+                left: 0;
                 color: $white;
             }
-            .background {
-                background-image: url(../../img/vertical.jpg);
-                display: block;
+            .photo {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 6rem;
             }
-
-            .pundit {
-                background-color: rgba(0,0,0,0) !important;
-                .text-wrapper, .voting {
-                    color: $white;
-                }
+            .name {
+                font-size: 2rem;
+                line-height: 2.5rem;
             }
-
-            .text {
-                position: absolute;
-                bottom: ($pundit-height + $pundit-vertical-padding);
-                z-index: 300;
-                @extend .h2;
-            }
-            .voting .up, .voting .down {
-                border-left: 0 !important;
+            .source {
+                font-size: 1.5rem;
             }
         }
-        &.featured {
-            background-color: rgba(0,0,0,0.2);
-            color: $white;
-            position: absolute;
-            bottom: 2rem;
-            width: 50%;
-
-            .text {
-                @extend .h1;
-                text-shadow: 2px 2px 3px black;
-                position: absolute;
-                bottom: 5rem;
-                left: 1rem;
-                right: ($pundit-height + 1rem);
-            }
-
+        & > .text {
+            margin-top: 2.5rem;
+        }
+        &.left {
             .pundit {
-                background-color: rgba(0,0,0,0) !important;
-                bottom: 0;
+                .photo {
+                    position: absolute;
+                    left: -7rem;
+                    top: -1rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+        &.right {
+            .text {
+                text-align: right;
+            }
+            .pundit {
+                .photo {
+                    position: absolute;
+                    right: -7rem;
+                    top: -1rem;
+                }
                 .text-wrapper {
-                    height: 5rem;
-                    color: $white;
-                    left: 4rem;
-                    text-shadow: 2px 2px 3px black;
-                }
-                .name, .source {
-                    text-shadow: 2px 2px 3px black;
-                }
-                .voting {
-                    .prompt {
-                        color: white;
-                        text-shadow: 2px 2px 3px black;
-                    }
-                    .label {
-                        display: inline-block;
-                        font-size: 1.2rem;
-                        padding-right: 0.5rem;
-                        line-height: 1.5rem;
-                    }
-                    .up, .down {
-                        width: 9rem;
-                        text-align: right;
-                        border-left: 0;
-
-                        &:hover {
-                            background-color: rgba(0,0,0,0);
-                        }
-                    }
+                    left: auto;
+                    width: 100%;
+                    float: right;
+                    text-align: right;
                 }
             }
         }
-        &.no-box {
-            background-color: rgba(0,0,0,0.2) !important;
-            .background {
-                display: none;
-            }
-            padding-bottom: 1rem;
-            height: $tall-2-height;
-            border: 1rem solid white;
-            // @include scrim(50);
-            .text {
-                width: 50%;
-            }
-
+    }
+    &.wide-2 {
+        .text {
+            @extend .h3;
+        }
+    }
+    &.tall-2 {
+        color: $white;
+        height: $tall-2-height;
+        .prompt {
+            color: $white;
         }
         .background {
-            width: 100%;
-            background-position: center center;
-            background-size: cover;
-            display: none;
-            position: absolute;
-            top:0;
-            left:0;
-            height: 100%;
+            background-image: url(../../img/vertical.jpg);
+            display: block;
         }
+
         .pundit {
+            background-color: rgba(0,0,0,0) !important;
+            color: $white;
+        }
+        .text-wrapper {
+            color: $white;
+        }
+        .text {
             position: absolute;
+            text-shadow: 2px 2px 3px black;
+            bottom: ($pundit-height + $prediction-padding + $voting-height);
+            left: $prediction-padding;
+            right: $prediction-padding;
+
+            z-index: 300;
+            @extend .h2;
+        }
+    }
+    &.featured {
+        background-color: rgba(0,0,0,0.2);
+        color: $white;
+        position: absolute;
+        bottom: 2rem;
+        width: 50%;
+
+        .text {
+            @extend .h1;
+
+            position: absolute;
+            bottom: ($pundit-height + $voting-height + 1rem);
+            left: 1rem;
+            right: 1rem;
+        }
+
+        .pundit {
+            background-color: rgba(0,0,0,0) !important;
             bottom: 0;
-            left: 0;
+            .text-wrapper {
+                height: 5rem;
+                color: $white;
+                left: 4rem;
+                text-shadow: 2px 2px 3px black;
+            }
+            .name, .source {
+                text-shadow: 2px 2px 3px black;
+            }
         }
-        .scrim {
-            @include scrim(50);
+        .voting {
+            .prompt {
+                color: white;
+                text-shadow: 2px 2px 3px black;
+            }
+            .label {
+                display: inline-block;
+                font-size: 1.2rem;
+                padding-right: 0.5rem;
+                line-height: 1.5rem;
+            }
+            .up, .down {
+                width: 9rem;
+                text-align: right;
+                border-left: 0;
+
+                &:hover {
+                    background-color: rgba(0,0,0,0);
+                }
+            }
         }
+    }
+    &.no-box {
+        background-color: rgba(0,0,0,0.2) !important;
+        .background {
+            display: none;
+        }
+        padding-bottom: 1rem;
+        height: $tall-2-height;
+        border: 1rem solid white;
+        // @include scrim(50);
+        .text {
+            width: 50%;
+        }
+
     }
 }
 
@@ -425,14 +496,20 @@ html, body {
     background-color: $ultralightgray;
     width: 100%;
     color: $black;
-    z-index: 300;
+    z-index: 700;
     @include border-box;
 
-    .photo > .grade {
-        position: absolute;
+    .grade {
         display: block;
-        top: $pundit-height;
-
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: $pundit-height;
+        width: $pundit-height;
+        color: $white;
+        text-align: center;
+        overflow: hidden;
+        @include transition(0.2s);
 
         .average {
             font-size: 0.7rem;
@@ -442,11 +519,18 @@ html, body {
             text-align: center;
             line-height: 1rem;
             left: 0;
-            bottom: 0;
+            bottom: -1rem;
             @include transition(0.2s);
         }
         .letter {
-            top: -0.5rem;
+            top: 0rem;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            @include transition(0.2s);
+            font-size: 1.5rem;
+            line-height: $pundit-height;
+            vertical-align: middle;
         }
 
         &:hover {
@@ -458,31 +542,6 @@ html, body {
             }
         }
     }
-
-    .grade {
-        position: relative;
-        height: $pundit-height;
-        width: $pundit-height;
-        color: $white;
-        text-align: center;
-        overflow: hidden;
-        @include transition(0.2s);
-
-        .letter {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            @include transition(0.2s);
-            font-size: 1.5rem;
-            line-height: $pundit-height;
-            vertical-align: middle;
-        }
-
-
-    }
-
-
     .photo {
         background-image: url(../../img/profile.jpeg);
         background-position: center center;
@@ -493,17 +552,13 @@ html, body {
         position: relative;
         overflow: hidden;
     }
-    &:hover {
-        .grade {
-            top: 0;
-        }
-    }
     .text-wrapper {
         @include border-box;
         position: absolute;
         padding: $pundit-vertical-padding;
         top: 0;
         left: ($pundit-height - 2 * $pundit-vertical-padding +  2 * $prediction-padding);
+        right: $pundit-height;
         height: $pundit-height;
         color: $black;
         .name {
@@ -513,81 +568,9 @@ html, body {
             margin: 0.25rem 0 0;
         }
     }
-    .voting {
-        z-index: 1000;
-        height: $pundit-height;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: $pundit-height;
-        @include transition(0.2s);
-
-
-        .prompt {
-            text-transform: uppercase;
-            position: absolute;
-            bottom: 0;
-            font-size: 0.8rem;
-            line-height: $pundit-height;
-            height: $pundit-height;
-            vertical-align: middle;
-            text-align: center;
-            width: 100%;
-            color: $black;
-        }
-        .options {
-            height: ($prediction-height - $pundit-height);
-            width: $pundit-height;
-            position: absolute;
-            bottom: $pundit-height;
-            right: 0;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            z-index: 3000;
-            @include transition(0.2s);
-            li {
-                height: (($prediction-height - $pundit-height)/4);
-                width: $pundit-height;
-                .letter {
-                    line-height: (($prediction-height - $pundit-height)/4);
-                }
-            }
-        }
-        &:hover {
-            height: (5 * $pundit-height);
-        }
-
-        .label {
-            display: none;
-        }
-
-        .up, .down {
-            border-left: 1px solid $white;
-            position: absolute;
-            right: 0;
-            padding: 0 $prediction-padding;
-            height: ($pundit-height / 2);
-            line-height: ($pundit-height / 3);
-            font-size: 1.5rem;
-            @include border-box;
-            @include transition(0.2s);
-
-            &:hover {
-                background-color: rgba(0,0,0,0.2);
-            }
-        }
-
-        .up {
+    &:hover {
+        .grade {
             top: 0;
-            vertical-align: bottom;
-            padding-top: ($pundit-height / 18);
-        }
-        .down {
-            vertical-align: top;
-            top: ($pundit-height / 2);
-            padding-top: ($pundit-height / 18);
         }
     }
 }
@@ -628,7 +611,27 @@ html, body {
     }
 }
 
-.full {
-    height: 80vh;
+footer {
+    background-color: $blue;
+    color: $white;
+    padding: 4rem 0;
+    margin-top: 2rem;
+    @include border-box;
+    ul {
+        margin: 0rem auto;
+        max-width: $content-width;
+        max-width: 95%;
+        padding: 0.75rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            width: 10rem;
+            margin: 0 auto;
+        }
+        ul {
+            margin-left: 1rem;
+        }
+    }
 }
 
