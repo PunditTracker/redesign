@@ -965,72 +965,60 @@ html, body {
 .prediction.featured {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
+  text-shadow: 2px 2px 3px black;
   position: absolute;
   bottom: 2rem;
   width: 50%;
 }
-/* line 433 */
+/* line 434 */
 .prediction.featured .text {
   position: absolute;
   bottom: 7rem;
   left: 1rem;
   right: 1rem;
 }
-/* line 442 */
+/* line 443 */
 .prediction.featured .pundit {
   background-color: transparent !important;
   bottom: 0;
 }
-/* line 445 */
+/* line 446 */
 .prediction.featured .pundit .text-wrapper {
   height: 5rem;
   color: white;
   left: 4rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 451 */
+/* line 452 */
 .prediction.featured .pundit .name, .prediction.featured .pundit .source {
   text-shadow: 2px 2px 3px black;
 }
-/* line 456 */
+/* line 457 */
+.prediction.featured .voting .options {
+  text-shadow: none;
+}
+/* line 460 */
 .prediction.featured .voting .prompt {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 460 */
-.prediction.featured .voting .label {
-  display: inline-block;
-  font-size: 1.2rem;
-  padding-right: 0.5rem;
-  line-height: 1.5rem;
-}
-/* line 466 */
-.prediction.featured .voting .up, .prediction.featured .voting .down {
-  width: 9rem;
-  text-align: right;
-  border-left: 0;
-}
-/* line 471 */
-.prediction.featured .voting .up:hover, .prediction.featured .voting .down:hover {
-  background-color: transparent;
-}
-/* line 477 */
+/* line 467 */
 .prediction.no-box {
   background-color: rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 1rem;
   height: 31.5rem;
   border: 1rem solid white;
 }
-/* line 479 */
+/* line 469 */
 .prediction.no-box .background {
   display: none;
 }
-/* line 486 */
+/* line 476 */
 .prediction.no-box .text {
   width: 50%;
 }
 
-/* line 493 */
+/* line 483 */
 .pundit {
   position: relative;
   height: 4rem;
@@ -1042,7 +1030,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 502 */
+/* line 492 */
 .pundit .grade {
   display: block;
   position: absolute;
@@ -1058,7 +1046,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 514 */
+/* line 504 */
 .pundit .grade .average {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -1073,7 +1061,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 525 */
+/* line 515 */
 .pundit .grade .letter {
   top: 0rem;
   position: absolute;
@@ -1087,15 +1075,15 @@ html, body {
   line-height: 4rem;
   vertical-align: middle;
 }
-/* line 537 */
+/* line 527 */
 .pundit .grade:hover .letter {
   top: -0.5rem;
 }
-/* line 540 */
+/* line 530 */
 .pundit .grade:hover .average {
   bottom: 0;
 }
-/* line 545 */
+/* line 535 */
 .pundit .photo {
   background-image: url(../../img/profile.jpeg);
   background-position: center center;
@@ -1106,7 +1094,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-/* line 555 */
+/* line 545 */
 .pundit .text-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1119,20 +1107,20 @@ html, body {
   height: 4rem;
   color: #111;
 }
-/* line 564 */
+/* line 554 */
 .pundit .text-wrapper .name {
   margin: 0;
 }
-/* line 567 */
+/* line 557 */
 .pundit .text-wrapper .source {
   margin: 0.25rem 0 0;
 }
-/* line 572 */
+/* line 562 */
 .pundit:hover .grade {
   top: 0;
 }
 
-/* line 578 */
+/* line 568 */
 .category-link {
   background-color: #2a81c4;
   color: white;
@@ -1148,7 +1136,7 @@ html, body {
   background-size: cover;
   background-image: url(../../img/hero.jpg);
 }
-/* line 590 */
+/* line 580 */
 .category-link h2 {
   position: absolute;
   right: 1rem;
@@ -1158,16 +1146,16 @@ html, body {
   line-height: 3rem;
   margin: 0;
 }
-/* line 599 */
+/* line 589 */
 .category-link h2 + a h2 {
   bottom: 1rem;
   text-decoration: underline !important;
 }
-/* line 603 */
+/* line 593 */
 .category-link h2 + a i {
   text-decoration: underline !important;
 }
-/* line 609 */
+/* line 599 */
 .category-link .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -1177,7 +1165,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 614 */
+/* line 604 */
 footer {
   background-color: #2a81c4;
   color: white;
@@ -1187,7 +1175,7 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 620 */
+/* line 610 */
 footer ul {
   margin: 0rem auto;
   max-width: 65rem;
@@ -1197,12 +1185,19 @@ footer ul {
   padding: 0;
   margin: 0;
 }
-/* line 628 */
+/* line 618 */
 footer ul li {
   width: 10rem;
   margin: 0 auto;
 }
-/* line 632 */
+/* line 622 */
 footer ul ul {
   margin-left: 1rem;
+}
+/* line 626 */
+footer .double {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
 }
