@@ -23,6 +23,32 @@
     'http://placekitten.com/600/800'
 ]%}
 
+{% set heads = [
+    url_for('static', filename='img/heads/AlejandroBedoya.jpg'),
+    url_for('static', filename='img/heads/AronJohannsson.jpg'),
+    url_for('static', filename='img/heads/BradDavis.jpg'),
+    url_for('static', filename='img/heads/BradGuzan.jpg'),
+    url_for('static', filename='img/heads/ChrisWondolowski.jpg'),
+    url_for('static', filename='img/heads/ClintDempsey.jpg'),
+    url_for('static', filename='img/heads/DaMarcusBeasley.jpg'),
+    url_for('static', filename='img/heads/DeAndreYedlin.jpg'),
+    url_for('static', filename='img/heads/FabianJohnson.jpg'),
+    url_for('static', filename='img/heads/GeoffCameron.jpg'),
+    url_for('static', filename='img/heads/GrahamZusi.jpg'),
+    url_for('static', filename='img/heads/JermaineJones.jpg'),
+    url_for('static', filename='img/heads/JohnBrooks.jpg'),
+    url_for('static', filename='img/heads/JozyAltidore.jpg'),
+    url_for('static', filename='img/heads/JulianGreen.jpg'),
+    url_for('static', filename='img/heads/KyleBeckerman.jpg'),
+    url_for('static', filename='img/heads/MattBesler.jpg'),
+    url_for('static', filename='img/heads/MichaelBradley.jpg'),
+    url_for('static', filename='img/heads/MixDiskerud.jpg'),
+    url_for('static', filename='img/heads/NickRimando.jpg'),
+    url_for('static', filename='img/heads/OmarGonzalez.jpg'),
+    url_for('static', filename='img/heads/TimHoward.jpg'),
+    url_for('static', filename='img/heads/TimmyChandler.jpg')
+]%}
+
 {% macro category_link() %}
 <div class="category-link">
     <div class="scrim"></div>
@@ -78,7 +104,7 @@
 
 {% macro pundit(name, source, color, grade, tag='div') %}
 <{{tag}} class="pundit {{color}}">
-    <div class="photo"></div>
+    <div class="photo" style="background-image:url({{ random(heads) }})"></div>
     <div class="text-wrapper">
         <a href="#/pundit/{{name}}">
             <h5 class="name">{{ name }}</h5>
