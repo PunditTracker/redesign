@@ -1,5 +1,6 @@
 @import 'base';
 @import 'navbar';
+@import 'blog';
 
 $blog-post-height: 6rem;
 $extension: 10rem;
@@ -30,6 +31,10 @@ html, body {
 
     & >.card-grid {
         width: 95%;
+    }
+
+    &.no-hero {
+        margin-top: ($navbar-height + 2rem);
     }
 }
 
@@ -65,7 +70,7 @@ html, body {
     }
 
     & > .background {
-        box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
+        @include large-box-shadow;
         top: $navbar-height;
         bottom: 2rem;
         position: absolute;
@@ -172,7 +177,7 @@ html, body {
     position: relative;
     margin: 0 (-1 * $extension - 0.75rem);
     padding: 0 ($extension + 0.75rem);
-    box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3);
+    @include large-box-shadow;
     .question {
         color: $white;
         position: relative;
@@ -183,7 +188,7 @@ html, body {
         padding: 5rem 0 0;
         z-index: 500;
         @extend .h2;
-        text-shadow: 2px 2px 3px black;
+        @include text-shadow;
     }
     .background {
         width: 100%;
@@ -203,7 +208,7 @@ html, body {
 .featured-users, .featured-pundits, .featured-blog-posts {
     height: $tall-3-2-height;
     background-color: $white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    @include box-shadow;
     & > .title-wrapper {
         @include border-box;
         // background-color: $blue;
@@ -219,7 +224,7 @@ html, body {
             bottom: 1rem;
             margin: 0;
             color: white;
-            text-shadow: 2px 2px 3px black;
+            @include text-shadow;
         }
     }
 
@@ -261,7 +266,7 @@ html, body {
 .facebook {
     height: $tall-3-2-height;
     height: $prediction-height;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    @include box-shadow;
     position: relative;
     @include radial(59,89,152,50%, $prediction-height - $pundit-height);
     .title-wrapper {
@@ -297,7 +302,7 @@ html, body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    @include box-shadow;
     z-index: 200;
     background-color: $white;
     padding: $prediction-padding;
@@ -398,7 +403,7 @@ html, body {
         background-color: rgba(0,0,0,0);
         position: relative;
         padding: 3rem;
-        text-shadow: 2px 2px 3px black;
+        @include text-shadow;
         & > .pundit {
             border: 0;
             top: 0;
@@ -484,7 +489,7 @@ html, body {
         }
         .text {
             position: absolute;
-            text-shadow: 2px 2px 3px black;
+            @include text-shadow;
             bottom: ($pundit-height + $prediction-padding + $voting-height);
             left: $prediction-padding;
             right: $prediction-padding;
@@ -496,7 +501,7 @@ html, body {
                 border: 0 !important;
         }
         .option {
-            text-shadow: 2px 2px 3px black;
+            @include text-shadow;
         }
         .options li:hover .option {
             text-shadow: none;
@@ -505,7 +510,7 @@ html, body {
     &.featured {
         background-color: rgba(0,0,0,0.2);
         color: $white;
-        text-shadow: 2px 2px 3px black;
+        @include text-shadow;
         position: absolute;
         bottom: 2rem;
         width: 50%;
@@ -526,22 +531,22 @@ html, body {
                 height: 5rem;
                 color: $white;
                 left: 4rem;
-                text-shadow: 2px 2px 3px black;
+                @include text-shadow;
             }
             .name, .source {
-                text-shadow: 2px 2px 3px black;
+                @include text-shadow;
             }
         }
         .voting {
             .prompt {
                 color: white;
-                text-shadow: 2px 2px 3px black;
+                @include text-shadow;
             }
             .options, .options li {
                 border: 0 !important;
             }
             .option {
-                text-shadow: 2px 2px 3px black;
+                @include text-shadow;
             }
             .options li:hover .option {
                 text-shadow: none;
@@ -637,6 +642,7 @@ html, body {
         color: $black;
         .name {
             margin:0;
+            font-weight: $regular;
         }
         .source {
             margin: 0.25rem 0 0;
@@ -652,7 +658,7 @@ html, body {
 .category-link {
     background-color: $blue;
     color: $white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+    @include box-shadow;
     z-index: 200;
     padding: $prediction-padding;
     height: $prediction-height;
@@ -665,7 +671,7 @@ html, body {
         position: absolute;
         right: 1rem;
         left: 1rem;
-        text-shadow: 2px 2px 3px black;
+        @include text-shadow;
         z-index: 1000;
         line-height: 3rem;
         margin: 0;

@@ -177,3 +177,24 @@ $o6: 1;
         rgba($r,$g,$b,$o6) $p6);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3b5897', GradientType=1 );
 }
+
+@mixin text-shadow {
+    text-shadow: 2px 2px 3px black;
+}
+
+@mixin box-shadow {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+
+@mixin large-box-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
+}
+
+@mixin clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+

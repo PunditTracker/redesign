@@ -28,17 +28,16 @@ $navbar-height: 4rem;
 		width: 4rem;
 		line-height: 0.75rem;
 		display: block;
-	}
-	.p {
-		font-size: 1.125rem;
-		line-height: 1.25rem;
-	}
-	.t {
-		font-size: 0.95rem;
-		margin-top: -1rem;
+		&:first-child {
+			font-size: 1.125rem;
+			line-height: 1.25rem;
+		}
+		&:last-child {
+			font-size: 0.95rem;
+			margin-top: -0.75rem;
+		}
 	}
 }
-
 .categories {
 	display: inline-block;
 	vertical-align: top;

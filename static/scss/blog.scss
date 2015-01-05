@@ -1,0 +1,192 @@
+@import 'base';
+
+$post-padding: 1rem;
+$post-margin: 1.5rem;
+$header-height: 15rem;
+
+
+.blog-left {
+	width: 66.666666%;
+	@include border-box;
+	float: left;
+}
+.blog-right {
+	width: 33.333333%;
+	@include border-box;
+	float: left;
+}
+.blog-wrapper {
+	max-width: $content-width;
+	margin: 0 auto;
+	@include clearfix;
+	position: relative;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+.posts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	.header {
+		height: $header-height;
+		position: relative;
+		.background {
+			@extend .background-image;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			.scrim {
+				@include scrim(100);
+			}
+		}
+		.text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 100;
+			color: white;
+			@include text-shadow;
+
+			h3 {
+				margin: 0;
+				margin-bottom: 1rem;
+			}
+			h6 {
+				margin: 0;
+			}
+		}
+	}
+	img {
+		max-width: 100%;
+		max-height: 20rem;
+		display: block;
+		margin: auto;
+		@include box-shadow;
+	}
+	p:last-child {
+		margin: 0;
+	}
+	.post {
+		@include box-shadow;
+		background-color: $white;
+		margin-bottom: $post-margin;
+	}
+
+	.text {
+		padding: $post-padding;
+	}
+}
+
+.title-card {
+	background-color: $white;
+	padding: $post-padding;
+	@include box-shadow;
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	max-height: 100%;
+	@include border-box;
+
+	.inner {
+		padding-bottom: $post-margin;
+		@include border-box;
+	}
+
+	&.fixed {
+		position: fixed;
+		bottom: 0;
+		&.bottom {
+			top: 0;
+			bottom: auto;
+			position: relative;
+		}
+	}
+}
+
+.comment-form, .comments {
+	padding: $post-padding;
+	background-color: $white;
+	& > h4 {
+		margin: 0 0 1rem;
+	}
+}
+.comment-form {
+	input[type="text"], input[type="email"] {
+		display: block;
+		margin-bottom: 1rem;
+		width: 100%;
+		max-width: 20rem;
+	}
+	textarea {
+		width: 100%;
+		height: 10rem;
+		margin-bottom: 1rem;
+	}
+}
+.comments {
+	margin-bottom: $post-margin;
+	&.are-facebook {
+		margin-bottom: 0;
+	}
+	ul {
+		margin: 0;
+		list-style: none;
+		ul {
+			margin-left: 4rem;
+		}
+	}
+	li {
+		border-top: 1px solid $verylightgray;
+	}
+	.comment {
+		div {
+			height: 2rem;
+			img {
+				display: inline-block;
+				height: 2rem;
+			}
+			h5 {
+				display: inline-block;
+				vertical-align: top;
+				line-height: 2rem;
+				margin: 0;
+			}
+		}
+		p {
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+.socials {
+	& > span {
+		height: 20px;
+		line-height: 12px;
+		display: inline-block;
+		padding-right: 1rem;
+		vertical-align: top;
+		&.facebook {
+			width: 130px;
+		}
+		&.twitter {
+			width: 77px;
+		}
+		&.g-plus {
+			width: 80px
+		}
+	}
+}

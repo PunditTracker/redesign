@@ -1,3 +1,14 @@
+{% set posts = [
+    {
+        "title": "Why You Should Ignore 2015 Market Forecasts",
+        "author": "Tim Howard",
+        "image": "basketball.jpg",
+        "date": "December 31, 2014",
+        "html": post_html,
+        "snippet": truncated_html
+    }
+]%}
+
 
 {% set predictions = [
     ('WTI Crude Oil will fall below $40 a barrel during 2015', 'Groundhog Gary', 'Shadow', 'green', 'Finance', 'A+'),
@@ -160,10 +171,10 @@
 </div>
 {% endmacro %}
 
-{% macro blog_posts() %}
+{% macro blog_posts(title="From our Blog") %}
 <div class="featured-blog-posts">
     <div class="title-wrapper">
-        <h2 class="title">From our Blog</h2>
+        <h2 class="title">{{title}}</h2>
     </div>
     <ul>
         <li class="blog-post">
@@ -251,22 +262,26 @@
     <nav>
         <div class="pure-g">
             <div class="pure-u-1">
-                <div class="logo">
-                    <span class="p">Pundit</span><br><span class="t">Tracker</span>
-                </div>
+                <a href="{{ url_for('grid') }}">
+                    <div class="logo">
+                        <span>Pundit</span><br><span>Tracker</span>
+                    </div>
+                </a>
                 <ul class="categories">
                     {% for _, _, _, color, category, _ in predictions %}
                         <li>
-                            <a href="#" data-color="{{color}}">{{ category }}</a>
+                            <a href="{{ url_for('grid') }}" data-color="{{color}}">{{ category }}</a>
                         </li>
                     {% endfor %}
+                    <li>
+                        <a href="{{ url_for('blog') }}">Blog</a>
+                    </li>
                 </ul>
                 <a class="sign-up button" href="#">Sign Up / Log in</a>
                 <div class="search">
                     <input id="search" class="stretch" type="text" placeholder="Type to search..." />
                     <i class="search-icon fa fa-search"></i>
                 </div>
-
             </div>
         </div>
     </nav>
@@ -305,7 +320,7 @@
                 <li class="double">
                     <a href="">
                         <div class="logo">
-                            <span class="p">Pundit</span><br><span class="t">Tracker</span>
+                            <span>Pundit</span><br><span>Tracker</span>
                         </div>
                     </a>
                 </li>
@@ -355,4 +370,67 @@
         </div>
     </div>
 </footer>
+{% endmacro %}
+
+{% macro post(truncate=False) %}
+{% with p = random(posts) %}
+<li class="post">
+    <div class="header">
+        <div class="background" style="background-image:url({{ url_for('static', filename='img/' + p.image) }})">
+            <div class="scrim"></div>
+        </div>
+        <div class="text">
+            <a href="{{ url_for('post') }}"><h3>{{p.title}}</h3></a>
+            <h6>{{p.date}} | by {{ p.author }}</h6>
+        </div>
+    </div>
+    <div class="text">
+        {{ socials() }}
+        {% if truncate %}
+            {{ p.snippet | safe}}
+            <p><a href="{{ url_for('post') }}">Read more...</a></p>
+        {% else%}
+            {{ p.html | safe}}
+            {{ socials() }}
+        {% endif %}
+    </div>
+</li>
+{% endwith%}
+{% endmacro %}
+
+{% macro comment() %}
+{% with _, name, source, color, _, grade = random(predictions) %}
+<div class="comment">
+    <!-- {{ pundit(name, source, color, grade) }} -->
+    <div>
+        <img src="{{ random(heads) }}"/>
+        <h5>{{name}}</h5>
+    </div>
+    <p class="text">
+        {% for _ in range(random([1,2,3,5,9])) %}
+        My comment is that this is a great article.
+        {% endfor %}
+    </p>
+</div>
+{% endwith%}
+{% endmacro %}
+
+{% macro socials() %}
+<div class="socials">
+    <span class="facebook-button">
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    </span>
+    <span class="twitter">
+        <a class="twitter-share-button"
+      href="https://twitter.com/share">
+        Tweet
+        </a>
+        <script type="text/javascript">
+        window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+        </script>
+    </span>
+    <span class="g-plus">
+        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="300"></div>
+    </span>
+</div>
 {% endmacro %}

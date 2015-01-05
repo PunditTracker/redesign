@@ -23,8 +23,8 @@ body, html {
     color: $black;
 }
 
-p, label {
-    margin-bottom: 0.3125rem;
+p, .p, label, table {
+    margin: 0 0 1rem;
     font-family: $sans;
     font-weight: $regular;
     font-size: 1rem;
@@ -38,10 +38,53 @@ pre {
     font-family: monospace;
 }
 
-ul li {
-    font-size: 1.2rem;
-    line-height: 1.9rem;
+$table-padding: 0.5rem;
+table {
+    // border: 1px solid $black;
+    margin: 1rem auto 2rem;
+    @include box-shadow;
+
+    thead {
+        background-color: $blue;
+        color: $white;
+        // border-bottom: 1px solid $black;
+    }
+    tfoot {
+        // border-top: 1px solid $black;
+    }
 }
+
+th, td {
+    padding: 0 $table-padding;
+    // &:first-child {
+    //     padding-left: 0;
+    // }
+    // &:last-child {
+    //     padding-right: 0;
+    // }
+}
+
+tr {
+    &:nth-child(even){
+        background-color: $ultralightgray;
+    }
+}
+
+th {
+    font-weight: $bold;
+}
+
+ul { list-style: disc; }
+ol { list-style: decimal; }
+ul, ol {
+    padding: 0;
+    margin-left: 2rem;
+    li {
+        @extend .p;
+        margin: 0;
+    }
+}
+
 
 em { font-style: italic; }
 
@@ -81,7 +124,7 @@ h4, .h4 {
 }
 h5, .h5 {
     font-family: $sans;
-    font-weight: $regular;
+    font-weight: $bold;
     font-size: 1rem;
     line-height: 1rem;
     margin-bottom: 0.625rem;

@@ -1,0 +1,53 @@
+{% extends "grid.html" %}
+{% import "macros.html" as macros with context %}
+
+{%- block body -%}
+{{ macros.navbar() }}
+<div class="content no-hero">
+    <div class="blog-wrapper card-grid">
+        <div class="blog-left">
+            {% block blog_content %}
+            <ul class="posts">
+                {% for _ in range(10) %}
+                {{ macros.post(True) }}
+                {% endfor %}
+            </ul>
+            {% endblock %}
+        </div>
+        <div class="sidebar blog-right">
+            <div class="inner">
+                {% block widgets %}
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">
+                        <div class="title-card">
+                            <a href="{{ url_for('blog') }}"><h1>PT Blog</h1></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">
+                        {{ macros.blog_posts('Featured Posts') }}
+                    </div>
+                </div>
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">
+                        {{ macros.featured_users() }}
+                    </div>
+                </div>
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">
+                        {{ macros.blog_posts('Trending') }}
+                    </div>
+                </div>
+                <div class="pure-g card-grid">
+                    <div class="pure-u-1">
+                        {{ macros.featured_pundits() }}
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    {{ macros.footer() }}
+</div>
+{%- endblock -%}
