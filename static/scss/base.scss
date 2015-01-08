@@ -40,28 +40,17 @@ pre {
 
 $table-padding: 0.5rem;
 table {
-    // border: 1px solid $black;
     margin: 1rem auto 2rem;
     @include box-shadow;
 
     thead {
         background-color: $blue;
         color: $white;
-        // border-bottom: 1px solid $black;
-    }
-    tfoot {
-        // border-top: 1px solid $black;
     }
 }
 
 th, td {
     padding: 0 $table-padding;
-    // &:first-child {
-    //     padding-left: 0;
-    // }
-    // &:last-child {
-    //     padding-right: 0;
-    // }
 }
 
 tr {
@@ -162,6 +151,17 @@ input, textarea, {
             padding-left: 2.25rem;
         }
     }
+}
+
+select {
+    border: 1px solid $verylightgray;
+    background-color: $white;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    background: url(../../img/caret.svg) no-repeat right 0.25rem center;
+    background-size: 1rem 1rem;
 }
 
 @media screen and (min-width: $xxl-desktop-min) {

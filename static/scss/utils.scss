@@ -198,3 +198,10 @@ $o6: 1;
     }
 }
 
+@mixin wrap {
+    white-space: wrap;      /* CSS3 */
+    white-space: -moz-wrap; /* Firefox */
+    white-space: -wrap;     /* Opera <7 */
+    white-space: -o-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}

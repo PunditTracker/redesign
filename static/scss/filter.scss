@@ -1,0 +1,79 @@
+@import 'base';
+
+$filter-height: 2rem;
+
+.filter {
+	display: inline-block;
+	border: 1px solid $verylightgray;
+	height: $filter-height;
+	position: relative;
+	span {
+		display: inline;
+		margin: 0;
+		vertical-align: top;
+		height: $filter-height;
+		line-height: $filter-height;
+	}
+
+	.label {
+		padding: 0.25rem;
+	}
+	.options {
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		height: $filter-height;
+		padding-top: $filter-height;
+		@include border-box;
+		position: relative;
+
+		li {
+			display: block;
+			padding: 0.25rem;
+			padding-right: ($filter-height);
+			vertical-align: top;
+			height: ($filter-height - 0.5rem);
+			line-height: ($filter-height - 0.5rem);
+			border: 1px solid $verylightgray;
+			border-top: 0;
+
+
+			&:hover {
+				background-color: $ultralightgray;
+			}
+
+			&.selected {
+				display: inline;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 0;
+
+				span {
+					position: absolute;
+					top: 0;
+					left: 0.25rem;
+				}
+			}
+		}
+	}
+	.arrow {
+		display: inline-block;
+		height: $filter-height;
+		line-height: $filter-height;
+		width: $filter-height;
+		text-align: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&.open {
+		.options {
+			height: auto;
+			overflow: visible;
+		}
+	}
+}

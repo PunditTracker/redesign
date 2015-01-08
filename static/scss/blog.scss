@@ -60,17 +60,34 @@ $header-height: 15rem;
 				margin: 0;
 			}
 		}
+
+		&.no-img {
+			.background {
+				display: none;
+			}
+			background-color: $ultralightgray;
+			height: auto;
+			.text {
+				position: relative;
+				color: $black;
+				text-shadow: none;
+			}
+		}
 	}
 	img {
-		max-width: 100%;
 		max-height: 20rem;
+	}
+	img, .img {
+		max-width: 100%;
 		display: block;
 		margin: auto;
 		@include box-shadow;
 	}
-	p:last-child {
+
+	p &:last-child {
 		margin: 0;
 	}
+
 	.post {
 		@include box-shadow;
 		background-color: $white;
@@ -80,7 +97,42 @@ $header-height: 15rem;
 	.text {
 		padding: $post-padding;
 	}
+
+	table, .table, img, .img {
+		&.inline {
+			max-width: 50%;
+			margin: 0.5rem 1rem;
+			display: inline-block;
+			max-height: auto;
+
+			&.left {
+				float:left;
+				margin-left: 0;
+			}
+			&.right {
+				float:right;
+				margin-right: 0;
+			}
+		}
+		& + label {
+			background-color: $ultralightgray;
+			display: block;
+			padding: 0.5rem;
+			margin: 0;
+			font-size: 0.8rem;
+			line-height: 1rem;
+			@include border-box;
+		}
+
+		& img, & table {
+			margin: 0;
+			width: 100% !important;
+			box-shadow: none !important;
+			@include border-box;
+		}
+	}
 }
+
 
 .title-card {
 	background-color: $white;
@@ -88,7 +140,7 @@ $header-height: 15rem;
 	@include box-shadow;
 
 	h1 {
-		margin: 0;
+		margin: 0 0 1rem;
 	}
 }
 
@@ -120,6 +172,7 @@ $header-height: 15rem;
 .comment-form, .comments {
 	padding: $post-padding;
 	background-color: $white;
+	@include box-shadow;
 	& > h4 {
 		margin: 0 0 1rem;
 	}
@@ -139,9 +192,6 @@ $header-height: 15rem;
 }
 .comments {
 	margin-bottom: $post-margin;
-	&.are-facebook {
-		margin-bottom: 0;
-	}
 	ul {
 		margin: 0;
 		list-style: none;
@@ -173,6 +223,7 @@ $header-height: 15rem;
 }
 
 .socials {
+	margin-bottom: 0.5rem;
 	& > span {
 		height: 20px;
 		line-height: 12px;

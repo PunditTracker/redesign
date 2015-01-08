@@ -180,19 +180,19 @@
         <li class="blog-post">
             <a href="">
                 <h4>Which Experts Predicted a Royals-Giants World Series?</h4>
-                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+                <h6>OCTOBER 19, 2014 | JOE HENDERSON</h6>
             </a>
         </li>
         <li class="blog-post">
             <a href="">
                 <h4>If you are going to be wrong, be spectacularly wrong</h4>
-                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+                <h6>OCTOBER 19, 2014 | MILES DAVIS</h6>
             </a>
         </li>
         <li class="blog-post">
             <a href="">
                 <h4>Is Nate Silver a Wizard or simply Above Average?</h4>
-                <h6>OCTOBER 19, 2014 | SPORTS</h6>
+                <h6>OCTOBER 19, 2014 | CHICK CORREA</h6>
             </a>
         </li>
     </ul>
@@ -372,10 +372,10 @@
 </footer>
 {% endmacro %}
 
-{% macro post(truncate=False) %}
+{% macro post(truncate=False, image=True) %}
 {% with p = random(posts) %}
 <li class="post">
-    <div class="header">
+    <div class="header {% if not image %}no-img{% endif %}">
         <div class="background" style="background-image:url({{ url_for('static', filename='img/' + p.image) }})">
             <div class="scrim"></div>
         </div>
@@ -434,3 +434,26 @@
     </span>
 </div>
 {% endmacro %}
+
+{% macro filter(label, options, selectedIndex=0) %}
+    <div class="filter">
+        <span class="label">{{ label }}</span>
+        <ul class="options">
+            {% for option in options %}
+                {% if loop.index0 == 0 %}
+                <li class="selected">
+                    <span>{{ option }}</span>
+                </li>
+                {% else %}
+                <li>
+                    <span>{{ option }}</span>
+                </li>
+                {% endif%}
+            {% endfor %}
+        </ul>
+        <span class="arrow">
+            <i class="fa fa-caret-down"></i>
+        </span>
+    </div>
+{% endmacro %}
+

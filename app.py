@@ -206,17 +206,96 @@ post_html = """
 
     <p>So what is behind the errant clustering? The biases
     of&nbsp;anchoring&nbsp;and recency are likely culprits,&nbsp;with analysts
-    anchoring to a baseline and extrapolating from recent trends. We believe
+    anchoring to a baseline and extrapolating from recent trends.
+    <span class="img inline left">
+        <img src="/static/img/hero.jpg">
+        <label class="caption">This image has a caption. Captions may extend onto
+        multiple lines if they want, <em>and can contain</em> <strong>HTML as well</strong>.</label>
+    </span>We believe
     career risk is also at play: as investor Joel Greenblatt put it, "It's much
     safer to be wrong in a crowd than to risk being the only one to misread a
     situation that everyone else had pegged correctly."</p>
 
     <p>But how do we reconcile the incentive for pundits to not stray from the
     consensus &mdash; and thus minimize career risk &mdash; with the bombastic
-    pundits that we all love to rail on?&nbsp;Why aren't they concerned about
+    pundits that we all love to rail on? But how do we reconcile the incentive for pundits to not stray from the
+    consensus &mdash; and thus minimize career risk &mdash; with the bombastic
+    pundits that we all love to rail on? But how do we reconcile the incentive for pundits to not stray from the
+    consensus &mdash; and thus minimize career risk &mdash; with the bombastic
+    pundits that we all love to rail on?
+
+    <div class="table inline right">
+        <table>
+            <thead>
+                <tr>
+                    <th>Bank</th>
+                    <th>2011</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>UBS</td>
+
+                    <td>1350</td>
+                </tr>
+
+                <tr>
+                    <td>Barclays</td>
+
+                    <td>1420</td>
+                </tr>
+
+                <tr>
+                    <td>Credit Suisse</td>
+
+                    <td>1250</td>
+                </tr>
+
+                <tr>
+                    <td>Goldman Sachs</td>
+
+                    <td>1450</td>
+                </tr>
+
+                <tr>
+                    <td>JP Morgan</td>
+
+                    <td>1400</td>
+                </tr>
+
+                <tr>
+                    <td>Bank of America Merrill Lynch</td>
+
+                    <td>1400</td>
+                </tr>
+
+                <tr>
+                    <td>Actual</td>
+
+                    <td>1258</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>Average (Banks)</th>
+
+                    <th>1378</th>
+                </tr>
+            </tfoot>
+        </table>
+        <label class="caption">Tables can be inline too! They can also have captions.</label>
+    </div>
+
+    But how do we reconcile the incentive for pundits to not stray from the
+    consensus &mdash; and thus minimize career risk &mdash; with the bombastic
+    pundits that we all love to rail on? Why aren't they concerned about
     career risk? Well, here's the catch:</p>
 
     <p>In punditry, if you are going to be wrong, it pays to be spectacularly
+    wrong. In punditry, if you are going to be wrong, it pays to be spectacularly
+    wrong. In punditry, if you are going to be wrong, it pays to be spectacularly
     wrong.</p>
 
     <p>We explain using the following matrix:</p>
@@ -296,10 +375,14 @@ post_html = """
 
     <p>Our hunch is that the best pundits are stuck in this Bermuda Triangle,
     quietly amassing first-rate track records but lacking a platform to reach a
-    wider audience. Instead, our professional ranks and airwaves are cluttered
+    wider audience. <img class="inline right" src="/static/img/hero.jpg"> Instead, our professional ranks and airwaves are cluttered
     with pundits who make Consensus and Wildly Contrarian predictions. Nate
     Silver is a rare exception, having made the leap from quant to superstar.
     We would argue that Silver was aided by the criticism leveled at him by
+    conservatives, which created a false perception that his election
+    predictions were wildly contrarian when they were&nbsp;<a href=
+    "http://blog.pundittracker.com/is-nate-silver-a-wizard-or-simply-above-average/"
+    target="_blank">in fact only moderately so</a>.  We would argue that Silver was aided by the criticism leveled at him by
     conservatives, which created a false perception that his election
     predictions were wildly contrarian when they were&nbsp;<a href=
     "http://blog.pundittracker.com/is-nate-silver-a-wizard-or-simply-above-average/"
