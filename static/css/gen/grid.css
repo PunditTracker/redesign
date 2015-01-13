@@ -1784,31 +1784,30 @@ select {
 }
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form {
-  background-color: white;
   color: #111;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
-  padding: 1rem;
   margin-bottom: 1.5rem;
 }
 /* line 10, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form input {
   margin-bottom: 1rem;
+  border: 0;
+  height: 2.5rem;
 }
 /* line 12, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form input[type="text"] {
   width: 100%;
 }
-/* line 17, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form h4 {
   margin: 0 0 1rem;
 }
-/* line 21, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 23, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form label {
   display: block;
   padding-left: 1rem;
   margin-bottom: 0;
 }
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 28, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .spacer {
   background-color: #2a81c4;
   width: 10rem;
@@ -1817,7 +1816,7 @@ select {
   left: 1rem;
   height: 1rem;
 }
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 36, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .editor {
   position: absolute;
   left: 11rem;
@@ -1826,7 +1825,7 @@ select {
   line-height: 1rem;
   width: 5rem;
 }
-/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 45, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .second-clause-wrapper {
   -webkit-transition: 0.2s 0 ease all;
   -moz-transition: 0.2s 0 ease all;
@@ -1837,19 +1836,19 @@ select {
   width: 0 !important;
   min-width: 50%;
 }
-/* line 49, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 51, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .second-clause-wrapper.hidden {
   min-width: 0;
 }
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .second-clause-wrapper input {
   margin: 0;
 }
-/* line 55, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .second-clause-wrapper input {
   width: 100%;
 }
-/* line 60, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners {
   list-style: none;
   margin: 0 0 1rem;
@@ -1857,7 +1856,7 @@ select {
   font-size: 0;
   position: relative;
 }
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners span {
   position: absolute;
   left: 50%;
@@ -1865,7 +1864,7 @@ select {
   line-height: 2rem;
   z-index: 20;
 }
-/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 76, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners li {
   font-size: 1rem;
   width: 16.666666%;
@@ -1875,22 +1874,22 @@ select {
   vertical-align: top;
   display: inline-block;
 }
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners li:not(:last-child) {
   padding-right: 0.25rem;
 }
-/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners li button {
   width: 100%;
   height: 2.5rem;
   text-align: center;
 }
-/* line 88, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners li input {
   position: relative;
   z-index: 50;
 }
-/* line 93, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners .button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1898,31 +1897,33 @@ select {
   background-color: white;
   color: gray;
   border-color: #e5e5e5;
-  padding: 0.25rem 1rem;
+  padding: 0 1rem;
   position: relative;
+  height: 2.5rem !important;
 }
-/* line 101, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners .button:hover {
   cursor: pointer;
 }
-/* line 104, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 107, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .joiners .button.on {
   color: white;
   background-color: #2a81c4;
   border-color: #2a81c4;
 }
-/* line 111, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .button {
   height: 2.5rem;
+  border: 0;
 }
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .active-tags {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
-/* line 119, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 123, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .active-tags li {
   display: inline-block;
   background-color: #2a81c4;
@@ -1930,43 +1931,45 @@ select {
   padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
-/* line 126, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .active-tags li:hover {
   cursor: pointer;
 }
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 132, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .active-tags li:not(:last-child) {
   margin-right: 0.25rem;
 }
-/* line 131, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 135, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .active-tags li i {
   padding-left: 0.25rem;
 }
-/* line 137, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 141, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form .is-opt {
   padding: 0.25rem;
   line-height: 2rem;
   color: gray;
 }
-/* line 144, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 148, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form select {
   margin-bottom: 1rem;
+  background-color: white;
 }
-/* line 148, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 153, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .prediction-form fieldset {
+  margin: 0;
   border: 0;
   padding: 0;
 }
 
-/* line 160, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 166, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction .final-clause-placeholder {
   color: gray;
 }
-/* line 163, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction .joiner {
   font-weight: 700;
 }
-/* line 166, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 172, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction span.hidden {
   display: none;
 }

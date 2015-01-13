@@ -1,10 +1,10 @@
 @import 'base';
 
 .prediction-form {
-	background-color: $white;
+	// background-color: $white;
 	color: $black;
-    @include box-shadow;
-    padding: 1rem;
+ //    @include box-shadow;
+ //    padding: 1rem;
     margin-bottom: 1.5rem;
 
     input {
@@ -12,6 +12,8 @@
     	&[type="text"] {
 	    	width: 100%;
     	}
+        border: 0;
+        height: 2.5rem;
     }
 
     h4 {
@@ -95,8 +97,9 @@
     		background-color: white;
     		color: gray;
     		border-color: $verylightgray;
-    		padding: 0.25rem 1rem;
+    		padding: 0 1rem;
     		position: relative;
+            height: 2.5rem !important;
 
     		&:hover {
     			cursor: pointer;
@@ -110,6 +113,7 @@
     }
 	.button {
 		height: 2.5rem;
+        border:0;
 	}
 	.active-tags {
 		margin: 0;
@@ -143,9 +147,11 @@
 
 	select {
 		margin-bottom: 1rem;
+        background-color: $white;
 	}
 
 	fieldset {
+        margin: 0;
 		border: 0;
 		padding:0;
 
