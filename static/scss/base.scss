@@ -125,7 +125,7 @@ h6, .h6 {
     line-height: 1rem;
 }
 
-input, textarea, {
+input, textarea {
     @extends .h6;
     padding: 0.5rem 1rem;
     margin: 0;
@@ -154,12 +154,13 @@ input, textarea, {
 }
 
 select {
+
     border: 1px solid $verylightgray;
     background-color: $white;
     border-radius: 0;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
-    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
     background: url(../../img/caret.svg) no-repeat right 0.25rem center;
     background-size: 1rem 1rem;
 }

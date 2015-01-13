@@ -1,0 +1,84 @@
+{% extends 'blog.html' %}
+{% import "macros.html" as macros with context %}
+
+{% block bodyJs %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/predict.js') }}"></script>
+{% endblock %}
+
+
+{% set placeholder = "The Patriots will win the Superbowl" %}
+{% set placeholder2	 = "it rains on gameday." %}
+{% block blog_content %}
+<div class="prediction-form">
+	<h4>I predict that...</h4>
+	<form id="prediction-form">
+		<fieldset>
+			<input type="text"
+				placeholder="{{ placeholder }}"
+				name="first-clause"
+				class="clause"
+				data-clause="1">
+			<ul class="joiners">
+				<span class="is-opt">(Optional)</span>
+				<li><button class="button" data-op="if">if</button></li>
+				<li><button class="button" data-op="and">and</button></li>
+				<li><button class="button" data-op="unless">unless</button></li>
+				<li class="second-clause-wrapper hidden">
+					<input type="text"
+						placeholder="{{ placeholder2 }}"
+						name="second-clause"
+						class="clause"
+						data-clause="2">
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<select name="category">
+	            <option>Select a Category...</option>
+	            <option>NFL</option>
+	            <option>NBA</option>
+	            <option>MLB</option>
+	            <option>NHL</option>
+	        </select>
+	    </fieldset>
+	    <fieldset>
+			<ul class="active-tags"></ul>
+	    	<input list="tags" id="tag-name" placeholder="Add tags" />
+			<datalist id="tags">
+			  <option value="risky">
+			  <option value="stock prices">
+			  <option value="NFL">
+			  <option value="NBA">
+			  <option value="MLB">
+			  <option value="NHL">
+			</datalist>
+			<span class="is-opt">(Optional)</span>
+		</fieldset>
+		<input name="login" value="yes" hidden>
+		<button type="submit" class="button">Submit</button>
+	</form>
+</div>
+{% endblock %}
+
+{% block widgets %}
+<div class="pure-g card-grid">
+    <div class="pure-u-1">
+    	<div class="prediction v1 final-prediction">
+    	    <div class="background">
+    	        <div class="scrim"></div>
+    	    </div>
+    	    <h4 class="text">
+    	    	<span class="final-clause-placeholder" data-clause="1">{{ placeholder }}</span>
+    	    	<span class="final-clause" data-clause="1"></span>
+    			<span class="hidden joiner" data-op="if">if</span>
+    			<span class="hidden joiner" data-op="and">and</span>
+    			<span class="hidden joiner" data-op="unless">unless</span>
+    	    	<span class="hidden final-clause-placeholder" data-clause="2">{{ placeholder2 }}</span>
+    	    	<span class="final-clause" data-clause="2"></span>
+    	    </h4>
+    	    {{ macros.pundit("Your Name", "Your affiliation", "green", "A+") }}
+    	</div>
+    </div>
+</div>
+{% endblock %}

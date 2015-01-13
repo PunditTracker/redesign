@@ -2,6 +2,7 @@
 @import 'navbar';
 @import 'blog';
 @import 'filter';
+@import 'prediction_form';
 
 $blog-post-height: 6rem;
 $extension: 10rem;
@@ -26,7 +27,6 @@ html, body {
 
 .content {
     z-index: 80;
-    position: absolute;
     width: 100%;
     overflow-x: hidden;
 
@@ -35,7 +35,7 @@ html, body {
     }
 
     &.no-hero {
-        margin-top: ($navbar-height + 2rem);
+        padding-top: ($navbar-height + 2rem);
     }
 }
 
@@ -312,6 +312,7 @@ html, body {
     @include border-box;
     .text {
         margin: 0;
+        word-wrap: break-word;
     }
     .background {
         width: 100%;

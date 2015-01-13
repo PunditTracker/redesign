@@ -262,7 +262,7 @@
     <nav>
         <div class="pure-g">
             <div class="pure-u-1">
-                <a href="{{ url_for('grid') }}">
+                <a href="{{ url_for('grid', login=request.args.get('login')) }}">
                     <div class="logo">
                         <span>Pundit</span><br><span>Tracker</span>
                     </div>
@@ -270,14 +270,14 @@
                 <ul class="categories">
                     {% for _, _, _, color, category, _ in predictions %}
                         <li>
-                            <a href="{{ url_for('grid') }}" data-color="{{color}}">{{ category }}</a>
+                            <a href="{{ url_for('grid', login=request.args.get('login')) }}" data-color="{{color}}">{{ category }}</a>
                         </li>
                     {% endfor %}
                     <li>
-                        <a href="{{ url_for('blog') }}">Blog</a>
+                        <a href="{{ url_for('blog', login=request.args.get('login')) }}">Blog</a>
                     </li>
                 </ul>
-                <a class="sign-up button" href="#">Sign Up / Log in</a>
+                {{ caller() }}
                 <div class="search">
                     <input id="search" class="stretch" type="text" placeholder="Type to search..." />
                     <i class="search-icon fa fa-search"></i>
@@ -380,7 +380,7 @@
             <div class="scrim"></div>
         </div>
         <div class="text">
-            <a href="{{ url_for('post') }}"><h3>{{p.title}}</h3></a>
+            <a href="{{ url_for('post', login=request.args.get('login')) }}"><h3>{{p.title}}</h3></a>
             <h6>{{p.date}} | by {{ p.author }}</h6>
         </div>
     </div>
@@ -388,7 +388,7 @@
         {{ socials() }}
         {% if truncate %}
             {{ p.snippet | safe}}
-            <p><a href="{{ url_for('post') }}">Read more...</a></p>
+            <p><a href="{{ url_for('post', login=request.args.get('login')) }}">Read more...</a></p>
         {% else%}
             {{ p.html | safe}}
             {{ socials() }}

@@ -13,7 +13,14 @@
 {%- endblock -%}
 
 {%- block body -%}
-{{ macros.navbar() }}
+{% call macros.navbar() %}
+{% if request.args.get('login') == 'yes' %}
+<a class="sign-up button" href="{{ url_for('predict', login=request.args.get('login')) }}">Predict!</a>
+{% else %}
+<a class="sign-up button" href="{{ url_for('grid', login='yes') }}">Sign Up / Log in</a>
+{% endif %}
+{% endcall %}
+{% block main %}
 <div class="hero fixed done">
     <div class="background" style="background-image:url({{ url_for('static', filename='img/callout.jpg') }});">
         <!-- <div class="scrim"></div> -->
@@ -148,6 +155,7 @@
             </div>
         </div>
     </div>
-    {{ macros.footer() }}
 </div>
+{% endblock %}
+{{ macros.footer() }}
 {%- endblock -%}

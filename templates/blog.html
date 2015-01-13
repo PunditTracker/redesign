@@ -1,8 +1,12 @@
 {% extends "grid.html" %}
 {% import "macros.html" as macros with context %}
 
-{%- block body -%}
-{{ macros.navbar() }}
+{% block bodyJs %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/blog.js') }}"></script>
+{% endblock %}
+
+{%- block main -%}
 <div class="content no-hero">
     <div class="blog-wrapper card-grid">
         <div class="blog-left">
@@ -51,6 +55,5 @@
             </div>
         </div>
     </div>
-    {{ macros.footer() }}
 </div>
 {%- endblock -%}
