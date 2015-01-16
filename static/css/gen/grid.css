@@ -1,7 +1,7 @@
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -11,7 +11,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -22,6 +22,15 @@
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -144,14 +153,14 @@ a, a:hover {
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.featured .text {
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
 /* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
+h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -267,7 +276,7 @@ select {
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -277,7 +286,7 @@ select {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -288,6 +297,15 @@ select {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -410,14 +428,14 @@ a, a:hover {
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.featured .text {
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
 /* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
+h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -611,7 +629,11 @@ select {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+.search i:hover {
+  cursor: text;
+}
+/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .search .stretch:focus i {
   color: transparent !important;
 }
@@ -619,7 +641,7 @@ select {
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -629,7 +651,7 @@ select {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -640,6 +662,15 @@ select {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -762,14 +793,14 @@ a, a:hover {
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.featured .text {
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
 /* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
+h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -1174,7 +1205,7 @@ p .posts:last-child {
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -1184,7 +1215,7 @@ p .posts:last-child {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -1195,6 +1226,15 @@ p .posts:last-child {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -1317,14 +1357,14 @@ a, a:hover {
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.featured .text {
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
 /* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
+h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -1519,7 +1559,7 @@ select {
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -1529,7 +1569,7 @@ select {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -1540,6 +1580,15 @@ select {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -1662,14 +1711,14 @@ a, a:hover {
 }
 
 /* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h1, .h1, .prediction.featured .text {
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
 /* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h2, .h2, .faceoff-wrapper .question, .set-wrapper .question, .prediction.tall-2 .text {
+h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
   font-size: 2.25rem;
@@ -1961,15 +2010,19 @@ select {
   padding: 0;
 }
 
-/* line 166, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 165, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+.final-prediction {
+  margin-top: 3rem;
+}
+/* line 167, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction .final-clause-placeholder {
   color: gray;
 }
-/* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction .joiner {
   font-weight: 700;
 }
-/* line 172, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
+/* line 173, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/prediction_form.scss */
 .final-prediction span.hidden {
   display: none;
 }
@@ -1999,50 +2052,51 @@ html, body {
 
 /* line 28 */
 .content {
+  position: relative;
   z-index: 80;
   width: 100%;
   overflow-x: hidden;
 }
-/* line 33 */
+/* line 34 */
 .content > .card-grid {
   width: 95%;
 }
-/* line 37 */
+/* line 38 */
 .content.no-hero {
   padding-top: 6rem;
 }
 
-/* line 42 */
+/* line 43 */
 .blue {
   background-color: #2a81c4;
 }
 
-/* line 43 */
+/* line 44 */
 .red {
   background-color: #e54236;
 }
 
-/* line 44 */
+/* line 45 */
 .yellow {
   background-color: #f4bb15;
 }
 
-/* line 45 */
+/* line 46 */
 .yellow-green {
   background-color: #FF5900;
 }
 
-/* line 46 */
+/* line 47 */
 .green {
   background-color: #039b67;
 }
 
-/* line 47 */
+/* line 48 */
 .orange {
   background-color: #d79003;
 }
 
-/* line 50 */
+/* line 51 */
 .hero {
   height: 80vh;
   margin: 0 auto;
@@ -2052,20 +2106,20 @@ html, body {
   padding-bottom: 2rem;
   position: relative;
 }
-/* line 59 */
+/* line 60 */
 .hero.fixed {
   height: 30rem;
   width: 85rem;
 }
-/* line 64 */
+/* line 65 */
 .hero.fixed.done {
   max-width: 100%;
 }
-/* line 68 */
+/* line 69 */
 .hero.fixed .featured {
   height: 30rem;
 }
-/* line 73 */
+/* line 74 */
 .hero > .background {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
   top: 4rem;
@@ -2077,7 +2131,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 84 */
+/* line 85 */
 .hero > .background .scrim {
   background: -moz-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(221, 221, 221, 0)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd), color-stop(100% #dddddd));
@@ -2086,12 +2140,12 @@ html, body {
   background: -ms-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
 }
-/* line 89 */
+/* line 90 */
 .hero .right {
   z-index: 200;
 }
 
-/* line 93 */
+/* line 94 */
 .scrim {
   height: 100%;
   width: 100%;
@@ -2101,50 +2155,50 @@ html, body {
   z-index: 60;
 }
 
-/* line 101 */
+/* line 102 */
 .card-grid {
   max-width: 65rem;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-/* line 105 */
+/* line 106 */
 .card-grid > div {
   padding: 0 0.75rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 114 */
+/* line 115 */
 .card-grid .card-grid {
   z-index: 200;
   width: 100%;
 }
-/* line 117 */
+/* line 118 */
 .card-grid .card-grid:last-child {
   margin: 0;
 }
-/* line 120 */
+/* line 121 */
 .card-grid .card-grid > div {
   padding: 0;
   margin: 0;
 }
-/* line 123 */
+/* line 124 */
 .card-grid .card-grid > div:not(:last-child) {
   padding-right: 0.75rem;
 }
-/* line 126 */
+/* line 127 */
 .card-grid .card-grid > div:not(:first-child) {
   padding-left: 0.75rem;
 }
 
-/* line 133 */
+/* line 134 */
 .with-image {
   position: relative;
   max-width: 65rem;
   width: 100%;
   margin: 0 auto;
 }
-/* line 139 */
+/* line 140 */
 .with-image .background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -2153,11 +2207,11 @@ html, body {
   top: -15rem;
   left: 50%;
   overflow: visible;
-  height: 61.5rem;
+  height: 64.5rem;
   width: 100rem;
   margin-left: -50rem;
 }
-/* line 151 */
+/* line 152 */
 .with-image .background .scrim {
   background: -moz-linear-gradient(top, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(20%, rgba(221, 221, 221, 0.25)), color-stop(50%, rgba(221, 221, 221, 0.01)), color-stop(70% rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd));
@@ -2167,37 +2221,37 @@ html, body {
   background: linear-gradient(to bottom, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
 }
 
-/* line 157 */
+/* line 158 */
 .faceoff-outer {
   margin: 2rem 0;
 }
 
-/* line 161 */
+/* line 162 */
 .faceoff-wrapper {
   color: white;
 }
-/* line 163 */
+/* line 164 */
 .faceoff-wrapper .background {
   background-image: url(../../img/football.jpg);
 }
 
-/* line 169 */
+/* line 170 */
 .set-wrapper .background {
   background-image: url(../../img/hero.jpg);
 }
-/* line 172 */
+/* line 173 */
 .set-wrapper .card-grid {
   padding: 2rem 0 5rem;
 }
 
-/* line 177 */
+/* line 178 */
 .faceoff-wrapper, .set-wrapper {
   position: relative;
   margin: 0 -10.75rem;
   padding: 0 10.75rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
 }
-/* line 182 */
+/* line 183 */
 .faceoff-wrapper .question, .set-wrapper .question {
   color: white;
   position: relative;
@@ -2209,7 +2263,7 @@ html, body {
   z-index: 500;
   text-shadow: 2px 2px 3px black;
 }
-/* line 194 */
+/* line 195 */
 .faceoff-wrapper .background, .set-wrapper .background {
   width: 100%;
   background-position: center center;
@@ -2219,18 +2273,111 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 203 */
+/* line 204 */
 .faceoff-wrapper .background .scrim, .set-wrapper .background .scrim {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 209 */
+/* line 212 */
+.march-madness {
+  position: relative;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  height: 34.5rem;
+}
+/* line 219 */
+.march-madness .header {
+  color: white;
+  position: relative;
+  margin: 0;
+  z-index: 500;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 227 */
+.march-madness .background {
+  width: 100%;
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-image: url(../../img/basket.jpg);
+}
+/* line 237 */
+.march-madness .background .scrim {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 242 */
+.march-madness .pick {
+  z-index: 500;
+  text-align: center;
+  position: absolute;
+  height: 5rem;
+  right: 2rem;
+  bottom: 3.5rem;
+}
+/* line 249 */
+.march-madness .pick .button {
+  background-color: transparent;
+  color: white;
+  width: auto;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.march-madness .pick .button:hover {
+  color: #111;
+}
+/* line 252 */
+.march-madness .pick .button:hover {
+  background-color: white;
+  text-shadow: none;
+}
+/* line 258 */
+.march-madness .mm-logo {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  z-index: 500;
+}
+
+/* line 267 */
+.rotate {
+  height: 16.5rem;
+  position: relative;
+}
+/* line 270 */
+.rotate > .inner {
+  position: absolute;
+  top: -63rem;
+  height: 142.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 280 */
+.rotate > .inner > li:not(:first-child) {
+  padding-top: 15rem;
+}
+
+/* line 287 */
 .featured-users, .featured-pundits, .featured-blog-posts {
-  height: 23.25rem;
+  height: 25.5rem;
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 213 */
+/* line 291 */
 .featured-users > .title-wrapper, .featured-pundits > .title-wrapper, .featured-blog-posts > .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2239,11 +2386,11 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 7.25rem;
+  height: 9.5rem;
   padding: 1rem;
   position: relative;
 }
-/* line 223 */
+/* line 301 */
 .featured-users > .title-wrapper > .title, .featured-pundits > .title-wrapper > .title, .featured-blog-posts > .title-wrapper > .title {
   position: absolute;
   bottom: 1rem;
@@ -2251,18 +2398,18 @@ html, body {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 232 */
+/* line 310 */
 .featured-users ul, .featured-pundits ul, .featured-blog-posts ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 240 */
+/* line 318 */
 .featured-blog-posts > .title-wrapper {
-  height: 5.25rem !important;
+  height: 7.5rem !important;
 }
-/* line 244 */
+/* line 322 */
 .featured-blog-posts .blog-post {
   height: 6rem;
   width: 100%;
@@ -2272,57 +2419,57 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 251 */
+/* line 329 */
 .featured-blog-posts .blog-post:hover {
   background-color: #f5f5f5;
 }
-/* line 254 */
+/* line 332 */
 .featured-blog-posts .blog-post:not(:last-child) {
   border-bottom: 1px solid #f5f5f5;
 }
-/* line 257 */
+/* line 335 */
 .featured-blog-posts .blog-post h4 {
   margin: 0;
   line-height: 1.5rem;
 }
-/* line 261 */
+/* line 339 */
 .featured-blog-posts .blog-post h6 {
   margin-top: 0.25rem;
 }
 
-/* line 267 */
+/* line 345 */
 .facebook {
-  height: 23.25rem;
-  height: 15rem;
+  height: 25.5rem;
+  height: 16.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   position: relative;
   background: white;
-  background: -moz-radial-gradient(50% 11rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
-  background: -webkit-gradient(radial, 50% 11rem, 0px, 50% 11rem, 100%, color-stop(0%, rgba(59, 89, 152, 0.01)), color-stop(15%, rgba(59, 89, 152, 0.1)), color-stop(35%, rgba(59, 89, 152, 0.4)), color-stop(45%, rgba(59, 89, 152, 0.6)), color-stop(60%, #3b5998), color-stop(100%, #3b5998));
-  background: -webkit-radial-gradient(50% 11rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
-  background: -o-radial-gradient(50% 11rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
-  background: -ms-radial-gradient(50% 11rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
-  background: radial-gradient(circle at 50% 11rem, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
+  background: -moz-radial-gradient(50% 12.5rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
+  background: -webkit-gradient(radial, 50% 12.5rem, 0px, 50% 12.5rem, 100%, color-stop(0%, rgba(59, 89, 152, 0.01)), color-stop(15%, rgba(59, 89, 152, 0.1)), color-stop(35%, rgba(59, 89, 152, 0.4)), color-stop(45%, rgba(59, 89, 152, 0.6)), color-stop(60%, #3b5998), color-stop(100%, #3b5998));
+  background: -webkit-radial-gradient(50% 12.5rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
+  background: -o-radial-gradient(50% 12.5rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
+  background: -ms-radial-gradient(50% 12.5rem, circle cover, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
+  background: radial-gradient(circle at 50% 12.5rem, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3b5897', GradientType=1 );
 }
-/* line 273 */
+/* line 351 */
 .facebook .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0.75rem;
-  height: 7.25rem;
+  height: 9.5rem;
   color: white;
 }
-/* line 278 */
+/* line 356 */
 .facebook .title-wrapper h3, .facebook .title-wrapper h2 {
   margin: 0;
 }
-/* line 282 */
+/* line 360 */
 .facebook > .fb-wrapper {
   text-align: center;
   position: absolute;
-  top: 7.25rem;
+  top: 9.5rem;
   bottom: 0;
   width: 100%;
   left: 0;
@@ -2332,7 +2479,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 292 */
+/* line 370 */
 .facebook > .fb-wrapper > .inner {
   position: absolute;
   height: 8rem;
@@ -2341,7 +2488,7 @@ html, body {
   top: 50%;
 }
 
-/* line 302 */
+/* line 380 */
 .prediction {
   background-position: center center;
   background-size: cover;
@@ -2349,8 +2496,8 @@ html, body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   z-index: 200;
   background-color: white;
-  padding: 0.75rem;
-  height: 15rem;
+  padding: 0 0.75rem 0.75rem;
+  height: 16.5rem;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2359,12 +2506,12 @@ html, body {
    * Variations *
    **************/
 }
-/* line 313 */
+/* line 391 */
 .prediction .text {
   margin: 0;
   word-wrap: break-word;
 }
-/* line 317 */
+/* line 395 */
 .prediction .background {
   width: 100%;
   background-position: center center;
@@ -2375,13 +2522,57 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 327 */
+/* line 405 */
+.prediction .tags {
+  margin: 0 -0.75rem 0.5rem;
+  max-height: 1.5rem;
+  overflow: hidden;
+}
+/* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.prediction .tags:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 410 */
+.prediction .tags .inner {
+  overflow: hidden;
+  max-height: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -2rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 418 */
+.prediction .tags .inner > li {
+  float: right;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  border: 1px solid #f5f5f5;
+  margin-right: -1px;
+  margin-top: -1px;
+  position: relative;
+  z-index: 500;
+}
+/* line 428 */
+.prediction .tags .inner > li.category {
+  background-color: #2a81c4;
+  color: white;
+  border-color: #2a81c4;
+  z-index: 550;
+}
+/* line 437 */
 .prediction .pundit {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 332 */
+/* line 442 */
 .prediction .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -2390,7 +2581,7 @@ html, body {
   background: -ms-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
-/* line 335 */
+/* line 445 */
 .prediction .voting {
   z-index: 500;
   height: 2rem;
@@ -2404,7 +2595,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 345 */
+/* line 455 */
 .prediction .voting .prompt {
   text-transform: uppercase;
   position: absolute;
@@ -2418,7 +2609,7 @@ html, body {
   width: 100%;
   color: #111;
 }
-/* line 358 */
+/* line 468 */
 .prediction .voting .options {
   margin-top: 1px;
   border-top: 1px solid #f5f5f5;
@@ -2441,7 +2632,7 @@ html, body {
   box-sizing: border-box;
   font-size: 0;
 }
-/* line 374 */
+/* line 484 */
 .prediction .voting .options li {
   width: 25%;
   display: inline-block;
@@ -2451,114 +2642,118 @@ html, body {
   text-align: center;
   height: 2rem;
 }
-/* line 380 */
+/* line 490 */
 .prediction .voting .options li:hover {
   color: #111;
   background-color: #f5f5f5;
 }
-/* line 384 */
+/* line 494 */
 .prediction .voting .options li:not(:last-child) {
   border-right: 1px solid #f5f5f5;
 }
-/* line 387 */
+/* line 497 */
 .prediction .voting .options li .option {
   line-height: 2rem;
   vertical-align: top;
 }
-/* line 396 */
+/* line 506 */
 .prediction:hover .voting .options {
   top: 0;
 }
-/* line 404 */
+/* line 509 */
+.prediction:hover .tags .inner {
+  margin-top: 0;
+}
+/* line 517 */
 .prediction.faceoff {
   background-color: transparent;
   position: relative;
   padding: 3rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 409 */
+/* line 522 */
 .prediction.faceoff > .pundit {
   border: 0;
   top: 0;
   position: relative;
   background-color: transparent;
 }
-/* line 414 */
+/* line 527 */
 .prediction.faceoff > .pundit .text-wrapper {
   left: 0;
   color: white;
 }
-/* line 418 */
+/* line 531 */
 .prediction.faceoff > .pundit .photo {
   height: 6rem;
   width: 6rem;
   border-radius: 6rem;
 }
-/* line 423 */
+/* line 536 */
 .prediction.faceoff > .pundit .name {
   font-size: 2rem;
   line-height: 2.5rem;
 }
-/* line 427 */
+/* line 540 */
 .prediction.faceoff > .pundit .source {
   font-size: 1.5rem;
 }
-/* line 431 */
+/* line 544 */
 .prediction.faceoff > .text {
   margin-top: 2.5rem;
 }
-/* line 436 */
+/* line 549 */
 .prediction.faceoff.left .pundit .photo {
   position: absolute;
   left: -7rem;
   top: -1rem;
   margin-left: 1rem;
 }
-/* line 445 */
+/* line 558 */
 .prediction.faceoff.right .text {
   text-align: right;
 }
-/* line 449 */
+/* line 562 */
 .prediction.faceoff.right .pundit .photo {
   position: absolute;
   right: -7rem;
   top: -1rem;
 }
-/* line 454 */
+/* line 567 */
 .prediction.faceoff.right .pundit .text-wrapper {
   left: auto;
   width: 100%;
   float: right;
   text-align: right;
 }
-/* line 468 */
+/* line 581 */
 .prediction.tall-3-2 {
-  height: 23.25rem;
+  height: 25.5rem;
 }
-/* line 474 */
+/* line 587 */
 .prediction.tall-2 {
   color: white;
-  height: 31.5rem;
+  height: 34.5rem;
 }
-/* line 477 */
+/* line 590 */
 .prediction.tall-2 .prompt {
   color: white;
 }
-/* line 480 */
+/* line 593 */
 .prediction.tall-2 .background {
   background-image: url(../../img/vertical.jpg);
   display: block;
 }
-/* line 485 */
+/* line 598 */
 .prediction.tall-2 .pundit {
   background-color: transparent !important;
   color: white;
 }
-/* line 489 */
+/* line 602 */
 .prediction.tall-2 .text-wrapper {
   color: white;
 }
-/* line 492 */
+/* line 605 */
 .prediction.tall-2 .text {
   position: absolute;
   text-shadow: 2px 2px 3px black;
@@ -2567,19 +2762,37 @@ html, body {
   right: 0.75rem;
   z-index: 300;
 }
-/* line 502 */
+/* line 615 */
 .prediction.tall-2 .options, .prediction.tall-2 .options li {
   border: 0 !important;
 }
-/* line 505 */
+/* line 618 */
 .prediction.tall-2 .option {
   text-shadow: 2px 2px 3px black;
 }
-/* line 508 */
+/* line 621 */
 .prediction.tall-2 .options li:hover .option {
   text-shadow: none;
 }
-/* line 512 */
+/* line 624 */
+.prediction.tall-2 .tags {
+  position: relative;
+  z-index: 500;
+  max-height: 1.5rem;
+}
+/* line 628 */
+.prediction.tall-2 .tags > .inner > li {
+  background-color: transparent;
+  border-color: transparent;
+}
+/* line 631 */
+.prediction.tall-2 .tags > .inner > li.category {
+  background-color: white;
+  color: black;
+  border-color: white;
+  text-shadow: none;
+}
+/* line 640 */
 .prediction.featured {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -2588,63 +2801,88 @@ html, body {
   bottom: 2rem;
   width: 50%;
 }
-/* line 520 */
+/* line 648 */
 .prediction.featured .text {
   position: absolute;
   bottom: 7rem;
   left: 1rem;
   right: 1rem;
 }
-/* line 529 */
+/* line 657 */
 .prediction.featured .pundit {
   background-color: transparent !important;
   bottom: 0;
 }
-/* line 532 */
+/* line 660 */
 .prediction.featured .pundit .text-wrapper {
   height: 5rem;
   color: white;
   left: 4rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 538 */
+/* line 666 */
 .prediction.featured .pundit .name, .prediction.featured .pundit .source {
   text-shadow: 2px 2px 3px black;
 }
-/* line 543 */
+/* line 671 */
 .prediction.featured .voting .prompt {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 547 */
+/* line 675 */
 .prediction.featured .voting .options, .prediction.featured .voting .options li {
   border: 0 !important;
 }
-/* line 550 */
+/* line 678 */
 .prediction.featured .voting .option {
   text-shadow: 2px 2px 3px black;
 }
-/* line 553 */
+/* line 681 */
 .prediction.featured .voting .options li:hover .option {
   text-shadow: none;
 }
-/* line 558 */
+/* line 685 */
+.prediction.featured .tags {
+  height: 2rem;
+  max-height: 3.5rem;
+}
+/* line 687 */
+.prediction.featured .tags > .inner {
+  max-height: 2rem;
+}
+/* line 690 */
+.prediction.featured .tags > .inner > li {
+  margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border-color: transparent;
+}
+/* line 697 */
+.prediction.featured .tags > .inner > li.category {
+  background-color: white;
+  color: black;
+  border-color: white;
+  text-shadow: none;
+}
+/* line 707 */
 .prediction.no-box {
   background-color: rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 1rem;
-  height: 31.5rem;
+  height: 34.5rem;
   border: 1rem solid white;
 }
-/* line 560 */
+/* line 709 */
 .prediction.no-box .background {
   display: none;
 }
-/* line 567 */
+/* line 716 */
 .prediction.no-box .text {
   width: 50%;
 }
 
-/* line 574 */
+/* line 723 */
 .pundit {
   position: relative;
   height: 4rem;
@@ -2656,7 +2894,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 583 */
+/* line 732 */
 .pundit .grade {
   display: block;
   position: absolute;
@@ -2672,7 +2910,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 595 */
+/* line 744 */
 .pundit .grade .average {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -2687,7 +2925,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 606 */
+/* line 755 */
 .pundit .grade .letter {
   top: 0rem;
   position: absolute;
@@ -2701,15 +2939,15 @@ html, body {
   line-height: 4rem;
   vertical-align: middle;
 }
-/* line 618 */
+/* line 767 */
 .pundit .grade:hover .letter {
   top: -0.5rem;
 }
-/* line 621 */
+/* line 770 */
 .pundit .grade:hover .average {
   bottom: 0;
 }
-/* line 626 */
+/* line 775 */
 .pundit .photo {
   background-image: url(../../img/profile.jpeg);
   background-position: center center;
@@ -2720,7 +2958,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-/* line 636 */
+/* line 785 */
 .pundit .text-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2733,28 +2971,28 @@ html, body {
   height: 4rem;
   color: #111;
 }
-/* line 645 */
+/* line 794 */
 .pundit .text-wrapper .name {
   margin: 0;
   font-weight: 400;
 }
-/* line 649 */
+/* line 798 */
 .pundit .text-wrapper .source {
   margin: 0.25rem 0 0;
 }
-/* line 654 */
+/* line 803 */
 .pundit:hover .grade {
   top: 0;
 }
 
-/* line 660 */
+/* line 809 */
 .category-link {
   background-color: #2a81c4;
   color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   z-index: 200;
   padding: 0.75rem;
-  height: 15rem;
+  height: 16.5rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2763,7 +3001,7 @@ html, body {
   background-size: cover;
   background-image: url(../../img/hero.jpg);
 }
-/* line 672 */
+/* line 821 */
 .category-link h2 {
   position: absolute;
   right: 1rem;
@@ -2773,16 +3011,16 @@ html, body {
   line-height: 3rem;
   margin: 0;
 }
-/* line 681 */
+/* line 830 */
 .category-link h2 + a h2 {
   bottom: 1rem;
   text-decoration: underline !important;
 }
-/* line 685 */
+/* line 834 */
 .category-link h2 + a i {
   text-decoration: underline !important;
 }
-/* line 691 */
+/* line 840 */
 .category-link .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -2792,7 +3030,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 696 */
+/* line 845 */
 footer {
   background-color: #2a81c4;
   color: white;
@@ -2802,24 +3040,24 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 703 */
+/* line 852 */
 footer > .card-grid {
   max-width: 95%;
   width: 65rem;
   margin: 0 auto;
 }
-/* line 708 */
+/* line 857 */
 footer ul {
   padding: 0.75rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 713 */
+/* line 862 */
 footer ul ul {
   margin-left: 1rem;
 }
-/* line 717 */
+/* line 866 */
 footer .double {
   border-bottom: 1px solid white;
   margin-bottom: 0.5rem;

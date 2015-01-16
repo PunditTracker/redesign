@@ -33,13 +33,12 @@
     </div>
 </div>
 <div class="content">
-    <div class="pure-g card-grid">
-        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
-        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
-        <div class="pure-u-1-3">{{ macros.prediction() }}</div>
-    </div>
+
     <div class="pure-g card-grid">
         <div class="pure-u-2-3">
+            <div class="pure-g card-grid">
+                <div class="pure-u-1">{{ macros.march_madness() }}</div>
+            </div>
             <div class="pure-g card-grid">
                 <div class="pure-u-1-2">{{ macros.prediction('tall-2') }}</div>
                 <div class="pure-u-1-2">
@@ -62,7 +61,13 @@
         </div>
         <div class="pure-u-1-3">
             <div class="pure-g card-grid">
+                <div class="pure-u-1">{{ macros.prediction() }}</div>
+            </div>
+            <div class="pure-g card-grid">
                 <div class="pure-u-1-1">{{ macros.blog_posts() }}</div>
+            </div>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1">{{ macros.prediction() }}</div>
             </div>
             <div class="pure-g card-grid">
                 <div class="pure-u-1">{{ macros.prediction() }}</div>
@@ -112,7 +117,7 @@
     </div>
     <div class="pure-g card-grid">
         <div class="pure-u-1 faceoff-outer">
-            {{ macros.faceoff() }}
+            {{ macros.set() }}
         </div>
     </div>
     <div class="pure-g card-grid">

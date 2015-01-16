@@ -66,6 +66,9 @@ $navbar-height: 4rem;
         line-height: 1.2rem;
         vertical-align: middle;
         @include transition(0.2s);
+	    &:hover {
+	    	cursor: text;
+	    }
 	}
 
 	.stretch:focus i {

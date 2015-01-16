@@ -8,7 +8,7 @@ $blog-post-height: 6rem;
 $extension: 10rem;
 $card-grid-padding: 1.5rem;
 $hero-height: 30rem;
-$prediction-height: 15rem;
+$prediction-height: 16.5rem;
 $prediction-padding: 0.75rem;
 $pundit-vertical-padding: 1rem;
 $pundit-height: 4rem;
@@ -26,6 +26,7 @@ html, body {
 }
 
 .content {
+    position: relative;
     z-index: 80;
     width: 100%;
     overflow-x: hidden;
@@ -188,7 +189,7 @@ html, body {
         margin: 0;
         padding: 5rem 0 0;
         z-index: 500;
-        @extend .h2;
+        @extend .h1;
         @include text-shadow;
     }
     .background {
@@ -202,6 +203,83 @@ html, body {
 
         .scrim {
             background-color: rgba(0,0,0, 0.15);
+        }
+    }
+}
+
+$rotate-padding: 15rem;
+
+.march-madness {
+    position: relative;
+    padding: 2rem;
+    @include border-box;
+    @include box-shadow;
+    overflow: hidden;
+    height: $tall-2-height;
+    .header {
+        color: $white;
+        position: relative;
+        margin: 0;
+        z-index: 500;
+        @include text-shadow;
+        @extend .h1;
+    }
+    .background {
+        width: 100%;
+        background-position: center top;
+        background-size: cover;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        background-image: url(../../img/basket.jpg);
+
+        .scrim {
+            background-color: rgba(0,0,0, 0.3);
+        }
+    }
+
+    .pick {
+        z-index: 500;
+        text-align: center;
+        position: absolute;
+        height: 5rem;
+        right: 2rem;
+        bottom: 3.5rem;
+        .button {
+            @include button(rgba(0,0,0,0), $white, $black, $border: 2px solid $white);
+            @include text-shadow;
+            &:hover {
+                background-color: $white;
+                text-shadow: none;
+            }
+        }
+    }
+    .mm-logo {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        width: 3rem;
+        z-index: 500;
+    }
+}
+
+.rotate {
+    height: $prediction-height;
+    position: relative;
+    & > .inner {
+        position: absolute;
+        top: -(2 * $prediction-height + 2 * $rotate-padding);
+        height: (5 * $prediction-height + 4 * $rotate-padding);
+        list-style: none;
+        padding:0;
+        margin: 0;
+
+        & > li {
+
+            &:not(:first-child) {
+                padding-top: $rotate-padding;
+            }
         }
     }
 }
@@ -306,7 +384,7 @@ html, body {
     @include box-shadow;
     z-index: 200;
     background-color: $white;
-    padding: $prediction-padding;
+    padding: 0 $prediction-padding $prediction-padding;
     height: $prediction-height;
     position: relative;
     @include border-box;
@@ -323,6 +401,38 @@ html, body {
         top:0;
         left:0;
         height: 100%;
+    }
+    .tags {
+        @include clearfix;
+        margin: 0 (-1 * $prediction-padding) 0.5rem;
+        max-height: 1.5rem;
+        overflow: hidden;
+        .inner {
+            overflow: hidden;
+            max-height: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: -2rem;
+            @include transition(0.2s);
+            & > li {
+                float: right;
+                padding: 0 0.5rem;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+                border: 1px solid $ultralightgray;
+                margin-right: -1px;
+                margin-top: -1px;
+                position: relative;
+                z-index: 500;
+                &.category {
+                    background-color: $blue;
+                    color: $white;
+                    border-color: $blue;
+                    z-index: 550;
+                }
+            }
+        }
     }
     .pundit {
         position: absolute;
@@ -395,6 +505,9 @@ html, body {
     &:hover {
         .voting .options{
             top: 0;
+        }
+        .tags .inner {
+            margin-top: 0;
         }
     }
 
@@ -508,6 +621,21 @@ html, body {
         .options li:hover .option {
             text-shadow: none;
         }
+        .tags {
+            position: relative;
+            z-index: 500;
+            max-height: 1.5rem;
+            & > .inner > li {
+                background-color: rgba(0,0,0,0);
+                border-color: rgba(0,0,0,0);
+                &.category {
+                    background-color: $white;
+                    color: black;
+                    border-color: $white;
+                    text-shadow: none;
+                }
+            }
+        }
     }
     &.featured {
         background-color: rgba(0,0,0,0.2);
@@ -553,6 +681,27 @@ html, body {
             .options li:hover .option {
                 text-shadow: none;
             }
+        }
+        .tags {
+            height: 2rem;
+            & > .inner {
+                max-height: 2rem;
+            }
+            & > .inner > li {
+                margin-bottom: 1rem;
+                padding: 0.25rem 1rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                background-color: rgba(0,0,0,0);
+                border-color: rgba(0,0,0,0);
+                &.category {
+                    background-color: $white;
+                    color: black;
+                    border-color: $white;
+                    text-shadow: none;
+                }
+            }
+            max-height: 3.5rem;
         }
     }
     &.no-box {
