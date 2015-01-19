@@ -2103,7 +2103,7 @@ html, body {
   padding-top: 4rem;
   padding-bottom: 2rem;
   position: relative;
-  height: 34.5rem;
+  height: 30rem;
   width: 85rem;
   max-width: 100%;
   overflow: hidden;
@@ -2111,7 +2111,7 @@ html, body {
 }
 /* line 63 */
 .hero .featured {
-  height: 34.5rem;
+  height: 30rem;
 }
 /* line 67 */
 .hero > .background {
@@ -2284,7 +2284,7 @@ html, body {
 
 /* line 216 */
 .small-feature {
-  height: 16.5rem;
+  height: 14.25rem;
   padding: 0.75rem;
 }
 /* line 219 */
@@ -2298,7 +2298,7 @@ html, body {
 
 /* line 228 */
 .march-madness {
-  height: 34.5rem;
+  height: 30rem;
 }
 /* line 230 */
 .march-madness .header {
