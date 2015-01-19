@@ -4,18 +4,19 @@
 @import 'filter';
 @import 'prediction_form';
 
-$blog-post-height: 6rem;
-$extension: 10rem;
-$card-grid-padding: 1.5rem;
-$hero-height: 30rem;
 $prediction-height: 16.5rem;
 $prediction-padding: 0.75rem;
+$card-grid-padding: 1.5rem;
+$tall-2-height: (2 * $prediction-height + $card-grid-padding);
+$tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
+$blog-post-height: 6rem;
+$extension: 10rem;
+$hero-height: $tall-2-height;//30rem;
+$small-hero-height: (($hero-height - $card-grid-padding) / 2);
 $pundit-vertical-padding: 1rem;
 $pundit-height: 4rem;
 $voting-height: 2rem;
 $hero-image-width: 100rem;
-$tall-2-height: (2 * $prediction-height + $card-grid-padding);
-$tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
 html, body {
     background-color: $verylightgray;
     position: relative;
@@ -49,26 +50,18 @@ html, body {
 
 
 .hero {
-    height: 80vh;
-    margin: 0 auto;
     width: 100%;
     z-index: 100;
     padding-top: $navbar-height;
     padding-bottom: 2rem;
     position: relative;
-
-    &.fixed {
-
+    height: $hero-height;
+    width: ($content-width + 2 * $extension);
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    .featured {
         height: $hero-height;
-        width: ($content-width + 2 * $extension);
-
-        &.done {
-            max-width: 100%;
-        }
-
-        .featured {
-            height: $hero-height;
-        }
     }
 
     & > .background {
@@ -82,10 +75,21 @@ html, body {
         width: 100%;
         overflow-x: hidden;
 
-    .scrim {
-        @include scrim($BACKGROUND);
+        .scrim {
+            @include scrim($BACKGROUND);
+        }
     }
-}
+
+    & > .card-grid {
+            .large-with-small-feature {
+                margin-left: -$extension;
+                padding-left: $extension;
+            }
+            .small-feature {
+                margin-right: -$extension;
+                padding-right: $extension;
+            }
+    }
 
     .right {
         z-index: 200;
@@ -209,13 +213,20 @@ html, body {
 
 $rotate-padding: 15rem;
 
+.small-feature {
+    height: $small-hero-height;
+    padding: $prediction-padding;
+    .header {
+        color: $white;
+        position: relative;
+        margin: 0;
+        z-index: 500;
+        @include text-shadow;
+    }
+}
+
 .march-madness {
-    position: relative;
-    padding: 2rem;
-    @include border-box;
-    @include box-shadow;
-    overflow: hidden;
-    height: $tall-2-height;
+    height: $hero-height;
     .header {
         color: $white;
         position: relative;
@@ -224,6 +235,14 @@ $rotate-padding: 15rem;
         @include text-shadow;
         @extend .h1;
     }
+}
+
+.march-madness, .small-feature {
+    position: relative;
+    padding: 2rem;
+    @include border-box;
+    @include box-shadow;
+    overflow: hidden;
     .background {
         width: 100%;
         background-position: center top;
@@ -235,24 +254,31 @@ $rotate-padding: 15rem;
         background-image: url(../../img/basket.jpg);
 
         .scrim {
-            background-color: rgba(0,0,0, 0.3);
+            background-color: rgba(0,0,0, 0.4);
         }
     }
 
-    .pick {
+    .pick, .go {
         z-index: 500;
         text-align: center;
         position: absolute;
         height: 5rem;
-        right: 2rem;
+    }
+    .pick {
         bottom: 3.5rem;
-        .button {
-            @include button(rgba(0,0,0,0), $white, $black, $border: 2px solid $white);
-            @include text-shadow;
-            &:hover {
-                background-color: $white;
-                text-shadow: none;
-            }
+        right: 2rem;
+    }
+    .go {
+        right: $extension;
+        bottom: 1rem;
+    }
+
+    .button {
+        @include button(rgba(0,0,0,0.2), $white, $black, $border: 2px solid $white);
+        @include text-shadow;
+        &:hover {
+            background-color: $white;
+            text-shadow: none;
         }
     }
     .mm-logo {
@@ -416,6 +442,7 @@ $rotate-padding: 15rem;
             margin-top: -2rem;
             @include transition(0.2s);
             & > li {
+                @include border-box;
                 float: right;
                 padding: 0 0.5rem;
                 font-size: 0.8rem;
