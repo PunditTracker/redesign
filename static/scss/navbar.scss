@@ -17,6 +17,12 @@ $navbar-height: 4rem;
 	}
 }
 
+.logo-image {
+	height: ($navbar-height - 1rem);
+	display: inline-block;
+	padding: 0.5rem 0;
+	vertical-align: top;
+}
 .logo {
 	@extend .h5;
 	font-weight: 700;
@@ -29,12 +35,13 @@ $navbar-height: 4rem;
 		line-height: 0.75rem;
 		display: block;
 		&:first-child {
-			font-size: 1.125rem;
+			font-size: 1.12rem;
 			line-height: 1.25rem;
 		}
 		&:last-child {
-			font-size: 0.95rem;
+			font-size: 1rem;
 			margin-top: -0.75rem;
+			font-weight: 400;
 		}
 	}
 }
