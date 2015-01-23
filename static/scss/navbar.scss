@@ -18,9 +18,8 @@ $navbar-height: 4rem;
 }
 
 .logo-image {
-	height: ($navbar-height - 1rem);
+	height: ($navbar-height);
 	display: inline-block;
-	padding: 0.5rem 0;
 	vertical-align: top;
 }
 .logo {

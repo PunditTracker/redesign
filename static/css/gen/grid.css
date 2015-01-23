@@ -570,63 +570,62 @@ select {
 
 /* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo-image {
-  height: 3rem;
+  height: 4rem;
   display: inline-block;
-  padding: 0.5rem 0;
   vertical-align: top;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 25, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0.75rem;
   display: inline-block;
 }
-/* line 32, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 31, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo span {
   text-align: justify;
   width: 4rem;
   line-height: 0.75rem;
   display: block;
 }
-/* line 37, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 36, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo span:first-child {
   font-size: 1.12rem;
   line-height: 1.25rem;
 }
-/* line 41, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 40, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .logo span:last-child {
   font-size: 1rem;
   margin-top: -0.75rem;
   font-weight: 400;
 }
 
-/* line 48, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .categories {
   display: inline-block;
   vertical-align: top;
 }
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 51, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .categories li {
   display: inline-block;
   font-size: 0.8rem;
   padding: 0 1rem;
 }
 
-/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .sign-up, .search {
   float: right;
   font-size: 0.8rem;
   margin-top: 1rem;
 }
 
-/* line 65, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .search {
   position: relative;
   margin-right: 1rem;
 }
-/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .search i {
   position: absolute;
   left: 1rem;
@@ -638,11 +637,11 @@ select {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 76, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 75, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .search i:hover {
   cursor: text;
 }
-/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
+/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/navbar.scss */
 .search .stretch:focus i {
   color: transparent !important;
 }
