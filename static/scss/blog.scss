@@ -5,15 +5,15 @@ $post-margin: 1.5rem;
 $header-height: 15rem;
 
 
-.blog-left {
+.blog-content {
 	width: 66.666666%;
 	@include border-box;
-	float: left;
-}
-.blog-right {
-	width: 33.333333%;
-	@include border-box;
-	float: left;
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
+	}
 }
 .blog-wrapper {
 	max-width: $content-width;
@@ -147,11 +147,18 @@ $header-height: 15rem;
 .sidebar {
 	position: absolute;
 	top: 0;
-	right: 0;
+	width: 33.333333%;
 	bottom: 0;
 	z-index: 100;
 	max-height: 100%;
 	@include border-box;
+
+	&.right {
+		right: 0;
+	}
+	&.left {
+		left: 0;
+	}
 
 	.inner {
 		padding-bottom: $post-margin;
@@ -219,6 +226,12 @@ $header-height: 15rem;
 		p {
 			margin-top: 0.5rem;
 		}
+	}
+	label {
+		display: inline;
+	}
+	input[type="radio"] {
+		height: 1rem;
 	}
 }
 

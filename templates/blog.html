@@ -9,7 +9,7 @@
 {%- block main -%}
 <div class="content no-hero">
     <div class="blog-wrapper card-grid">
-        <div class="blog-left">
+        <div class="blog-content left">
             {% block blog_content %}
             <ul class="posts">
                 {% for _ in range(10) %}
@@ -18,7 +18,7 @@
             </ul>
             {% endblock %}
         </div>
-        <div class="sidebar blog-right">
+        <div class="sidebar right blog-right">
             <div class="inner">
                 {% block widgets %}
                 <div class="pure-g card-grid">

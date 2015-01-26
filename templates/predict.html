@@ -56,6 +56,13 @@
 			</datalist>
 			<span class="is-opt">(Optional)</span>
 		</fieldset>
+		<fieldset>
+			<input type="radio" name="date-exists" id="date-exists-1" value="1">
+			<label for="date-exists-1">Doesn't expire</label>
+			<input type="radio" name="date-exists" id="date-exists-2" value="2">
+			<label for="date-exists-2">Expires:</label>
+			<input name="date" type="date">
+		</fieldset>
 		<input name="login" value="yes" hidden>
 		<button type="submit" class="button">Publish</button>
 	</form>
@@ -65,9 +72,14 @@
 {% block widgets %}
 <div class="pure-g card-grid">
     <div class="pure-u-1">
-    	<div class="prediction v1 final-prediction">
+    	<div class="prediction v1 final-prediction hover">
     	    <div class="background">
     	        <div class="scrim"></div>
+    	    </div>
+    	    <div class="tags">
+    	        <ul class="inner">
+    	            <li class="category">Select a Category...</li>
+    	        </ul>
     	    </div>
     	    <h4 class="text">
     	    	<span class="final-clause-placeholder" data-clause="1">{{ placeholder }}</span>

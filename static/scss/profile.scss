@@ -1,0 +1,27 @@
+@import 'base';
+
+.profile {
+	@include box-shadow;
+    z-index: 200;
+    background-color: $white;
+    margin-bottom: 0;
+
+	img {
+		width: 100%;
+	}
+
+	.text {
+		padding: 1rem;
+		.h3 {
+			margin: 0 0 0.5rem;
+		}
+		h5 {
+			margin: 0;
+		}
+	}
+}
+
+.profile-content {
+	@extend .blog-content;
+	margin-bottom: 1.5rem;
+}

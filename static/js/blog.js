@@ -14,16 +14,12 @@ $(function() {
 			topSoFixedTop = bottomOfNavbar - topOfSidebar,
 			topSoFixedBottom = Math.min(bottomOfWindow, bottomOfWrapper) - topOfSidebar - $inner.outerHeight();
 
-		console.log('hi', topOfInner, bottomOfNavbar, bottomOfInner, bottomOfWindow, bottomOfWrapper)
 		if (bottomOfInner > bottomOfWrapper) {
 			$sidebar.css({'padding-top': topSoFixedBottom})
-	  		console.log('a bottom');
 		} else if (topOfInner >= bottomOfNavbar || (bottomOfInner < bottomOfWindow && bottomOfInner < bottomOfWrapper && $inner.height() < $(window).height())) {
 	  		$sidebar.css({'padding-top': topSoFixedTop});
-	  		console.log('b top');
 	  	} else if (bottomOfInner < bottomOfWindow || bottomOfInner > bottomOfWrapper) {
 			$sidebar.css({'padding-top': topSoFixedBottom})
-	  		console.log('c bottom');
 		}
 	};
 

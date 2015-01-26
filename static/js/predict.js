@@ -44,24 +44,31 @@ $(function() {
 	});
 
 	$('.clause[data-clause="2"]').focus(function(e) {
-		console.log($('.joiners button.on').length)
 		if ($('.joiners button.on').length == 0) {
 			$('.joiners button[data-op="if"]').click();
 		}
-	})
+	});
+
+	$('select').change(function(e) {
+		$('.final-prediction .category').text($(this).val());
+	});
 
 	$('#tag-name').keydown(function(e) {
 	    if(e.which == 13) {
 		    e.preventDefault();
+		    var id = Math.random().toString(36).substring(7);
 	    	$('.active-tags').append(
-	    		'<li class="tag">' + $(this).val() + '<i class="fa fa-times"></i></li>'
+	    		'<li class="tag" data-target="#' + id + '">' + $(this).val() + '<i class="fa fa-times"></i></li>'
     		);
-			console.log($(this).val())
+    		$('.final-prediction .tags .inner').append(
+	    		'<li id="' + id + '">' + $(this).val() + '</li>'
+    		);
 	        $(this).val('');
 	    }
 	});
 
 	$(document).on('click', '.tag', function() {
+		$($(this).data('target')).remove();
 		$(this)[0].remove();
 	});
 });

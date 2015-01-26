@@ -3,6 +3,7 @@
 @import 'blog';
 @import 'filter';
 @import 'prediction_form';
+@import 'profile';
 
 $prediction-height: 16.5rem;
 $prediction-padding: 0.75rem;
@@ -260,13 +261,43 @@ $rotate-padding: 15rem;
 
     .pick, .go {
         z-index: 500;
-        text-align: center;
         position: absolute;
-        height: 5rem;
     }
     .pick {
-        bottom: 3.5rem;
+        bottom: 5.5rem;
         right: 2rem;
+        color: $white;
+        h2 {
+            margin-bottom: 1rem;
+        }
+        h4 {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            .button {
+                position: absolute;
+                right: -30%;
+                width: 25%;
+                @include border-box;
+            }
+        }
+        input[type="text"] {
+            margin-bottom: 0.5rem;
+            background-color: rgba(0,0,0,0);
+            border: 0;
+            @include text-shadow;
+            border-bottom: 2px solid $white;
+            width: 100%;
+            color: $white;
+
+            &.with-text{
+                width: 70%;
+
+                & + .button {
+                    right: 0;
+                }
+            }
+        }
     }
     .go {
         right: $extension;
@@ -276,9 +307,10 @@ $rotate-padding: 15rem;
     .button {
         @include button(rgba(0,0,0,0.2), $white, $black, $border: 2px solid $white);
         @include text-shadow;
-        &:hover {
+        &:hover, &:focus {
             background-color: $white;
             text-shadow: none;
+            color: $black;
         }
     }
     .mm-logo {
@@ -529,7 +561,7 @@ $rotate-padding: 15rem;
             }
         }
     }
-    &:hover {
+    &:hover, &.hover {
         .voting .options{
             top: 0;
         }

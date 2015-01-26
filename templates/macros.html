@@ -138,12 +138,14 @@
 
 {% macro pundit(name, source, color, grade, tag='div') %}
 <{{tag}} class="pundit {{color}}">
-    <div class="photo" style="background-image:url({{ random(heads) }})"></div>
+    <a href="{{ url_for('profile') }}">
+        <div class="photo" style="background-image:url({{ random(heads) }})"></div>
+    </a>
     <div class="text-wrapper">
-        <a href="#/pundit/{{name}}">
+        <a href="{{ url_for('profile') }}">
             <h5 class="name">{{ name }}</h5>
         </a>
-        <a href="#/source/{{source}}">
+        <a href="{{ url_for('profile') }}">
             <h6 class="source">{{ source }}</h6>
         </a>
     </div>
@@ -486,9 +488,13 @@
     <div class="pure-g card-grid">
         <div class="pure-u-1">
             <h2 class="header">Don't miss out on <br>the Madness.</h2>
-            <h2 class="pick fade-in-up animated">
-                <a href="#" class="button">Pick your bracket today  </a>
-            </h2>
+            <form class="pick">
+                <h2 class="h1">Sign up for updates.</h2>
+                <h4 class="fade-in-up animated">
+                    <input class="email" type="text" placeholder="Email address">
+                    <input type="submit" class="button white-inverse" value="Go">
+                </h4>
+            </form>
         </div>
     </div>
     <div class="mm-logo"><img src="{{ url_for('static', filename='img/march-madness.png')}}"></div>

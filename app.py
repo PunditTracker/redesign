@@ -35,10 +35,13 @@ def post():
 def angle():
     return render_template('angle.html', random=r_elem)
 
-
-@app.route('/predict')
+@app.route('/grid/predict')
 def predict():
     return render_template('predict.html', random=r_elem)
+
+@app.route('/grid/profile')
+def profile():
+    return render_template('profile.html', random=r_elem)
 
 def register_scss():
     """"""
