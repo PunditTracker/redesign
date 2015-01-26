@@ -16,7 +16,7 @@ $(function() {
 
 		if (bottomOfInner > bottomOfWrapper) {
 			$sidebar.css({'padding-top': topSoFixedBottom})
-		} else if (topOfInner >= bottomOfNavbar || (bottomOfInner < bottomOfWindow && bottomOfInner < bottomOfWrapper && $inner.height() < $(window).height())) {
+		} else if (topOfInner >= bottomOfNavbar || (bottomOfInner < bottomOfWindow && bottomOfInner < bottomOfWrapper && $inner.height() < ($(window).height() - navbarAndMargin))) {
 	  		$sidebar.css({'padding-top': topSoFixedTop});
 	  	} else if (bottomOfInner < bottomOfWindow || bottomOfInner > bottomOfWrapper) {
 			$sidebar.css({'padding-top': topSoFixedBottom})

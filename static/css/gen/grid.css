@@ -2342,21 +2342,76 @@ select {
 /* line 9, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
 .profile img {
   width: 100%;
+  margin: 0;
+  display: block;
 }
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+/* line 15, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
 .profile .text {
   padding: 1rem;
 }
-/* line 15, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+/* line 17, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
 .profile .text .h3, .profile .text .prediction.wide-2 .text, .prediction.wide-2 .profile .text .text, .profile .text .prediction.tall-3-2 .text, .prediction.tall-3-2 .profile .text .text {
   margin: 0 0 0.5rem;
 }
-/* line 18, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
 .profile .text h5 {
   margin: 0;
 }
-
 /* line 24, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .text.dark {
+  background-color: #f5f5f5;
+}
+/* line 28, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats {
+  background-color: #f5f5f5;
+}
+/* line 31, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats h6 {
+  margin: 0 0 0.5rem;
+}
+/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats h4 {
+  margin: 0;
+}
+/* line 38, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats > div[class^="pure-u-"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  text-align: center;
+}
+/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats > div[class^="pure-u-"]:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
+}
+/* line 51, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats .since {
+  padding-right: 5rem !important;
+  position: relative;
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats .since .green {
+  width: 3.5rem;
+  padding: 0.5rem;
+  height: 3.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 61, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
+.profile .stats .since .green h4 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif !important;
+  line-height: 3.5rem;
+}
+
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/profile.scss */
 .profile-content {
   margin-bottom: 1.5rem;
 }
