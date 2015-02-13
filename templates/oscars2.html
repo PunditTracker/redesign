@@ -1,0 +1,94 @@
+{% extends "grid.html" %}
+{% import "macros.html" as macros with context %}
+
+{% block bodyJs %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/oscars.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/blog.js') }}"></script>
+{% endblock %}
+
+{% set oscar_images = [
+    'http://a.oscar.go.com/service/image/index/id/41df1a31-b900-4edd-8706-7e48d36b6090/dim/263x175.jpg',
+    'http://a.oscar.go.com/service/image/index/id/9702ebba-504c-4b20-a161-04adb1dfb5f8/dim/263x175.jpg',
+    'http://a.oscar.go.com/service/image/index/id/bf50ea28-6b22-46c4-8b41-1643a75e4d37/dim/263x175.jpg',
+    'http://a.oscar.go.com/service/image/index/id/a59ee529-30fd-43d1-a21c-7b9f0adb969b/dim/263x175.jpg',
+    'http://a.oscar.go.com/service/image/index/id/bc69879a-8911-409a-9073-403f4d3dbe40/dim/263x175.jpg'
+] %}
+
+{% block navbarClass %}hidden-for-oscars{% endblock %}
+{%- block main -%}
+{% call macros.navbar("oscars") %}
+{% if request.args.get('login') == 'yes' %}
+<a class="sign-up button" href="{{ url_for('predict', login=request.args.get('login')) }}">Predict!</a>
+{% else %}
+<a class="sign-up button" href="{{ url_for('grid', login='yes') }}">Sign Up / Log in</a>
+{% endif %}
+{% endcall %}
+<div class="hero short oscars" id="hero">
+    <div class="oscars-cover">
+        <i class="logo" style="background-image: url({{ url_for('static', filename='img/oscars-cover.jpeg') }})"></i>
+        <a href="#oscars-predict" class="down">
+            <span>Make your picks</span><br>
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+<div class="content oscars">
+    <div class="blog-wrapper card-grid">
+        <div class="oscars-categories">
+            <!-- <div class="gray-scrim"></div> -->
+            {% for oscar in categories %}
+            {% with outer = loop.index %}
+            <li class="pure-g card-grid oscars-category" id="cat-{{ outer }}" data-page="{{ outer }}">
+                <div class="pure-u-1-2">
+                    <div class="oscars-header">
+                        <h2>{{ oscar.category }}</h2>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <ul class="nominees">
+                        {% for nominee in oscar.nominees %}
+                        {% with inner = loop.index %}
+                        <li class="nominee"
+                            id="nom-{{ outer }}{{ inner }}"
+                            {% if outer == categories | length %}
+                            data-next="#submit"
+                            {% else %}
+                            data-next='#cat-{{ outer + 1 }}'
+                            {% endif %}
+                            data-target='#od-{{ outer }}{{ inner }}'>
+                            <h4>{{ nominee.title }}</h4>
+                        </li>
+                        {% endwith %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            {% endwith %}
+            {% endfor %}
+        </div>
+        <div class="oscars sidebar right">
+            <div class="inner">
+                {% for oscar in categories %}
+                    {% with outer = loop.index %}
+                    {% for nominee in oscar.nominees %}
+                        {% with inner = loop.index %}
+                        <div id="od-{{ outer }}{{ inner }}" class="oscars-details {% if inner + outer > 2 %}hidden{% endif %}">
+                            <div class="background" style="background-image: url({{ random(oscar_images)}});">
+                                <div class="scrim"></div>
+                                <div class="text">
+                                    <h3>{{ nominee.title }}</h3>
+                                </div>
+                            </div>
+                            <p class="text">{{ nominee.desc | safe }} and whatever other details we have on this.</p>
+                        </div>
+                        {% endwith %}
+                    {% endfor %}
+                    {% endwith %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{%- endblock -%}

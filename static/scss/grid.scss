@@ -4,6 +4,7 @@
 @import 'filter';
 @import 'prediction_form';
 @import 'profile';
+@import 'oscars';
 
 $prediction-height: 16.5rem;
 $prediction-padding: 0.75rem;
@@ -61,6 +62,12 @@ html, body {
     max-width: 100%;
     overflow: hidden;
     margin: 0 auto;
+
+    &.full {
+        width: 100%;
+        min-height: 100vh;
+    }
+
     .featured {
         height: $hero-height;
     }

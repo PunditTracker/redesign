@@ -8,8 +8,14 @@ app = Flask(__name__)
 
 from blog_post import post_html
 
+oscars_data = {}
+
+with open('data/oscars.json') as in_file:
+    oscars_data = json.loads(in_file.read())
+
 truncated_html = truncate(post_html, 255)
 r_elem = (lambda l: l[random.randint(0, len(l) - 1)])
+
 
 @app.route('/')
 def index():
@@ -20,6 +26,7 @@ def index():
 def grid():
     return render_template('grid.html', random=r_elem)
 
+
 @app.route('/grid/blog')
 def blog():
     return render_template('blog.html',
@@ -27,21 +34,33 @@ def blog():
                            post_html=post_html,
                            truncated_html=truncated_html)
 
+
 @app.route('/grid/blog/post')
 def post():
     return render_template('post.html', random=r_elem, post_html=post_html)
+
 
 @app.route('/angle')
 def angle():
     return render_template('angle.html', random=r_elem)
 
+
 @app.route('/grid/predict')
 def predict():
     return render_template('predict.html', random=r_elem)
 
+
 @app.route('/grid/profile')
 def profile():
     return render_template('profile.html', random=r_elem)
+
+
+@app.route('/grid/oscars')
+def oscars():
+    return render_template('oscars.html',
+                           random=r_elem,
+                           categories=oscars_data['oscars'])
+
 
 def register_scss():
     """"""

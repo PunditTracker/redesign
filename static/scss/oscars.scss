@@ -1,0 +1,302 @@
+@import 'base';
+
+$oscar-gold: rgba(215, 200, 109, 0.7);
+$oscar-gold-bright: rgba(215, 200, 109, 0.85);
+
+.completion {
+	position: fixed;
+	top: ($navbar-height + 1.5rem);
+	left: 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding: 0.25rem 0.5rem;
+		position: relative;
+		letter-spacing: 0;
+
+		.dot {
+			height: 0.5rem;
+			width: 0.5rem;
+			background-color: $black;
+			display: block;
+		}
+		&:hover {
+			padding: 1rem 0.5rem;
+
+			.text {
+				display: block;
+				width: 40rem;
+			}
+		}
+	}
+
+
+	.text {
+		display: none;
+		position: absolute;
+		left: 1.5rem;
+		top:50%;
+		height: 2rem;
+		@include transform(translateY(-50%));
+	}
+}
+
+.content.oscars {
+	padding-top: ($navbar-height + 1.5rem);
+}
+
+.oscars-header {
+	position: absolute;
+	display: block;
+	max-width: 100%;
+	top: 0;
+	width: 33.333333%;
+	padding-right: 0.75rem;
+
+	h2 {
+		@include box-shadow;
+		background-color: $white;
+		padding: 1rem;
+		margin: 0 0.75rem 0 0;
+	}
+
+	&.fixed {
+		position: fixed;
+		top: ($navbar-height + 1.5rem);
+
+		&.bottom {
+			position: absolute;
+			top: auto;
+			bottom: 0;
+		}
+	}
+}
+
+.sidebar.oscars {
+	width: 33.333333%;
+	display: inline-block;
+}
+.oscars-categories {
+	position: relative;
+	list-style: none;
+	margin: 0 0 1.5rem;
+	padding: 0.5rem 0;
+	@include clearfix;
+
+	.oscars-category {
+		display: block;
+		position: relative;
+		@include clearfix;
+	}
+}
+
+.nom-wrapper {
+	padding-bottom: 15rem !important;
+}
+
+.nominees {
+	list-style: none;
+	margin: 0;
+	padding: 0.5rem 0;
+	@include box-shadow;
+	background-color: $white;
+
+	.nominee {
+		padding: 0.5rem 1rem;
+		h4 {
+			margin: 0;
+			@include border-box;
+		}
+		&:hover {
+			background-color: $ultralightgray;
+			cursor: pointer;
+		}
+		&.selected {
+			color: $black;
+			background-color: $oscar-gold;
+		}
+	}
+}
+
+.oscars-details {
+	left: 0.75rem;
+	right: 0.75rem;
+	width: 100%;
+	float: right;
+	display: block;
+	top: 0;
+	@include clearfix;
+	@include border-box;
+
+	& > .inner {
+		@include box-shadow;
+		background-color: $white;
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&.fixed {
+		position: fixed;
+		top: $navbar-height + 1.5rem;
+		float: auto;
+		margin-left: 0.75rem;
+
+		&.bottom {
+			position: absolute !important;
+			top: auto !important;
+			bottom: 0 !important;
+			right: 0 !important;
+			margin-right: 0;
+			padding-left: 0.75rem;
+			width: 33.333333% !important;
+			left: auto !important;
+		}
+	}
+
+	.background {
+		height: 15rem;
+		position: relative;
+		@extend .background-image;
+		.scrim {
+			@include scrim(0);
+		}
+		h3 {
+			position: absolute;
+			bottom: 1rem;
+			z-index: 400;
+			margin-bottom: 0;
+			color: $white;
+			@include text-shadow;
+		}
+	}
+	.text {
+		padding: 1rem;
+		margin: 0;
+	}
+}
+
+.oscars-cover {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	.logo {
+		@include animatedWithDelay(2s, 0.5s);
+	    @extend .fade-in-up;
+	    position: absolute;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    left: (0.5 * $navbar-height);
+	    right: (0.5 * $navbar-height);
+	    top: (1.5 * $navbar-height);
+	    bottom: (1.5 * $navbar-height);
+	    opacity: 0;
+	}
+
+	.down {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		@include transform(translateX(-50%));
+		color: $oscar-gold;
+		@include animatedWithDelay(2s, 0.5s);
+	    @extend .fade-in;
+	    text-align: center;
+	    font-size: 0.8rem;
+		&:hover {
+			color: $oscar-gold-bright;
+		}
+	}
+}
+
+.hero.short {
+	height: 25rem;
+	padding: 0;
+}
+
+.hero.oscars {
+    width: 100%;
+    @include animatedWithDelay(2s, 2s);
+    @include animateWithBezier;
+    animation-name: shrink;
+    -webkit-animation-name: shrink;
+}
+
+
+.navbar {
+	&.oscars {
+		z-index: 499;
+		background-color: black;
+		@include animatedWithDelay(2s, 0.5s);
+	    @extend .fade-in;
+	    color: $oscar-gold;
+	    input {
+	    	background-color: black;
+	    	color: $oscar-gold;
+	    	border-color: $oscar-gold;
+	    	&:active, &:hover, &:focus {
+	    		color: $oscar-gold-bright;
+	    		border-color: $oscar-gold-bright;
+	    		i {
+	    			color: $oscar-gold-bright;
+	    		}
+	    		&::-webkit-input-placeholder {
+	    			color :$oscar-gold;
+	    		}
+	    		&:-moz-input-placeholder {
+	    			color :$oscar-gold;
+	    		}
+	    		&::-moz-input-placeholder {
+	    			color :$oscar-gold;
+	    		}
+	    		&:-ms-input-placeholder {
+	    			color :$oscar-gold;
+	    		}
+	    	}
+	    }
+	    .button {
+	    	background-color: black;
+	    	color: $oscar-gold;
+	    	border-color: $oscar-gold;
+	    	&:active, &:hover, &:focus {
+	    		color: $oscar-gold-bright;
+	    		border-color: $oscar-gold-bright;
+	    	}
+	    }
+	    position: absolute;
+	    a:hover {
+			color: $oscar-gold-bright;
+	    }
+	}
+	&.hidden-for-oscars {
+		top: -$navbar-height;
+		@include transition(0.3s);
+		&.show {
+			top: 0;
+		}
+	}
+}
+
+
+
+@-webkit-keyframes shrink {
+    0% {
+        min-height: 100vh;
+    }
+    100% {
+        min-height: 50vh;
+    }
+}
+@keyframes shrink {
+    0% {
+        min-height: 100vh;
+    }
+    100% {
+        min-height: 50vh;
+    }
+}

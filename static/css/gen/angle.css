@@ -1,7 +1,7 @@
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -11,7 +11,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -22,6 +22,15 @@
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -48,7 +57,7 @@
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
 /* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -60,12 +69,12 @@ body, html {
 }
 
 /* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-p, label {
-  margin-bottom: 0.3125rem;
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2rem;
+p, .p, ul li, ol li, label, table {
+  margin: 0 0 1rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 /* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -76,132 +85,198 @@ pre {
   font-family: monospace;
 }
 
-/* line 41, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-ul li {
-  font-size: 1.2rem;
-  line-height: 1.9rem;
+/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table {
+  margin: 1rem auto 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table thead {
+  background-color: #08537b;
+  color: white;
 }
 
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th, td {
+  padding: 0 0.5rem;
+}
+
+/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th {
+  font-weight: 700;
+}
+
+/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul, ol {
+  padding: 0;
+  margin-left: 2rem;
+}
+/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul li, ol li {
+  margin: 0;
+}
+
+/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 48, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 50, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input, textarea {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.3125rem;
-}
-/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 6.5rem;
-  line-height: 6.5rem;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.featured .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 3rem;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.featured .pundit .name {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h4, .h4, .logo {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h4, .h4, .logo {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin-bottom: .625rem;
-  text-transform: uppercase;
-}
-
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 107, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction.featured .pundit .source {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   line-height: 1rem;
 }
 
+/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input, textarea {
+  @extends .h6;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  width: 10rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+  @extends .h6;
+}
+/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch, textarea.stretch {
+  width: 2.5rem;
+  padding-left: 1.75rem;
+}
+/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch:focus, textarea.stretch:focus {
+  width: 10rem;
+  padding-left: 2.25rem;
+}
+
+/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+select {
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  background: url(../../img/caret.svg) no-repeat right 0.25rem center;
+  background-size: 1rem 1rem;
+}
+
 @media screen and (min-width: 1921px) {
-  /* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 127, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 133, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -211,7 +286,7 @@ h6, .h6, .prediction.featured .pundit .source {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -222,6 +297,15 @@ h6, .h6, .prediction.featured .pundit .source {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -248,7 +332,7 @@ h6, .h6, .prediction.featured .pundit .source {
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
 /* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -260,12 +344,12 @@ body, html {
 }
 
 /* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-p, label {
-  margin-bottom: 0.3125rem;
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2rem;
+p, .p, ul li, ol li, label, table {
+  margin: 0 0 1rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 /* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
@@ -276,132 +360,198 @@ pre {
   font-family: monospace;
 }
 
-/* line 41, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-ul li {
-  font-size: 1.2rem;
-  line-height: 1.9rem;
+/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table {
+  margin: 1rem auto 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table thead {
+  background-color: #08537b;
+  color: white;
 }
 
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th, td {
+  padding: 0 0.5rem;
+}
+
+/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th {
+  font-weight: 700;
+}
+
+/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul, ol {
+  padding: 0;
+  margin-left: 2rem;
+}
+/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul li, ol li {
+  margin: 0;
+}
+
+/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 48, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 50, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input, textarea {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 0.3125rem;
-}
-/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-/* line 74, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 300;
-  font-size: 6.5rem;
-  line-height: 6.5rem;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.featured .text {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 3rem;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.featured .pundit .name {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h4, .h4, .logo {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
-/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
-h4, .h4, .logo {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin-bottom: .625rem;
-  text-transform: uppercase;
-}
-
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5 {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 1rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 107, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction.featured .pundit .source {
-  font-family: "Lato", Helvetica, Ariel sans-serif;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   line-height: 1rem;
 }
 
+/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input, textarea {
+  @extends .h6;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  width: 10rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+  @extends .h6;
+}
+/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch, textarea.stretch {
+  width: 2.5rem;
+  padding-left: 1.75rem;
+}
+/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch:focus, textarea.stretch:focus {
+  width: 10rem;
+  padding-left: 2.25rem;
+}
+
+/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+select {
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  background: url(../../img/caret.svg) no-repeat right 0.25rem center;
+  background-size: 1rem 1rem;
+}
+
 @media screen and (min-width: 1921px) {
-  /* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 127, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 133, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
+    -webkit-transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -411,7 +561,7 @@ h6, .h6, .prediction.featured .pundit .source {
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -422,6 +572,15 @@ h6, .h6, .prediction.featured .pundit .source {
 .fade-in-up {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
@@ -524,11 +683,15 @@ html, body {
   color: white;
   width: auto;
   display: inline-block;
-  border: 1px solid white;
+  border: 0;
   padding: 0.5rem 1rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.button:hover {
+  color: 1px solid white;
 }
 
 /* line 22 */
@@ -569,25 +732,25 @@ html, body {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.left {
   left: 0;
   border-top: 25rem solid #e54236;
   border-right: 2.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.hang-left {
   left: -2.5rem;
   border-bottom: 25rem solid #e54236;
   border-left: 2.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.right {
   right: 0;
   border-bottom: 25rem solid #e54236;
   border-left: 2.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero .angle.hang-right {
   right: -2.5rem;
   border-top: 25rem solid #e54236;
@@ -606,25 +769,25 @@ html, body {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.left {
   left: 0;
   border-top: 25rem solid #f4bb15;
   border-right: 2.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.hang-left {
   left: -2.5rem;
   border-bottom: 25rem solid #f4bb15;
   border-left: 2.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.right {
   right: 0;
   border-bottom: 25rem solid #f4bb15;
   border-left: 2.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .hero.inline .angle.hang-right {
   right: -2.5rem;
   border-top: 25rem solid #f4bb15;
@@ -670,25 +833,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.left {
   left: 0;
   border-top: 25rem solid white;
   border-right: 2.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-left {
   left: -2.5rem;
   border-bottom: 25rem solid white;
   border-left: 2.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.right {
   right: 0;
   border-bottom: 25rem solid white;
   border-left: 2.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-right {
   right: -2.5rem;
   border-top: 25rem solid white;
@@ -702,25 +865,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.left {
   left: 0;
   border-top: 15rem solid white;
   border-right: 1.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.hang-left {
   left: -1.5rem;
   border-bottom: 15rem solid white;
   border-left: 1.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.right {
   right: 0;
   border-bottom: 15rem solid white;
   border-left: 1.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction > .angle.hang-right {
   right: -1.5rem;
   border-top: 15rem solid white;
@@ -734,25 +897,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.left {
   left: 0;
   border-top: 10rem solid white;
   border-right: 1rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.hang-left {
   left: -1rem;
   border-bottom: 10rem solid white;
   border-left: 1rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.right {
   right: 0;
   border-bottom: 10rem solid white;
   border-left: 1rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.small > .angle.hang-right {
   right: -1rem;
   border-top: 10rem solid white;
@@ -766,25 +929,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.left {
   left: 0;
   border-top: 22rem solid white;
   border-right: 2.2rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.hang-left {
   left: -2.2rem;
   border-bottom: 22rem solid white;
   border-left: 2.2rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.right {
   right: 0;
   border-bottom: 22rem solid white;
   border-left: 2.2rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.tall-2 > .angle.hang-right {
   right: -2.2rem;
   border-top: 22rem solid white;
@@ -811,25 +974,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.left {
   left: 0;
   border-top: 25rem solid rgba(255, 255, 255, 0.3);
   border-right: 2.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.hang-left {
   left: -2.5rem;
   border-bottom: 25rem solid rgba(255, 255, 255, 0.3);
   border-left: 2.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.right {
   right: 0;
   border-bottom: 25rem solid rgba(255, 255, 255, 0.3);
   border-left: 2.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.featured > .angle.hang-right {
   right: -2.5rem;
   border-top: 25rem solid rgba(255, 255, 255, 0.3);
@@ -843,25 +1006,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.left {
   left: 0;
   border-top: 15rem solid rgba(255, 255, 255, 0.3);
   border-right: 1.5rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-left {
   left: -1.5rem;
   border-bottom: 15rem solid rgba(255, 255, 255, 0.3);
   border-left: 1.5rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.right {
   right: 0;
   border-bottom: 15rem solid rgba(255, 255, 255, 0.3);
   border-left: 1.5rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured > .angle.hang-right {
   right: -1.5rem;
   border-top: 15rem solid rgba(255, 255, 255, 0.3);
@@ -875,25 +1038,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.left {
   left: 0;
   border-top: 10rem solid rgba(255, 255, 255, 0.3);
   border-right: 1rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.hang-left {
   left: -1rem;
   border-bottom: 10rem solid rgba(255, 255, 255, 0.3);
   border-left: 1rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.right {
   right: 0;
   border-bottom: 10rem solid rgba(255, 255, 255, 0.3);
   border-left: 1rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.small > .angle.hang-right {
   right: -1rem;
   border-top: 10rem solid rgba(255, 255, 255, 0.3);
@@ -907,25 +1070,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.left {
   left: 0;
   border-top: 22rem solid rgba(255, 255, 255, 0.3);
   border-right: 2.2rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.hang-left {
   left: -2.2rem;
   border-bottom: 22rem solid rgba(255, 255, 255, 0.3);
   border-left: 2.2rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.right {
   right: 0;
   border-bottom: 22rem solid rgba(255, 255, 255, 0.3);
   border-left: 2.2rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction.featured.tall-2 > .angle.hang-right {
   right: -2.2rem;
   border-top: 22rem solid rgba(255, 255, 255, 0.3);
@@ -1034,7 +1197,7 @@ i.bg-image {
 }
 /* line 233 */
 .set-title.blue {
-  background-color: #2a81c4;
+  background-color: #08537b;
 }
 /* line 80 */
 .set-title.blue > .angle {
@@ -1044,28 +1207,28 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.left {
   left: 0;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.hang-left {
   left: -1.7rem;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.right {
   right: 0;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.blue > .angle.hang-right {
   right: -1.7rem;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
 /* line 234 */
@@ -1080,25 +1243,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.red > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #e54236;
@@ -1116,25 +1279,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.yellow > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #f4bb15;
@@ -1152,25 +1315,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.green > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #039b67;
@@ -1188,25 +1351,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .set-title.orange > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #d79003;
@@ -1252,7 +1415,7 @@ i.bg-image {
 }
 /* line 266 */
 .prediction-set.blue {
-  background-color: #2a81c4;
+  background-color: #08537b;
 }
 /* line 80 */
 .prediction-set.blue > .angle {
@@ -1262,28 +1425,28 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.left {
   left: 0;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.hang-left {
   left: -1.7rem;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.right {
   right: 0;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.blue > .angle.hang-right {
   right: -1.7rem;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
 /* line 267 */
@@ -1298,25 +1461,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.red > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #e54236;
@@ -1334,25 +1497,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.yellow > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #f4bb15;
@@ -1370,25 +1533,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.green > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #039b67;
@@ -1406,25 +1569,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set.orange > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #d79003;
@@ -1442,7 +1605,7 @@ i.bg-image {
   position: relative;
   padding-right: 2.7rem;
   height: 17rem;
-  background-color: #ddd;
+  background-color: #f5f5f5;
   width: 99rem;
 }
 /* line 86 */
@@ -1453,28 +1616,28 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.left {
   left: 0;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.hang-left {
   left: -1.7rem;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.right {
   right: 0;
-  border-bottom: 17rem solid #2a81c4;
+  border-bottom: 17rem solid #08537b;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.blue > .angle.hang-right {
   right: -1.7rem;
-  border-top: 17rem solid #2a81c4;
+  border-top: 17rem solid #08537b;
   border-right: 1.7rem solid transparent;
 }
 /* line 86 */
@@ -1485,25 +1648,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.left {
   left: 0;
   border-top: 17rem solid #e54236;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.right {
   right: 0;
   border-bottom: 17rem solid #e54236;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.red > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #e54236;
@@ -1517,25 +1680,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.left {
   left: 0;
   border-top: 17rem solid #f4bb15;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.right {
   right: 0;
   border-bottom: 17rem solid #f4bb15;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.yellow > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #f4bb15;
@@ -1549,25 +1712,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.left {
   left: 0;
   border-top: 17rem solid #039b67;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.right {
   right: 0;
   border-bottom: 17rem solid #039b67;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.green > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #039b67;
@@ -1581,25 +1744,25 @@ i.bg-image {
   height: 0;
   z-index: 100;
 }
-/* line 85, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 84, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.left {
   left: 0;
   border-top: 17rem solid #d79003;
   border-right: 1.7rem solid transparent;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.hang-left {
   left: -1.7rem;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 94, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.right {
   right: 0;
   border-bottom: 17rem solid #d79003;
   border-left: 1.7rem solid transparent;
 }
-/* line 100, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction-set > .inner.orange > .angle.hang-right {
   right: -1.7rem;
   border-top: 17rem solid #d79003;
@@ -1613,7 +1776,7 @@ i.bg-image {
 
 /* line 300 */
 .strip.blue {
-  background-color: #2a81c4;
+  background-color: #08537b;
 }
 /* line 301 */
 .strip.red {
@@ -1634,7 +1797,7 @@ i.bg-image {
 
 /* line 307 */
 .triple {
-  background-color: #ddd;
+  background-color: #f5f5f5;
 }
 /* line 309 */
 .triple .content {

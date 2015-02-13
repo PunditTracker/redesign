@@ -18,23 +18,47 @@
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,22 +69,34 @@
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -68,7 +104,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -77,7 +113,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -85,81 +121,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -167,7 +203,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -175,7 +211,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -183,7 +219,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -192,7 +228,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -200,7 +236,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -216,22 +252,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -244,31 +280,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -293,23 +329,47 @@ select {
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -320,22 +380,34 @@ select {
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -343,7 +415,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -352,7 +424,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -360,81 +432,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -442,7 +514,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -450,7 +522,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -458,7 +530,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -467,7 +539,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -475,7 +547,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -491,22 +563,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -519,31 +591,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -666,23 +738,47 @@ select {
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -693,22 +789,34 @@ select {
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -716,7 +824,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -725,7 +833,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -733,81 +841,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -815,7 +923,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -823,7 +931,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -831,7 +939,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -840,7 +948,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -848,7 +956,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -864,22 +972,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -892,31 +1000,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -945,7 +1053,7 @@ select {
   overflow-y: hidden;
   width: 100%;
 }
-/* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .blog-wrapper:after {
   content: " ";
   display: block;
@@ -1244,23 +1352,47 @@ p .posts:last-child {
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1271,22 +1403,34 @@ p .posts:last-child {
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -1294,7 +1438,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -1303,7 +1447,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -1311,81 +1455,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1393,7 +1537,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1401,7 +1545,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1409,7 +1553,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -1418,7 +1562,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -1426,7 +1570,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -1442,22 +1586,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -1470,31 +1614,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -1598,23 +1742,47 @@ select {
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1625,22 +1793,34 @@ select {
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -1648,7 +1828,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -1657,7 +1837,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -1665,81 +1845,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1747,7 +1927,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1755,7 +1935,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -1763,7 +1943,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -1772,7 +1952,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -1780,7 +1960,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -1796,22 +1976,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -1824,31 +2004,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -2077,23 +2257,47 @@ select {
     transform: translateY(0);
   }
 }
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
-.fade-in-up {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
   -webkit-animation-name: fade-in-up;
   animation-name: fade-in-up;
 }
 
-/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
   opacity: 0;
 }
 
 /* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
-.background-image, .posts .header .background {
+.background-image, .posts .header .background, .oscars-details .background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2104,22 +2308,34 @@ select {
   text-transform: uppercase;
 }
 
-/* line 30, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-/* line 13, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   /* Set your content font stack here: */
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
 }
 
-/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -2127,7 +2343,7 @@ body, html {
   color: #111;
 }
 
-/* line 26, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 p, .p, ul li, ol li, label, table {
   margin: 0 0 1rem;
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
@@ -2136,7 +2352,7 @@ p, .p, ul li, ol li, label, table {
   line-height: 1.75rem;
 }
 
-/* line 34, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 pre {
   margin: 1rem 0;
   padding: 1rem;
@@ -2144,81 +2360,81 @@ pre {
   font-family: monospace;
 }
 
-/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table {
   margin: 1rem auto 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 table thead {
   background-color: #08537b;
   color: white;
 }
 
-/* line 52, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th, td {
   padding: 0 0.5rem;
 }
 
-/* line 57, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* line 62, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 th {
   font-weight: 700;
 }
 
-/* line 66, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul, ol {
   padding: 0;
   margin-left: 2rem;
 }
-/* line 71, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 ul li, ol li {
   margin: 0;
 }
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 em {
   font-style: italic;
 }
 
-/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 strong, .bold {
   font-weight: 700;
 }
 
-/* line 82, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 a, a:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 91, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 2.75rem;
   line-height: 3.5rem;
 }
 
-/* line 96, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h2, .h2, .prediction.tall-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -2226,7 +2442,7 @@ h2, .h2, .prediction.tall-2 .text {
   line-height: 3rem;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -2234,7 +2450,7 @@ h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
   line-height: 2.25rem;
 }
 
-/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h4, .h4 {
   font-family: "Roboto Slab", Georgia, serif;
   font-weight: 400;
@@ -2242,7 +2458,7 @@ h4, .h4 {
   line-height: 2rem;
 }
 
-/* line 114, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h5, .h5, .logo {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 700;
@@ -2251,7 +2467,7 @@ h5, .h5, .logo {
   margin-bottom: 0.625rem;
 }
 
-/* line 121, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
   font-family: "Open Sans", Helvetica, Ariel sans-serif;
   font-weight: 400;
@@ -2259,7 +2475,7 @@ h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .pred
   line-height: 1rem;
 }
 
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input, textarea {
   @extends .h6;
   padding: 0.5rem 1rem;
@@ -2275,22 +2491,22 @@ input, textarea {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 138, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
   @extends .h6;
 }
-/* line 145, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch, textarea.stretch {
   width: 2.5rem;
   padding-left: 1.75rem;
 }
-/* line 149, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 input.stretch:focus, textarea.stretch:focus {
   width: 10rem;
   padding-left: 2.25rem;
 }
 
-/* line 156, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
 select {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -2303,31 +2519,31 @@ select {
 }
 
 @media screen and (min-width: 1921px) {
-  /* line 169, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1920px) {
-  /* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) {
-  /* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 193, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
   html, body {
     font-size: 11px;
   }
@@ -2416,13 +2632,702 @@ select {
   margin-bottom: 1.5rem;
 }
 
-/* line 21 */
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 54, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in-up, .oscars-cover .logo {
+  -webkit-animation-name: fade-in-up;
+  animation-name: fade-in-up;
+}
+
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.fade-in, .oscars-cover .down, .navbar.oscars {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+/* line 64, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/animations.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+/* line 3, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.background-image, .posts .header .background, .oscars-details .background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 9, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.upper {
+  text-transform: uppercase;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.textDimensionCalculation {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+}
+
+/* line 20, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  color: #111;
+}
+
+/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+p, .p, ul li, ol li, label, table {
+  margin: 0 0 1rem;
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+/* line 35, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: white;
+  font-family: monospace;
+}
+
+/* line 43, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table {
+  margin: 1rem auto 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 47, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+table thead {
+  background-color: #08537b;
+  color: white;
+}
+
+/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th, td {
+  padding: 0 0.5rem;
+}
+
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+th {
+  font-weight: 700;
+}
+
+/* line 67, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul, ol {
+  padding: 0;
+  margin-left: 2rem;
+}
+/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+ul li, ol li {
+  margin: 0;
+}
+
+/* line 79, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+em {
+  font-style: italic;
+}
+
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+strong, .bold {
+  font-weight: 700;
+}
+
+/* line 83, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 87, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h1, .h1, .faceoff-wrapper .question, .set-wrapper .question, .march-madness .header, .prediction.featured .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 3.5rem;
+}
+
+/* line 97, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h2, .h2, .prediction.tall-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 3rem;
+}
+
+/* line 103, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h3, .h3, .prediction.wide-2 .text, .prediction.tall-3-2 .text {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h4, .h4 {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+/* line 115, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h5, .h5, .logo {
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+h6, .h6, .prediction-form .joiners span, .prediction-form .active-tags li, .prediction-form .is-opt, .prediction .voting .options li .option {
+  font-family: "Open Sans", Helvetica, Ariel sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input, textarea {
+  @extends .h6;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  width: 10rem;
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
+}
+/* line 139, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
+  @extends .h6;
+}
+/* line 146, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch, textarea.stretch {
+  width: 2.5rem;
+  padding-left: 1.75rem;
+}
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+input.stretch:focus, textarea.stretch:focus {
+  width: 10rem;
+  padding-left: 2.25rem;
+}
+
+/* line 157, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+select {
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  background: url(../../img/caret.svg) no-repeat right 0.25rem center;
+  background-size: 1rem 1rem;
+}
+
+@media screen and (min-width: 1921px) {
+  /* line 170, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  html, body {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  /* line 176, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  html, body {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  /* line 182, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  html, body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 188, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  html, body {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/base.scss */
+  html, body {
+    font-size: 11px;
+  }
+}
+/* line 6, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion {
+  position: fixed;
+  top: 5.5rem;
+  left: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 14, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion li {
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  letter-spacing: 0;
+}
+/* line 19, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion li .dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #111;
+  display: block;
+}
+/* line 25, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion li:hover {
+  padding: 1rem 0.5rem;
+}
+/* line 28, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion li:hover .text {
+  display: block;
+  width: 40rem;
+}
+/* line 36, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion .text {
+  display: none;
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  height: 2rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+/* line 46, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.content.oscars {
+  padding-top: 5.5rem;
+}
+
+/* line 50, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-header {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  top: 0;
+  width: 33.333333%;
+  padding-right: 0.75rem;
+}
+/* line 58, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-header h2 {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  padding: 1rem;
+  margin: 0 0.75rem 0 0;
+}
+/* line 65, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-header.fixed {
+  position: fixed;
+  top: 5.5rem;
+}
+/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-header.fixed.bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+}
+
+/* line 77, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.sidebar.oscars {
+  width: 33.333333%;
+  display: inline-block;
+}
+
+/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-categories {
+  position: relative;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0.5rem 0;
+}
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.oscars-categories:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 88, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-categories .oscars-category {
+  display: block;
+  position: relative;
+}
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.oscars-categories .oscars-category:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 95, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nom-wrapper {
+  padding-bottom: 15rem !important;
+}
+
+/* line 99, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nominees {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  background-color: white;
+}
+/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nominees .nominee {
+  padding: 0.5rem 1rem;
+}
+/* line 108, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nominees .nominee h4 {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 112, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nominees .nominee:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+/* line 116, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.nominees .nominee.selected {
+  color: #111;
+  background-color: rgba(215, 200, 109, 0.7);
+}
+
+/* line 123, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details {
+  left: 0.75rem;
+  right: 0.75rem;
+  width: 100%;
+  float: right;
+  display: block;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+.oscars-details:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 133, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details > .inner {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  background-color: white;
+}
+/* line 136, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details > .inner.hidden {
+  display: none;
+}
+/* line 141, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details.fixed {
+  position: fixed;
+  top: 5.5rem;
+  float: auto;
+  margin-left: 0.75rem;
+}
+/* line 147, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details.fixed.bottom {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin-right: 0;
+  padding-left: 0.75rem;
+  width: 33.333333% !important;
+  left: auto !important;
+}
+/* line 159, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details .background {
+  height: 15rem;
+  position: relative;
+}
+/* line 163, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details .background .scrim {
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(100% black), color-stop(100% black));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
+}
+/* line 166, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details .background h3 {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 400;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+/* line 175, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-details .text {
+  padding: 1rem;
+  margin: 0;
+}
+
+/* line 181, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-cover {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-cover .logo {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 2rem;
+  right: 2rem;
+  top: 6rem;
+  bottom: 6rem;
+  opacity: 0;
+}
+/* line 201, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-cover .down {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  color: rgba(215, 200, 109, 0.7);
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  text-align: center;
+  font-size: 0.8rem;
+}
+/* line 211, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.oscars-cover .down:hover {
+  color: rgba(215, 200, 109, 0.85);
+}
+
+/* line 217, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.hero.short {
+  height: 25rem;
+  padding: 0;
+}
+
+/* line 222, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.hero.oscars {
+  width: 100%;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.98, 0.44, 0.25, 0.78);
+  -moz-animation-timing-function: cubic-bezier(0.98, 0.44, 0.25, 0.78);
+  -ms-animation-timing-function: cubic-bezier(0.98, 0.44, 0.25, 0.78);
+  -o-animation-timing-function: cubic-bezier(0.98, 0.44, 0.25, 0.78);
+  animation-timing-function: cubic-bezier(0.98, 0.44, 0.25, 0.78);
+  animation-name: shrink;
+  -webkit-animation-name: shrink;
+}
+
+/* line 232, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars {
+  z-index: 499;
+  background-color: black;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  color: rgba(215, 200, 109, 0.7);
+  position: absolute;
+}
+/* line 238, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input {
+  background-color: black;
+  color: rgba(215, 200, 109, 0.7);
+  border-color: rgba(215, 200, 109, 0.7);
+}
+/* line 242, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active, .navbar.oscars input:hover, .navbar.oscars input:focus {
+  color: rgba(215, 200, 109, 0.85);
+  border-color: rgba(215, 200, 109, 0.85);
+}
+/* line 245, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active i, .navbar.oscars input:hover i, .navbar.oscars input:focus i {
+  color: rgba(215, 200, 109, 0.85);
+}
+/* line 248, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active::-webkit-input-placeholder, .navbar.oscars input:hover::-webkit-input-placeholder, .navbar.oscars input:focus::-webkit-input-placeholder {
+  color: rgba(215, 200, 109, 0.7);
+}
+/* line 251, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active:-moz-input-placeholder, .navbar.oscars input:hover:-moz-input-placeholder, .navbar.oscars input:focus:-moz-input-placeholder {
+  color: rgba(215, 200, 109, 0.7);
+}
+/* line 254, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active::-moz-input-placeholder, .navbar.oscars input:hover::-moz-input-placeholder, .navbar.oscars input:focus::-moz-input-placeholder {
+  color: rgba(215, 200, 109, 0.7);
+}
+/* line 257, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars input:active:-ms-input-placeholder, .navbar.oscars input:hover:-ms-input-placeholder, .navbar.oscars input:focus:-ms-input-placeholder {
+  color: rgba(215, 200, 109, 0.7);
+}
+/* line 262, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars .button {
+  background-color: black;
+  color: rgba(215, 200, 109, 0.7);
+  border-color: rgba(215, 200, 109, 0.7);
+}
+/* line 266, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars .button:active, .navbar.oscars .button:hover, .navbar.oscars .button:focus {
+  color: rgba(215, 200, 109, 0.85);
+  border-color: rgba(215, 200, 109, 0.85);
+}
+/* line 272, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.oscars a:hover {
+  color: rgba(215, 200, 109, 0.85);
+}
+/* line 276, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.hidden-for-oscars {
+  top: -4rem;
+  -webkit-transition: 0.3s 0 ease all;
+  -moz-transition: 0.3s 0 ease all;
+  -o-transition: 0.3s 0 ease all;
+  transition: 0.3s 0 ease all;
+}
+/* line 279, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.navbar.hidden-for-oscars.show {
+  top: 0;
+}
+
+@-webkit-keyframes shrink {
+  0% {
+    min-height: 100vh;
+  }
+  100% {
+    min-height: 50vh;
+  }
+}
+@keyframes shrink {
+  0% {
+    min-height: 100vh;
+  }
+  100% {
+    min-height: 50vh;
+  }
+}
+/* line 22 */
 html, body {
   background-color: #e5e5e5;
   position: relative;
 }
 
-/* line 26 */
+/* line 27 */
 .button {
   background-color: #08537b;
   color: white;
@@ -2434,58 +3339,58 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .button:hover {
   color: #f5f5f5;
 }
 
-/* line 30 */
+/* line 31 */
 .content {
   position: relative;
   z-index: 80;
   width: 100%;
   overflow-x: hidden;
 }
-/* line 36 */
+/* line 37 */
 .content > .card-grid {
   width: 95%;
 }
-/* line 40 */
+/* line 41 */
 .content.no-hero {
   padding-top: 6rem;
 }
 
-/* line 45 */
+/* line 46 */
 .blue {
   background-color: #08537b;
 }
 
-/* line 46 */
+/* line 47 */
 .red {
   background-color: #e54236;
 }
 
-/* line 47 */
+/* line 48 */
 .yellow {
   background-color: #f4bb15;
 }
 
-/* line 48 */
+/* line 49 */
 .yellow-green {
   background-color: #FF5900;
 }
 
-/* line 49 */
+/* line 50 */
 .green {
   background-color: #039b67;
 }
 
-/* line 50 */
+/* line 51 */
 .orange {
   background-color: #d79003;
 }
 
-/* line 53 */
+/* line 54 */
 .hero {
   width: 100%;
   z-index: 100;
@@ -2498,11 +3403,16 @@ html, body {
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 64 */
+/* line 66 */
+.hero.full {
+  width: 100%;
+  min-height: 100vh;
+}
+/* line 71 */
 .hero .featured {
   height: 30rem;
 }
-/* line 68 */
+/* line 75 */
 .hero > .background {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
   top: 4rem;
@@ -2514,7 +3424,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 79 */
+/* line 86 */
 .hero > .background .scrim {
   background: -moz-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(221, 221, 221, 0)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(55%, rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd), color-stop(100% #dddddd));
@@ -2523,22 +3433,22 @@ html, body {
   background: -ms-linear-gradient(top, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
   background: linear-gradient(to bottom, rgba(221, 221, 221, 0) 0%, rgba(221, 221, 221, 0.25) 55%, rgba(221, 221, 221, 0.25) 55%, #dddddd 100%, #dddddd 100%);
 }
-/* line 85 */
+/* line 92 */
 .hero > .card-grid .large-with-small-feature {
   margin-left: -10rem;
   padding-left: 10rem;
 }
-/* line 89 */
+/* line 96 */
 .hero > .card-grid .small-feature {
   margin-right: -10rem;
   padding-right: 10rem;
 }
-/* line 95 */
+/* line 102 */
 .hero .right {
   z-index: 200;
 }
 
-/* line 99 */
+/* line 106 */
 .scrim {
   height: 100%;
   width: 100%;
@@ -2548,50 +3458,50 @@ html, body {
   z-index: 60;
 }
 
-/* line 107 */
+/* line 114 */
 .card-grid {
   max-width: 65rem;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
-/* line 111 */
+/* line 118 */
 .card-grid > div {
   padding: 0 0.75rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 120 */
+/* line 127 */
 .card-grid .card-grid {
   z-index: 200;
   width: 100%;
 }
-/* line 123 */
+/* line 130 */
 .card-grid .card-grid:last-child {
   margin: 0;
 }
-/* line 126 */
+/* line 133 */
 .card-grid .card-grid > div {
   padding: 0;
   margin: 0;
 }
-/* line 129 */
+/* line 136 */
 .card-grid .card-grid > div:not(:last-child) {
   padding-right: 0.75rem;
 }
-/* line 132 */
+/* line 139 */
 .card-grid .card-grid > div:not(:first-child) {
   padding-left: 0.75rem;
 }
 
-/* line 139 */
+/* line 146 */
 .with-image {
   position: relative;
   max-width: 65rem;
   width: 100%;
   margin: 0 auto;
 }
-/* line 145 */
+/* line 152 */
 .with-image .background {
   background-repeat: no-repeat;
   background-position: center center;
@@ -2604,7 +3514,7 @@ html, body {
   width: 100rem;
   margin-left: -50rem;
 }
-/* line 157 */
+/* line 164 */
 .with-image .background .scrim {
   background: -moz-linear-gradient(top, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(20%, rgba(221, 221, 221, 0.25)), color-stop(50%, rgba(221, 221, 221, 0.01)), color-stop(70% rgba(221, 221, 221, 0.25)), color-stop(100% #dddddd));
@@ -2614,37 +3524,37 @@ html, body {
   background: linear-gradient(to bottom, #dddddd 0%, rgba(221, 221, 221, 0.25) 20%, rgba(221, 221, 221, 0.01) 50%, rgba(221, 221, 221, 0.25) 70%, #dddddd 100%);
 }
 
-/* line 163 */
+/* line 170 */
 .faceoff-outer {
   margin: 2rem 0;
 }
 
-/* line 167 */
+/* line 174 */
 .faceoff-wrapper {
   color: white;
 }
-/* line 169 */
+/* line 176 */
 .faceoff-wrapper .background {
   background-image: url(../../img/football.jpg);
 }
 
-/* line 175 */
+/* line 182 */
 .set-wrapper .background {
   background-image: url(../../img/hero.jpg);
 }
-/* line 178 */
+/* line 185 */
 .set-wrapper .card-grid {
   padding: 2rem 0 5rem;
 }
 
-/* line 183 */
+/* line 190 */
 .faceoff-wrapper, .set-wrapper {
   position: relative;
   margin: 0 -10.75rem;
   padding: 0 10.75rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19);
 }
-/* line 188 */
+/* line 195 */
 .faceoff-wrapper .question, .set-wrapper .question {
   color: white;
   position: relative;
@@ -2656,7 +3566,7 @@ html, body {
   z-index: 500;
   text-shadow: 2px 2px 3px black;
 }
-/* line 200 */
+/* line 207 */
 .faceoff-wrapper .background, .set-wrapper .background {
   width: 100%;
   background-position: center center;
@@ -2666,17 +3576,17 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 209 */
+/* line 216 */
 .faceoff-wrapper .background .scrim, .set-wrapper .background .scrim {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 217 */
+/* line 224 */
 .small-feature {
   height: 14.25rem;
   padding: 0.75rem;
 }
-/* line 220 */
+/* line 227 */
 .small-feature .header {
   color: white;
   position: relative;
@@ -2685,11 +3595,11 @@ html, body {
   text-shadow: 2px 2px 3px black;
 }
 
-/* line 229 */
+/* line 236 */
 .march-madness {
   height: 30rem;
 }
-/* line 231 */
+/* line 238 */
 .march-madness .header {
   color: white;
   position: relative;
@@ -2698,7 +3608,7 @@ html, body {
   text-shadow: 2px 2px 3px black;
 }
 
-/* line 241 */
+/* line 248 */
 .march-madness, .small-feature {
   position: relative;
   padding: 2rem;
@@ -2708,7 +3618,7 @@ html, body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
-/* line 247 */
+/* line 254 */
 .march-madness .background, .small-feature .background {
   width: 100%;
   background-position: center top;
@@ -2719,32 +3629,32 @@ html, body {
   height: 100%;
   background-image: url(../../img/basket.jpg);
 }
-/* line 257 */
+/* line 264 */
 .march-madness .background .scrim, .small-feature .background .scrim {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 262 */
+/* line 269 */
 .march-madness .pick, .march-madness .go, .small-feature .pick, .small-feature .go {
   z-index: 500;
   position: absolute;
 }
-/* line 266 */
+/* line 273 */
 .march-madness .pick, .small-feature .pick {
   bottom: 5.5rem;
   right: 2rem;
   color: white;
 }
-/* line 270 */
+/* line 277 */
 .march-madness .pick h2, .small-feature .pick h2 {
   margin-bottom: 1rem;
 }
-/* line 273 */
+/* line 280 */
 .march-madness .pick h4, .small-feature .pick h4 {
   margin: 0;
   overflow: hidden;
   position: relative;
 }
-/* line 277 */
+/* line 284 */
 .march-madness .pick h4 .button, .small-feature .pick h4 .button {
   position: absolute;
   right: -30%;
@@ -2753,7 +3663,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 284 */
+/* line 291 */
 .march-madness .pick input[type="text"], .small-feature .pick input[type="text"] {
   margin-bottom: 0.5rem;
   background-color: transparent;
@@ -2763,20 +3673,20 @@ html, body {
   width: 100%;
   color: white;
 }
-/* line 293 */
+/* line 300 */
 .march-madness .pick input[type="text"].with-text, .small-feature .pick input[type="text"].with-text {
   width: 70%;
 }
-/* line 296 */
+/* line 303 */
 .march-madness .pick input[type="text"].with-text + .button, .small-feature .pick input[type="text"].with-text + .button {
   right: 0;
 }
-/* line 302 */
+/* line 309 */
 .march-madness .go, .small-feature .go {
   right: 10rem;
   bottom: 1rem;
 }
-/* line 307 */
+/* line 314 */
 .march-madness .button, .small-feature .button {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -2789,17 +3699,17 @@ html, body {
   box-sizing: border-box;
   text-shadow: 2px 2px 3px black;
 }
-/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .march-madness .button:hover, .small-feature .button:hover {
   color: #111;
 }
-/* line 310 */
+/* line 317 */
 .march-madness .button:hover, .march-madness .button:focus, .small-feature .button:hover, .small-feature .button:focus {
   background-color: white;
   text-shadow: none;
   color: #111;
 }
-/* line 316 */
+/* line 323 */
 .march-madness .mm-logo, .small-feature .mm-logo {
   position: absolute;
   right: 2rem;
@@ -2808,12 +3718,12 @@ html, body {
   z-index: 500;
 }
 
-/* line 325 */
+/* line 332 */
 .rotate {
   height: 16.5rem;
   position: relative;
 }
-/* line 328 */
+/* line 335 */
 .rotate > .inner {
   position: absolute;
   top: -63rem;
@@ -2822,18 +3732,18 @@ html, body {
   padding: 0;
   margin: 0;
 }
-/* line 338 */
+/* line 345 */
 .rotate > .inner > li:not(:first-child) {
   padding-top: 15rem;
 }
 
-/* line 345 */
+/* line 352 */
 .featured-users, .featured-pundits, .featured-blog-posts {
   height: 25.5rem;
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 349 */
+/* line 356 */
 .featured-users > .title-wrapper, .featured-pundits > .title-wrapper, .featured-blog-posts > .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2846,7 +3756,7 @@ html, body {
   padding: 1rem;
   position: relative;
 }
-/* line 359 */
+/* line 366 */
 .featured-users > .title-wrapper > .title, .featured-pundits > .title-wrapper > .title, .featured-blog-posts > .title-wrapper > .title {
   position: absolute;
   bottom: 1rem;
@@ -2854,18 +3764,18 @@ html, body {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 368 */
+/* line 375 */
 .featured-users ul, .featured-pundits ul, .featured-blog-posts ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 376 */
+/* line 383 */
 .featured-blog-posts > .title-wrapper {
   height: 7.5rem !important;
 }
-/* line 380 */
+/* line 387 */
 .featured-blog-posts .blog-post {
   height: 6rem;
   width: 100%;
@@ -2875,25 +3785,25 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 387 */
+/* line 394 */
 .featured-blog-posts .blog-post:hover {
   background-color: #f5f5f5;
 }
-/* line 390 */
+/* line 397 */
 .featured-blog-posts .blog-post:not(:last-child) {
   border-bottom: 1px solid #f5f5f5;
 }
-/* line 393 */
+/* line 400 */
 .featured-blog-posts .blog-post h4 {
   margin: 0;
   line-height: 1.5rem;
 }
-/* line 397 */
+/* line 404 */
 .featured-blog-posts .blog-post h6 {
   margin-top: 0.25rem;
 }
 
-/* line 403 */
+/* line 410 */
 .facebook {
   height: 25.5rem;
   height: 16.5rem;
@@ -2908,7 +3818,7 @@ html, body {
   background: radial-gradient(circle at 50% 12.5rem, rgba(59, 89, 152, 0.01) 0%, rgba(59, 89, 152, 0.1) 15%, rgba(59, 89, 152, 0.4) 35%, rgba(59, 89, 152, 0.6) 45%, #3b5998 60%, #3b5998 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3b5897', GradientType=1 );
 }
-/* line 409 */
+/* line 416 */
 .facebook .title-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2917,11 +3827,11 @@ html, body {
   height: 9.5rem;
   color: white;
 }
-/* line 414 */
+/* line 421 */
 .facebook .title-wrapper h3, .facebook .title-wrapper h2 {
   margin: 0;
 }
-/* line 418 */
+/* line 425 */
 .facebook > .fb-wrapper {
   text-align: center;
   position: absolute;
@@ -2935,7 +3845,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 428 */
+/* line 435 */
 .facebook > .fb-wrapper > .inner {
   position: absolute;
   height: 8rem;
@@ -2944,7 +3854,7 @@ html, body {
   top: 50%;
 }
 
-/* line 438 */
+/* line 445 */
 .prediction {
   background-position: center center;
   background-size: cover;
@@ -2962,12 +3872,12 @@ html, body {
    * Variations *
    **************/
 }
-/* line 449 */
+/* line 456 */
 .prediction .text {
   margin: 0;
   word-wrap: break-word;
 }
-/* line 453 */
+/* line 460 */
 .prediction .background {
   width: 100%;
   background-position: center center;
@@ -2978,19 +3888,19 @@ html, body {
   left: 0;
   height: 100%;
 }
-/* line 463 */
+/* line 470 */
 .prediction .tags {
   margin: 0 -0.75rem 0.5rem;
   max-height: 1.5rem;
   overflow: hidden;
 }
-/* line 194, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/utils.scss */
 .prediction .tags:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 468 */
+/* line 475 */
 .prediction .tags .inner {
   overflow: hidden;
   max-height: 2rem;
@@ -3003,7 +3913,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 476 */
+/* line 483 */
 .prediction .tags .inner > li {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3018,20 +3928,20 @@ html, body {
   position: relative;
   z-index: 500;
 }
-/* line 487 */
+/* line 494 */
 .prediction .tags .inner > li.category {
   background-color: #08537b;
   color: white;
   border-color: #08537b;
   z-index: 550;
 }
-/* line 496 */
+/* line 503 */
 .prediction .pundit {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 501 */
+/* line 508 */
 .prediction .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -3040,7 +3950,7 @@ html, body {
   background: -ms-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
-/* line 504 */
+/* line 511 */
 .prediction .voting {
   z-index: 500;
   height: 2rem;
@@ -3054,7 +3964,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 514 */
+/* line 521 */
 .prediction .voting .prompt {
   text-transform: uppercase;
   position: absolute;
@@ -3068,7 +3978,7 @@ html, body {
   width: 100%;
   color: #111;
 }
-/* line 527 */
+/* line 534 */
 .prediction .voting .options {
   margin-top: 1px;
   border-top: 1px solid #f5f5f5;
@@ -3091,7 +4001,7 @@ html, body {
   box-sizing: border-box;
   font-size: 0;
 }
-/* line 543 */
+/* line 550 */
 .prediction .voting .options li {
   width: 25%;
   display: inline-block;
@@ -3101,118 +4011,118 @@ html, body {
   text-align: center;
   height: 2rem;
 }
-/* line 549 */
+/* line 556 */
 .prediction .voting .options li:hover {
   color: #111;
   background-color: #f5f5f5;
 }
-/* line 553 */
+/* line 560 */
 .prediction .voting .options li:not(:last-child) {
   border-right: 1px solid #f5f5f5;
 }
-/* line 556 */
+/* line 563 */
 .prediction .voting .options li .option {
   line-height: 2rem;
   vertical-align: top;
 }
-/* line 565 */
+/* line 572 */
 .prediction:hover .voting .options, .prediction.hover .voting .options {
   top: 0;
 }
-/* line 568 */
+/* line 575 */
 .prediction:hover .tags .inner, .prediction.hover .tags .inner {
   margin-top: 0;
 }
-/* line 576 */
+/* line 583 */
 .prediction.faceoff {
   background-color: transparent;
   position: relative;
   padding: 3rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 581 */
+/* line 588 */
 .prediction.faceoff > .pundit {
   border: 0;
   top: 0;
   position: relative;
   background-color: transparent;
 }
-/* line 586 */
+/* line 593 */
 .prediction.faceoff > .pundit .text-wrapper {
   left: 0;
   color: white;
 }
-/* line 590 */
+/* line 597 */
 .prediction.faceoff > .pundit .photo {
   height: 6rem;
   width: 6rem;
   border-radius: 6rem;
 }
-/* line 595 */
+/* line 602 */
 .prediction.faceoff > .pundit .name {
   font-size: 2rem;
   line-height: 2.5rem;
 }
-/* line 599 */
+/* line 606 */
 .prediction.faceoff > .pundit .source {
   font-size: 1.5rem;
 }
-/* line 603 */
+/* line 610 */
 .prediction.faceoff > .text {
   margin-top: 2.5rem;
 }
-/* line 608 */
+/* line 615 */
 .prediction.faceoff.left .pundit .photo {
   position: absolute;
   left: -7rem;
   top: -1rem;
   margin-left: 1rem;
 }
-/* line 617 */
+/* line 624 */
 .prediction.faceoff.right .text {
   text-align: right;
 }
-/* line 621 */
+/* line 628 */
 .prediction.faceoff.right .pundit .photo {
   position: absolute;
   right: -7rem;
   top: -1rem;
 }
-/* line 626 */
+/* line 633 */
 .prediction.faceoff.right .pundit .text-wrapper {
   left: auto;
   width: 100%;
   float: right;
   text-align: right;
 }
-/* line 640 */
+/* line 647 */
 .prediction.tall-3-2 {
   height: 25.5rem;
 }
-/* line 646 */
+/* line 653 */
 .prediction.tall-2 {
   color: white;
   height: 34.5rem;
 }
-/* line 649 */
+/* line 656 */
 .prediction.tall-2 .prompt {
   color: white;
 }
-/* line 652 */
+/* line 659 */
 .prediction.tall-2 .background {
   background-image: url(../../img/vertical.jpg);
   display: block;
 }
-/* line 657 */
+/* line 664 */
 .prediction.tall-2 .pundit {
   background-color: transparent !important;
   color: white;
 }
-/* line 661 */
+/* line 668 */
 .prediction.tall-2 .text-wrapper {
   color: white;
 }
-/* line 664 */
+/* line 671 */
 .prediction.tall-2 .text {
   position: absolute;
   text-shadow: 2px 2px 3px black;
@@ -3221,37 +4131,37 @@ html, body {
   right: 0.75rem;
   z-index: 300;
 }
-/* line 674 */
+/* line 681 */
 .prediction.tall-2 .options, .prediction.tall-2 .options li {
   border: 0 !important;
 }
-/* line 677 */
+/* line 684 */
 .prediction.tall-2 .option {
   text-shadow: 2px 2px 3px black;
 }
-/* line 680 */
+/* line 687 */
 .prediction.tall-2 .options li:hover .option {
   text-shadow: none;
 }
-/* line 683 */
+/* line 690 */
 .prediction.tall-2 .tags {
   position: relative;
   z-index: 500;
   max-height: 1.5rem;
 }
-/* line 687 */
+/* line 694 */
 .prediction.tall-2 .tags > .inner > li {
   background-color: transparent;
   border-color: transparent;
 }
-/* line 690 */
+/* line 697 */
 .prediction.tall-2 .tags > .inner > li.category {
   background-color: white;
   color: black;
   border-color: white;
   text-shadow: none;
 }
-/* line 699 */
+/* line 706 */
 .prediction.featured {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -3260,56 +4170,56 @@ html, body {
   bottom: 2rem;
   width: 50%;
 }
-/* line 707 */
+/* line 714 */
 .prediction.featured .text {
   position: absolute;
   bottom: 7rem;
   left: 1rem;
   right: 1rem;
 }
-/* line 716 */
+/* line 723 */
 .prediction.featured .pundit {
   background-color: transparent !important;
   bottom: 0;
 }
-/* line 719 */
+/* line 726 */
 .prediction.featured .pundit .text-wrapper {
   height: 5rem;
   color: white;
   left: 4rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 725 */
+/* line 732 */
 .prediction.featured .pundit .name, .prediction.featured .pundit .source {
   text-shadow: 2px 2px 3px black;
 }
-/* line 730 */
+/* line 737 */
 .prediction.featured .voting .prompt {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 734 */
+/* line 741 */
 .prediction.featured .voting .options, .prediction.featured .voting .options li {
   border: 0 !important;
 }
-/* line 737 */
+/* line 744 */
 .prediction.featured .voting .option {
   text-shadow: 2px 2px 3px black;
 }
-/* line 740 */
+/* line 747 */
 .prediction.featured .voting .options li:hover .option {
   text-shadow: none;
 }
-/* line 744 */
+/* line 751 */
 .prediction.featured .tags {
   height: 2rem;
   max-height: 3.5rem;
 }
-/* line 746 */
+/* line 753 */
 .prediction.featured .tags > .inner {
   max-height: 2rem;
 }
-/* line 749 */
+/* line 756 */
 .prediction.featured .tags > .inner > li {
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
@@ -3318,30 +4228,30 @@ html, body {
   background-color: transparent;
   border-color: transparent;
 }
-/* line 756 */
+/* line 763 */
 .prediction.featured .tags > .inner > li.category {
   background-color: white;
   color: black;
   border-color: white;
   text-shadow: none;
 }
-/* line 766 */
+/* line 773 */
 .prediction.no-box {
   background-color: rgba(0, 0, 0, 0.2) !important;
   padding-bottom: 1rem;
   height: 34.5rem;
   border: 1rem solid white;
 }
-/* line 768 */
+/* line 775 */
 .prediction.no-box .background {
   display: none;
 }
-/* line 775 */
+/* line 782 */
 .prediction.no-box .text {
   width: 50%;
 }
 
-/* line 782 */
+/* line 789 */
 .pundit {
   position: relative;
   height: 4rem;
@@ -3353,7 +4263,7 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 791 */
+/* line 798 */
 .pundit .grade {
   display: block;
   position: absolute;
@@ -3369,7 +4279,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 803 */
+/* line 810 */
 .pundit .grade .average {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -3384,7 +4294,7 @@ html, body {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 814 */
+/* line 821 */
 .pundit .grade .letter {
   top: 0rem;
   position: absolute;
@@ -3398,15 +4308,15 @@ html, body {
   line-height: 4rem;
   vertical-align: middle;
 }
-/* line 826 */
+/* line 833 */
 .pundit .grade:hover .letter {
   top: -0.5rem;
 }
-/* line 829 */
+/* line 836 */
 .pundit .grade:hover .average {
   bottom: 0;
 }
-/* line 834 */
+/* line 841 */
 .pundit .photo {
   background-image: url(../../img/profile.jpeg);
   background-position: center center;
@@ -3417,7 +4327,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-/* line 844 */
+/* line 851 */
 .pundit .text-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3430,21 +4340,21 @@ html, body {
   height: 4rem;
   color: #111;
 }
-/* line 853 */
+/* line 860 */
 .pundit .text-wrapper .name {
   margin: 0;
   font-weight: 400;
 }
-/* line 857 */
+/* line 864 */
 .pundit .text-wrapper .source {
   margin: 0.25rem 0 0;
 }
-/* line 862 */
+/* line 869 */
 .pundit:hover .grade {
   top: 0;
 }
 
-/* line 868 */
+/* line 875 */
 .category-link {
   background-color: #08537b;
   color: white;
@@ -3460,7 +4370,7 @@ html, body {
   background-size: cover;
   background-image: url(../../img/hero.jpg);
 }
-/* line 880 */
+/* line 887 */
 .category-link h2 {
   position: absolute;
   right: 1rem;
@@ -3470,16 +4380,16 @@ html, body {
   line-height: 3rem;
   margin: 0;
 }
-/* line 889 */
+/* line 896 */
 .category-link h2 + a h2 {
   bottom: 1rem;
   text-decoration: underline !important;
 }
-/* line 893 */
+/* line 900 */
 .category-link h2 + a i {
   text-decoration: underline !important;
 }
-/* line 899 */
+/* line 906 */
 .category-link .scrim {
   background: -moz-linear-gradient(top, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(50, 50, 50, 0)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(55%, rgba(50, 50, 50, 0.25)), color-stop(100% #323232), color-stop(100% #323232));
@@ -3489,7 +4399,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0) 0%, rgba(50, 50, 50, 0.25) 55%, rgba(50, 50, 50, 0.25) 55%, #323232 100%, #323232 100%);
 }
 
-/* line 904 */
+/* line 911 */
 footer {
   background-color: #08537b;
   color: white;
@@ -3499,24 +4409,24 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 911 */
+/* line 918 */
 footer > .card-grid {
   max-width: 95%;
   width: 65rem;
   margin: 0 auto;
 }
-/* line 916 */
+/* line 923 */
 footer ul {
   padding: 0.75rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 921 */
+/* line 928 */
 footer ul ul {
   margin-left: 1rem;
 }
-/* line 925 */
+/* line 932 */
 footer .double {
   border-bottom: 1px solid white;
   margin-bottom: 0.5rem;

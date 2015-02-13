@@ -282,13 +282,19 @@
 {% endmacro %}
 
 
-{% macro navbar() %}
-<div class="navbar">
+{% macro navbar(class) %}
+<div class="navbar {{ class }}">
     <nav>
         <div class="pure-g">
             <div class="pure-u-1">
                 <a href="{{ url_for('grid', login=request.args.get('login')) }}">
+                    {% if class == "oscars" %}
+                    <div class="logo">
+                        <span>Pundit</span><br><span>Tracker</span>
+                    </div>
+                    {% else %}
                     <img class="logo-image" src="{{ url_for('static', filename='img/logo-blue.png')}}">
+                    {% endif %}
                 </a>
                 <ul class="categories">
                     {% for _, _, _, color, category, _ in predictions %}
