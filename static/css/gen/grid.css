@@ -2944,6 +2944,25 @@ select {
   }
 }
 /* line 6, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.go-to-submit {
+  display: none !important;
+  -webkit-transition: 0.4s 0 ease all;
+  -moz-transition: 0.4s 0 ease all;
+  -o-transition: 0.4s 0 ease all;
+  transition: 0.4s 0 ease all;
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  color: #111 !important;
+  border: 0 !important;
+  background-color: #d7c86d !important;
+}
+/* line 16, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.go-to-submit.show {
+  display: block !important;
+}
+
+/* line 21, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion {
   position: absolute;
   left: 2rem;
@@ -2964,20 +2983,20 @@ select {
   -o-transition: 0.2s 0s ease box-shadow;
   transition: 0.2s 0s ease box-shadow;
 }
-/* line 21, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 36, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion.fixed {
   top: 5.5rem;
   left: 1rem;
   position: fixed;
 }
-/* line 27, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 42, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li {
   padding: 0.125rem 0.5rem;
   position: relative;
   letter-spacing: 0;
   width: 100%;
 }
-/* line 33, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 48, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li .dot {
   position: absolute;
   top: 0.375rem;
@@ -2986,29 +3005,34 @@ select {
   width: 0.5rem;
   margin-left: 0.25rem;
   display: inline;
-  background-color: #111;
+  background-color: #888;
   display: block;
 }
-/* line 44, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 59, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li i {
+  -webkit-transition: 0.2s 0 ease all;
+  -moz-transition: 0.2s 0 ease all;
+  -o-transition: 0.2s 0 ease all;
+  transition: 0.2s 0 ease all;
   display: none;
   position: absolute;
   top: 0.125rem;
   left: 0.5rem;
+  color: #039b67;
 }
-/* line 51, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 68, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li.done {
   padding: 0.125rem 0.5rem;
 }
-/* line 53, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 70, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li.done .dot {
   display: none;
 }
-/* line 56, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 73, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion li.done i {
   display: block;
 }
-/* line 63, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 80, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion h6 {
   margin: 0 0 0 1.5rem;
   min-height: 1rem;
@@ -3018,47 +3042,51 @@ select {
   -o-transition: 0.2s 0 ease all;
   transition: 0.2s 0 ease all;
 }
-/* line 69, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion:hover {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
 }
-/* line 72, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 89, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .completion:hover h6 {
   color: #111;
 }
+/* line 92, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+.completion:hover .dot {
+  background-color: #111;
+}
 
-/* line 78, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 98, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .content.oscars {
   padding-top: 5.5rem;
 }
-/* line 81, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 101, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .content.oscars > .card-grid {
   position: relative;
 }
 
-/* line 86, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 106, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-header {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   padding: 1rem;
   background-color: #d7c86d;
 }
-/* line 90, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 110, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-header h2 {
   margin: 0;
 }
-/* line 93, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 113, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-header h4 {
   margin: 0 0 -0.5rem;
 }
 
-/* line 98, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 118, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .sidebar.oscars {
   width: 33.333333%;
   display: inline-block;
 }
 
-/* line 102, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 122, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-categories {
   position: relative;
   list-style: none;
@@ -3071,7 +3099,7 @@ select {
   display: block;
   clear: both;
 }
-/* line 109, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 129, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-categories .oscars-category {
   display: block;
   position: relative;
@@ -3083,7 +3111,7 @@ select {
   clear: both;
 }
 
-/* line 120, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 140, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees {
   list-style: none;
   margin: 0 0 10rem;
@@ -3091,11 +3119,11 @@ select {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   background-color: white;
 }
-/* line 128, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 148, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee {
   padding: 0.5rem 1rem;
 }
-/* line 130, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 150, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee h4 {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -3103,7 +3131,7 @@ select {
   box-sizing: border-box;
   vertical-align: middle;
 }
-/* line 135, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 155, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee h4 .boxed {
   border: 2px solid #111;
   font-size: 0.75rem;
@@ -3112,22 +3140,22 @@ select {
   margin-right: 0.5rem;
   color: transparent;
 }
-/* line 144, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 164, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee:hover {
   background-color: #f5f5f5;
   cursor: pointer;
 }
-/* line 148, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 168, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee.selected {
   color: #111;
   background-color: rgba(215, 200, 109, 0.7);
 }
-/* line 151, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 171, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .nominees .nominee.selected h4 .boxed {
   color: #111;
 }
 
-/* line 158, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 178, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit {
   height: 20rem;
   position: relative;
@@ -3137,7 +3165,7 @@ select {
   position: relative;
   min-height: 100vh;
 }
-/* line 167, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 187, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit .background {
   background-color: black;
   -webkit-box-sizing: border-box;
@@ -3151,7 +3179,7 @@ select {
   width: 100%;
   display: block;
 }
-/* line 179, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 199, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit .background .scrim {
   background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(100% black), color-stop(100% black));
@@ -3162,7 +3190,7 @@ select {
   position: relative;
   z-index: 450;
 }
-/* line 185, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 205, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit .button {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
@@ -3187,17 +3215,17 @@ select {
 #submit .button:hover {
   color: #111;
 }
-/* line 192, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 212, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit .button h2 {
   margin: 2rem;
   text-shadow: 2px 2px 3px black;
 }
-/* line 197, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 217, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 #submit .button:hover {
   color: white;
 }
 
-/* line 203, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 footer.oscars {
   margin: 0;
   position: relative;
@@ -3205,7 +3233,7 @@ footer.oscars {
   background-color: black;
 }
 
-/* line 210, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 230, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details {
   left: 0.75rem;
   right: 0.75rem;
@@ -3223,23 +3251,23 @@ footer.oscars {
   display: block;
   clear: both;
 }
-/* line 220, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 240, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details > .inner {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   background-color: white;
 }
-/* line 223, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 243, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details > .inner.hidden {
   display: none;
 }
-/* line 228, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 248, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details.fixed {
   position: fixed;
   top: 5.5rem;
   float: auto;
   margin-left: 0.75rem;
 }
-/* line 234, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 254, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details.fixed.bottom {
   position: absolute !important;
   top: auto !important;
@@ -3250,12 +3278,12 @@ footer.oscars {
   width: 33.333333% !important;
   left: auto !important;
 }
-/* line 246, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 266, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details .background {
   height: 15rem;
   position: relative;
 }
-/* line 250, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 270, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details .background .scrim {
   background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(55%, rgba(0, 0, 0, 0.25)), color-stop(100% black), color-stop(100% black));
@@ -3264,7 +3292,7 @@ footer.oscars {
   background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.25) 55%, black 100%, black 100%);
 }
-/* line 253, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 273, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details .background h3 {
   position: absolute;
   bottom: 1rem;
@@ -3273,20 +3301,20 @@ footer.oscars {
   color: white;
   text-shadow: 2px 2px 3px black;
 }
-/* line 262, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 282, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-details .text {
   padding: 1rem;
   margin: 0;
 }
 
-/* line 268, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 288, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-cover {
   background-color: black;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 274, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 294, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-cover .logo {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -3304,7 +3332,7 @@ footer.oscars {
   bottom: 6rem;
   opacity: 0;
 }
-/* line 288, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 308, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-cover .down {
   position: absolute;
   bottom: 1rem;
@@ -3323,23 +3351,23 @@ footer.oscars {
   text-align: center;
   font-size: 0.8rem;
 }
-/* line 298, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 318, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .oscars-cover .down:hover {
   color: #d7c86d;
 }
 
-/* line 304, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 324, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .hero.short {
   height: 25rem;
   padding: 0;
 }
 
-/* line 309, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 329, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .hero.oscars {
   width: 100%;
   min-height: 100vh;
 }
-/* line 313, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 333, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .hero.oscars.shrink {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -3356,7 +3384,7 @@ footer.oscars {
   -webkit-animation-name: shrink;
 }
 
-/* line 323, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 343, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars {
   z-index: 499;
   background-color: black;
@@ -3369,53 +3397,53 @@ footer.oscars {
   color: rgba(215, 200, 109, 0.7);
   position: absolute;
 }
-/* line 329, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 349, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input {
   background-color: black;
   color: rgba(215, 200, 109, 0.7);
   border-color: rgba(215, 200, 109, 0.7);
 }
-/* line 333, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 353, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active, .navbar.oscars input:hover, .navbar.oscars input:focus {
   color: #d7c86d;
   border-color: #d7c86d;
 }
-/* line 336, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 356, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active i, .navbar.oscars input:hover i, .navbar.oscars input:focus i {
   color: #d7c86d;
 }
-/* line 339, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 359, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active::-webkit-input-placeholder, .navbar.oscars input:hover::-webkit-input-placeholder, .navbar.oscars input:focus::-webkit-input-placeholder {
   color: rgba(215, 200, 109, 0.7);
 }
-/* line 342, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 362, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active:-moz-input-placeholder, .navbar.oscars input:hover:-moz-input-placeholder, .navbar.oscars input:focus:-moz-input-placeholder {
   color: rgba(215, 200, 109, 0.7);
 }
-/* line 345, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 365, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active::-moz-input-placeholder, .navbar.oscars input:hover::-moz-input-placeholder, .navbar.oscars input:focus::-moz-input-placeholder {
   color: rgba(215, 200, 109, 0.7);
 }
-/* line 348, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 368, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars input:active:-ms-input-placeholder, .navbar.oscars input:hover:-ms-input-placeholder, .navbar.oscars input:focus:-ms-input-placeholder {
   color: rgba(215, 200, 109, 0.7);
 }
-/* line 353, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 373, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars .button {
   background-color: black;
   color: rgba(215, 200, 109, 0.7);
   border-color: rgba(215, 200, 109, 0.7);
 }
-/* line 357, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 377, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars .button:active, .navbar.oscars .button:hover, .navbar.oscars .button:focus {
   color: #d7c86d;
   border-color: #d7c86d;
 }
-/* line 363, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 383, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.oscars a:hover {
   color: #d7c86d;
 }
-/* line 367, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 387, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.hidden-for-oscars {
   top: -4rem;
   -webkit-transition: 0.3s 0 ease all;
@@ -3423,7 +3451,7 @@ footer.oscars {
   -o-transition: 0.3s 0 ease all;
   transition: 0.3s 0 ease all;
 }
-/* line 370, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
+/* line 390, /Users/dan/Dropbox/Clients/Pundit Tracker/frontpage/static/scss/oscars.scss */
 .navbar.hidden-for-oscars.show {
   top: 0;
 }

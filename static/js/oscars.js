@@ -16,44 +16,6 @@ $(function() {
 		} else if ($(this).scrollTop() <= 0 ){
 			$nav.removeClass('show');
 		}
-		/* Transition headers between pages */
-        // $.each($('.oscars-category'), function(_, page) {
-        //     var $page = $(page);
-        //     var pageNo = parseInt($page.data('page'));
-        //     var $header = $page.find('.left-side');
-        //     var topOfViewport = $(window).scrollTop() + offset;
-        //     var headerToTop = $header.offset().top - topOfViewport;
-        //     var pageToTop = $page.offset().top - topOfViewport;
-
-        //     if (headerToTop < 0) {
-        //         /* Set a header to fixed as it hits the top of the screen */
-        //         $header.width($header.width());
-        //         $header.addClass('fixed');
-        //     } else if (pageToTop > 0) {
-        //         /* Unfix the header when we start to see the page above it */
-        //         $header.removeClass('fixed');
-        //         $header.style = '';
-        //     }
-
-        //     if (pageNo == 1) { return }
-
-        //     var $prevPage = $('#cat-' + (pageNo - 1));
-        //     var $prevHeader = $prevPage.find('.left-side');
-        //     var topOfPrevHeader = $prevHeader.offset().top;
-        //     var bottomOfPrevHeader = $prevHeader.offset().top + $prevHeader.outerHeight();
-        //     var bottomOfPrevPage = $prevPage.offset().top + $prevPage.outerHeight();
-
-
-        //     if ($prevHeader.hasClass('fixed') && !$prevHeader.hasClass('bottom') && bottomOfPrevHeader > bottomOfPrevPage) {
-        //         /* Unfix the previous header as the current one hits it */
-        //         $prevHeader.style = '';
-        //         $prevHeader.addClass('bottom');
-        //     } else if ($prevHeader.hasClass('bottom') && topOfPrevHeader > topOfViewport) {
-        //         /* Fix the previous header as we scroll it into view */
-        //         $prevHeader.width($prevHeader.width());
-        //         $prevHeader.removeClass('bottom');
-        //     }
-        // });
 	}
 
 	setTimeout(updateForScroll, 4000);
@@ -85,6 +47,7 @@ $(function() {
 		$('html, body').animate({
 			'scrollTop': scrollTop
 		});
+		$('.go-to-submit').addClass('show');
 	});
 
 });

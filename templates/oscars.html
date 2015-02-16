@@ -35,6 +35,7 @@
     </div>
 </div>
 <div class="content oscars">
+    <a href="#submit" class="button go-to-submit scroll">Predict Now</a>
     <ul class="completion fixed">
         {% for oscar in categories %}
         <li id="nav-{{ loop.index }}">
@@ -105,7 +106,7 @@
 <div id="submit">
     <div class="background" style="background-image:url({{ url_for('static', filename='img/oscars-submit.jpg') }});">
         <div class="scrim">
-            <div class="button"><h2>Predict</h2></div>
+            <div class="button"><h2>Submit Predictions</h2></div>
         </div>
     </div>
 </div>
