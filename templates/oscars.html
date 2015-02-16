@@ -16,6 +16,7 @@
 ] %}
 
 {% block navbarClass %}hidden-for-oscars{% endblock %}
+{% block footerClass %}oscars{% endblock %}
 {%- block main -%}
 {% call macros.navbar("oscars") %}
 {% if request.args.get('login') == 'yes' %}
@@ -98,6 +99,13 @@
                 {% endwith %}
                 {% endfor %}
             </ul>
+        </div>
+    </div>
+</div>
+<div id="submit">
+    <div class="background" style="background-image:url({{ url_for('static', filename='img/oscars-submit.jpg') }});">
+        <div class="scrim">
+            <div class="button"><h2>Predict</h2></div>
         </div>
     </div>
 </div>

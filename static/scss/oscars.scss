@@ -110,6 +110,10 @@ $oscar-gold-bright: rgba(215, 200, 109, 1);
 		display: block;
 		position: relative;
 		@include clearfix;
+
+		&:last-child .nominees {
+			// margin: 0 0 1.5rem;
+		}
 	}
 }
 
@@ -119,6 +123,7 @@ $oscar-gold-bright: rgba(215, 200, 109, 1);
 	padding: 0.5rem 0;
 	@include box-shadow;
 	background-color: $white;
+
 
 	.nominee {
 		padding: 0.5rem 1rem;
@@ -148,6 +153,58 @@ $oscar-gold-bright: rgba(215, 200, 109, 1);
 			}
 		}
 	}
+}
+
+#submit {
+
+	height: 20rem;
+	position: relative;
+	z-index: 425;
+	width: 100%;
+	margin-top: -1.5rem;
+	position: relative;
+	min-height: 100vh;
+	.background {
+		background-color: black;
+		@include border-box;
+		padding-top: $navbar-height;
+		@extend .background-image;
+		background-position: top center;
+		background-repeat: no-repeat;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: block;
+
+		.scrim {
+			@include scrim(0);
+			position: relative;
+			z-index: 450;
+		}
+	}
+	.button {
+		@include button(rgba(0,0,0,0.2), $white, $black, $border: 2px solid $white);
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		z-index: 475;
+		@include transform(translate(-50%, -50%));
+		h2 {
+			margin: 2rem;
+			@include text-shadow;
+		}
+		cursor: pointer;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+footer.oscars {
+	margin: 0;
+	position: relative;
+	z-index: 425;
+	background-color: black;
 }
 
 .oscars-details {

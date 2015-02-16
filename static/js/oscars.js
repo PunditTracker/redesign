@@ -75,16 +75,16 @@ $(function() {
 	});
 
 	$('.nominee').click(function() {
-		$(this).siblings().removeClass('selected');
+		$navItem = $('#nav-' + $(this).data('cat'));
+        $navItem.addClass('done');
+        $(this).siblings().removeClass('selected');
 		$(this).addClass('selected');
-		var $next = $($(this).data('next'));
-		var scrollTop = $next.offset().top - offset;
+		var next = $(this).data('next');
+
+		var scrollTop = $(next).offset().top - (next == "#submit" ? $nav.height() : offset);
 		$('html, body').animate({
 			'scrollTop': scrollTop
 		});
-        $navItem = $('#nav-' + $(this).data('cat'));
-        $navItem.addClass('done');
-        console.log($navItem)
 	});
 
 });
