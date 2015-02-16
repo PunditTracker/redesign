@@ -1,7 +1,7 @@
 {
 	"oscars": [
 	 	{
-	 		"category": "Best Picture",
+	 		"category": "Picture",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/American_Sniper_(film)",
@@ -46,7 +46,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Director",
+	 		"category": "Director",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Wes_Anderson",
@@ -76,7 +76,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Actor",
+	 		"category": "Actor",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Steve_Carell",
@@ -106,7 +106,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Actress",
+	 		"category": "Actress",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Marion_Cotillard",
@@ -136,7 +136,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Supporting Actor",
+	 		"category": "Supporting Actor",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Robert_Duvall",
@@ -166,7 +166,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Supporting Actress",
+	 		"category": "Supporting Actress",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Patricia_Arquette",
@@ -196,7 +196,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Original Screenplay",
+	 		"category": "Original Screenplay",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Birdman_(film)",
@@ -226,7 +226,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Adapted Screenplay",
+	 		"category": "Adapted Screenplay",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/American_Sniper_(film)",
@@ -256,7 +256,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Animated Feature Film",
+	 		"category": "Animated Feature Film",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Big_Hero_6_(film)",
@@ -286,7 +286,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Foreign Language Film",
+	 		"category": "Foreign Language Film",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Ida_(film)",
@@ -316,7 +316,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Documentary – Feature",
+	 		"category": "Documentary – Feature",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Citizenfour",
@@ -346,7 +346,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Documentary – Short Subject",
+	 		"category": "Documentary – Short",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Crisis_Hotline:_Veterans_Press_1",
@@ -376,7 +376,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Live Action Short Film",
+	 		"category": "Live Action Short Film",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/Aya_(2012_film)",
@@ -406,7 +406,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Animated Short Film",
+	 		"category": "Animated Short Film",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/The_Bigger_Picture",
@@ -436,7 +436,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Original Score",
+	 		"category": "Original Score",
 	 		"nominees": [
 		 		{
 		 			"url": "http://wikipedia.com/wiki/The_Grand_Budapest_Hotel",
@@ -466,7 +466,7 @@
 	 		]
 	 	},
 	 	{
-	 		"category": "Best Original Song",
+	 		"category": "Original Song",
 	 		"nominees": [
 		 		{
 		 			"url": "/wiki/Everything_Is_Awesome",
@@ -496,7 +496,7 @@
 	 		]
 		},
  		{
- 			"category": "Best Sound Editing",
+ 			"category": "Sound Editing",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/American_Sniper_(film)",
@@ -526,7 +526,7 @@
  			]
  		},
  		{
- 			"category": "Best Sound Mixing",
+ 			"category": "Sound Mixing",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/American_Sniper_(film)",
@@ -556,7 +556,7 @@
  			]
  		},
  		{
- 			"category": "Best Production Design",
+ 			"category": "Production Design",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/The_Grand_Budapest_Hotel",
@@ -586,7 +586,7 @@
  			]
  		},
  		{
- 			"category": "Best Cinematography",
+ 			"category": "Cinematography",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/Birdman_(film)",
@@ -616,7 +616,7 @@
  			]
  		},
  		{
- 			"category": "Best Makeup and Hairstyling",
+ 			"category": "Makeup and Hairstyling",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/Foxcatcher",
@@ -636,7 +636,7 @@
  			]
  		},
  		{
- 			"category": "Best Costume Design",
+ 			"category": "Costume Design",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/The_Grand_Budapest_Hotel",
@@ -666,7 +666,7 @@
  			]
  		},
  		{
- 			"category": "Best Film Editing",
+ 			"category": "Film Editing",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/American_Sniper_(film)",
@@ -696,7 +696,7 @@
  			]
  		},
  		{
- 			"category": "Best Visual Effects",
+ 			"category": "Visual Effects",
  			"nominees": [
 	 			{
 	 				"url": "http://wikipedia.com/wiki/Captain_America:_The_Winter_Soldier",

@@ -13,7 +13,6 @@ $tall-2-height: (2 * $prediction-height + $card-grid-padding);
 $tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
 $blog-post-height: 6rem;
 $extension: 10rem;
-$hero-height: 30rem;
 $small-hero-height: (($hero-height - $card-grid-padding) / 2);
 $pundit-vertical-padding: 1rem;
 $pundit-height: 4rem;
@@ -62,11 +61,6 @@ html, body {
     max-width: 100%;
     overflow: hidden;
     margin: 0 auto;
-
-    &.full {
-        width: 100%;
-        min-height: 100vh;
-    }
 
     .featured {
         height: $hero-height;
