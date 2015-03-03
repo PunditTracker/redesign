@@ -46,11 +46,11 @@
 }
 
 @mixin two-way-scrim($x) {
-    @include _scrim(rgba($x, $x, $x,1), 0%,
-                    rgba($x, $x, $x,0.25), 20%,
-                    rgba($x, $x, $x,0.01), 50%,
-                    rgba($x, $x, $x,0.25), 70%,
-                    rgba($x, $x, $x,1), 100%);
+    @include _scrim(rgba($x, $x, $x,0.75), 0%,
+                    rgba($x, $x, $x,0.2), 20%,
+                    rgba($x, $x, $x,0.2), 50%,
+                    rgba($x, $x, $x,0.2), 80%,
+                    rgba($x, $x, $x,0.75), 100%);
 }
 
 @mixin scrim($x) {

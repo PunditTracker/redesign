@@ -9,9 +9,13 @@ app = Flask(__name__)
 from blog_post import post_html
 
 oscars_data = {}
+march_madness = {}
 
 with open('data/oscars.json') as in_file:
     oscars_data = json.loads(in_file.read())
+
+with open('data/march_madness.json') as in_file:
+    march_madness_data = json.loads(in_file.read())
 
 truncated_html = truncate(post_html, 255)
 r_elem = (lambda l: l[random.randint(0, len(l) - 1)])
@@ -60,6 +64,13 @@ def oscars():
     return render_template('oscars.html',
                            random=r_elem,
                            categories=oscars_data['oscars'])
+
+
+@app.route('/grid/march-madness')
+def march_madness():
+    return render_template('march_madness.html',
+                           random=r_elem,
+                           march_madness=march_madness_data['march_madness'])
 
 
 def register_scss():

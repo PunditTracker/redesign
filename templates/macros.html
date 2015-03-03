@@ -297,13 +297,21 @@
                     {% endif %}
                 </a>
                 <ul class="categories">
+                    {#
                     {% for _, _, _, color, category, _ in predictions %}
                         <li>
                             <a href="{{ url_for('grid', login=request.args.get('login')) }}" data-color="{{color}}">{{ category }}</a>
                         </li>
                     {% endfor %}
+                    #}
                     <li>
                         <a href="{{ url_for('blog', login=request.args.get('login')) }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('oscars', login=request.args.get('login')) }}">Oscars</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('march_madness', login=request.args.get('login')) }}">Madness</a>
                     </li>
                 </ul>
                 {{ caller() }}

@@ -1,0 +1,82 @@
+{% extends "grid.html" %}
+{% import "macros.html" as macros with context %}
+
+{% block bodyJs %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/march_madness.js') }}"></script>
+{% endblock %}
+
+{% set rounds=['regional-final', 'regional-semifinal', 'third-round', 'second-round'] %}
+{% set games=(
+	(
+		((1, 16),(8, 9)),
+		((5, 12),(4, 13))
+	),
+	(
+		((6, 11),(3, 14)),
+		((7, 10),(2, 15))
+	)
+) %}
+
+{% macro round(game, teams, base_id, depth=0, bin=0) %}
+{% with id=base_id + bin | string %}
+<li class="game-wrapper {{ rounds[depth] }} {% if base_id in ('south', 'east') %}flipped{% endif %}">
+	{% if game[0] is number %}
+	<div class="game active" >
+		<ul class="inner">
+			{% for seed in game %}
+			<li id="{{ id }}{{ loop.index0 }}" data-winner="#{{ id }}"><p>
+				<span class="seed">{{ seed }}</span> :
+				<span class="team">{{ teams[seed - 1] }}</span>
+			</p></li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% else %}
+	<div class="game">
+		<ul class="inner">
+			<li id="{{ id }}0" data-winner="#{{ id }}"></li>
+			<li id="{{ id }}1" data-winner="#{{ id }}"></li>
+		</ul>
+	</div>
+	<ul class="sub-games {{ rounds[depth + 1] }}s">
+		{{ round(game[0], teams, id, depth + 1, 0) }}
+		{{ round(game[1], teams, id, depth + 1, 1) }}
+	</ul>
+	{% endif %}
+</li>
+{% endwith %}
+{% endmacro %}
+
+{% block navbarClass %}hidden-for-madness{% endblock %}
+{% block footerClass %}madness{% endblock %}
+{%- block main -%}
+{% call macros.navbar("madness") %}
+{% if request.args.get('login') == 'yes' %}
+<a class="sign-up button" href="{{ url_for('predict', login=request.args.get('login')) }}">Predict!</a>
+{% else %}
+<a class="sign-up button" href="{{ url_for('grid', login='yes') }}">Sign Up / Log in</a>
+{% endif %}
+{% endcall %}
+<div class="hero short madness" id="hero">
+    <div class="madness-cover">
+    	<div class="background" style="background-image: url({{ url_for('static', filename='img/madness-cover.jpg') }})">
+    		<div class="scrim"></div>
+    	</div>
+    	<div class="madness-title">
+    		<h1>Predict <span class="second-word">the Madness</span></h1>
+    	</div>
+        <a href="#cat-1" class="scroll down">
+            <span>Make your picks</span><br>
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+<div class="content madness">
+	<ul class="games regional-finals">
+		{% for division, teams in march_madness.iteritems() %}
+			{{ round(games, teams, division | lower) }}
+		{% endfor %}
+	</ul>
+</div>
+{%- endblock -%}
