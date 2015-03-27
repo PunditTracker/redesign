@@ -34,12 +34,9 @@ $graph-height: ($prediction-height - 6.5rem);
             bottom: 0;
             left: 50%;
             @include transform(translateX(-50%));
-            background-color: $lightgray;
+            background-color: $blue;
             width:2rem;
-            -webkit-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
-               -moz-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
-                 -o-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
-                    transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
+            @include transition-with-delay(1s, 1s);
             &.h05 { height: (5% * 2); }
             &.h20 { height: (20% * 2); }
             &.h10 { height: (10% * 2); }
@@ -58,19 +55,16 @@ $graph-height: ($prediction-height - 6.5rem);
                 @include transition(0.2s);
             }
         }
+        &:hover .bar .amount {
+            opacity: 1;
+            top: -1.5rem;
+        }
         .label {
             position: absolute;
             bottom: -1.5rem;
             width: 100%;
             text-align: center;
             margin: 0;
-        }
-    }
-    &:hover .bar {
-        background-color: $blue;
-        .amount {
-            opacity: 1;
-            top: -1.5rem;
         }
     }
 }
