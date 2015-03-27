@@ -66,6 +66,11 @@ def oscars():
                            categories=oscars_data['oscars'])
 
 
+@app.route('/grid/prediction')
+def prediction():
+    return render_template('prediction.html', random=r_elem)
+
+
 @app.route('/grid/march-madness')
 def march_madness():
     return render_template('march_madness.html',

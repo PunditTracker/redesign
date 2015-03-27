@@ -6,9 +6,8 @@
 @import 'profile';
 @import 'oscars';
 @import 'march_madness';
+@import 'prediction';
 
-$prediction-height: 16.5rem;
-$prediction-padding: 0.75rem;
 $card-grid-padding: 1.5rem;
 $tall-2-height: (2 * $prediction-height + $card-grid-padding);
 $tall-3-2-height: ((3 * $prediction-height + $card-grid-padding) / 2);
@@ -451,6 +450,9 @@ $rotate-padding: 15rem;
     .text {
         margin: 0;
         word-wrap: break-word;
+        a:hover {
+            text-decoration: underline;
+        }
     }
     .background {
         width: 100%;
@@ -575,6 +577,15 @@ $rotate-padding: 15rem;
     /**************
      * Variations *
      **************/
+    &.single {
+        @extend .hover;
+
+        .text {
+            @extend .h3;
+        }
+    }
+
+
     &.faceoff {
         background-color: rgba(0,0,0,0);
         position: relative;

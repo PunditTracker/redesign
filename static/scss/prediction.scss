@@ -1,0 +1,80 @@
+@import 'base';
+
+$graph-height: ($prediction-height - 6.5rem);
+.analysis {
+    background-color: $white;
+    @include box-shadow;
+    padding: $prediction-padding;
+    height: $prediction-height;
+    @include border-box;
+
+    h4 {
+        margin: 0 0 0.5rem;
+    }
+
+    .graph {
+        height: $graph-height;
+        background: linear-gradient(
+          to top,
+          $ultralightgray,
+          $ultralightgray 2px,
+          $white 2px,
+          $white
+        );
+        /* The rectangle in which to repeat.
+           It can be fully wide in this case */
+        background-size: 100% 20%;
+        border-top: 2px solid $ultralightgray;
+        & > div {
+            position: relative;
+            height: $graph-height;
+        }
+        .bar {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+            background-color: $lightgray;
+            width:2rem;
+            -webkit-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
+               -moz-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
+                 -o-transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
+                    transition: 1s 1s ease height, 0.2s 0s ease backgorund-color;
+            &.h05 { height: (5% * 2); }
+            &.h20 { height: (20% * 2); }
+            &.h10 { height: (10% * 2); }
+            &.h25 { height: (25% * 2); }
+            &.h30 { height: (30% * 2); }
+            &.h40 { height: (40% * 2); }
+            &.h45 { height: (45% * 2); }
+            &.h0 { height: 0 !important; }
+            .amount {
+                opacity: 0;
+                position: absolute;
+                top: -1.25rem;
+                width: 100%;
+                text-align: center;
+                @extend .h6;
+                @include transition(0.2s);
+            }
+        }
+        .label {
+            position: absolute;
+            bottom: -1.5rem;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &:hover .bar {
+        background-color: $blue;
+        .amount {
+            opacity: 1;
+            top: -1.5rem;
+        }
+    }
+}
+
+.single-more {
+    margin-top: 4rem;
+}

@@ -1,0 +1,65 @@
+{% extends "grid.html" %}
+{% import "macros.html" as macros with context %}
+
+{% block bodyJs %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+{% endblock %}
+
+{% macro graph(amounts) %}
+<div class="pure-g graph">
+    {% for class, amount, label in amounts %}
+    <div class="pure-u-1-4">
+        <div class="bar h{{class}} h0">
+            <div class="amount">{{amount}}</div>
+        </div>
+        <h6 class="label">{{ label }}</h6>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{%- block main -%}
+<div class="content no-hero">
+    <div class="pure-g card-grid">
+        <div class="pure-u-1-6"></div>
+        <div class="pure-u-2-3">
+            <div class="pure-g card-grid">
+                <div class="pure-u-1">
+                    {{ macros.prediction('single') }}
+                </div>
+            </div>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">
+                    <div class="analysis likely">
+                        <h4>What people are saying</h4>
+                        {{ graph([
+                            ('05', '5%', 'No Way'),
+                            ('30', '30%', 'Unlikely'),
+                            ('25', '25%', 'Likely'),
+                            ('40', '40%', 'Definitely')
+                        ]) }}
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="analysis popularity">
+                        <h4>NFL Predictions</h4>
+                        {{ graph([
+                            ('05', '50', 'May'),
+                            ('10', '100', 'June'),
+                            ('30', '300', 'July'),
+                            ('45', '450', 'August')
+                        ]) }}
+                    </div>
+                </div>
+            </div>
+            <h4 class="single-more">More from Todd Thatcher</h4>
+            <div class="pure-g card-grid">
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+                <div class="pure-u-1-2">{{ macros.prediction() }}</div>
+            </div>
+        </div>
+        <div class="pure-u-1-6"></div>
+    </div>
+</div>
+{%- endblock -%}
